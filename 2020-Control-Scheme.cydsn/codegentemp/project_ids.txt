@@ -1,0 +1,6 @@
+C:\Users\Chantilly Robotics\Desktop\FRC 2019-2020\Custom Gunner Controls\2020-Control-Scheme.cydsn\2020-Control-Scheme.cyprj|694b9328-0208-4dad-8bac-0c6606a99975
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|8deb4093-ed30-409e-8627-7fae64af751e
+C:\Users\Chantilly Robotics\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|7f79ab4a-b230-44cf-87c9-53ee26311b77
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|f6ad23b6-2797-4bc3-a411-bbf99b7d3a7f
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|2006f834-b4bb-4da7-826c-919f32beb78a
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|111c311c-c3c7-4246-8134-b5d6d1441bf8

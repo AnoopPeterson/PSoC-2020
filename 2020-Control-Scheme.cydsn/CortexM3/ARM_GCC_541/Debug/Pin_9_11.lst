@@ -1,0 +1,811 @@
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\cchmBSOj.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"Pin_9_11.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.Pin_9_11_Write,"ax",%progbits
+  20              		.align	2
+  21              		.global	Pin_9_11_Write
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	Pin_9_11_Write, %function
+  25              	Pin_9_11_Write:
+  26              	.LFB0:
+  27              		.file 1 "Generated_Source\\PSoC5\\Pin_9_11.c"
+   1:Generated_Source\PSoC5/Pin_9_11.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/Pin_9_11.c **** * File Name: Pin_9_11.c  
+   3:Generated_Source\PSoC5/Pin_9_11.c **** * Version 2.20
+   4:Generated_Source\PSoC5/Pin_9_11.c **** *
+   5:Generated_Source\PSoC5/Pin_9_11.c **** * Description:
+   6:Generated_Source\PSoC5/Pin_9_11.c **** *  This file contains API to enable firmware control of a Pins component.
+   7:Generated_Source\PSoC5/Pin_9_11.c **** *
+   8:Generated_Source\PSoC5/Pin_9_11.c **** * Note:
+   9:Generated_Source\PSoC5/Pin_9_11.c **** *
+  10:Generated_Source\PSoC5/Pin_9_11.c **** ********************************************************************************
+  11:Generated_Source\PSoC5/Pin_9_11.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  12:Generated_Source\PSoC5/Pin_9_11.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  13:Generated_Source\PSoC5/Pin_9_11.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  14:Generated_Source\PSoC5/Pin_9_11.c **** * the software package with which this file was provided.
+  15:Generated_Source\PSoC5/Pin_9_11.c **** *******************************************************************************/
+  16:Generated_Source\PSoC5/Pin_9_11.c **** 
+  17:Generated_Source\PSoC5/Pin_9_11.c **** #include "cytypes.h"
+  18:Generated_Source\PSoC5/Pin_9_11.c **** #include "Pin_9_11.h"
+  19:Generated_Source\PSoC5/Pin_9_11.c **** 
+  20:Generated_Source\PSoC5/Pin_9_11.c **** /* APIs are not generated for P15[7:6] on PSoC 5 */
+  21:Generated_Source\PSoC5/Pin_9_11.c **** #if !(CY_PSOC5A &&\
+  22:Generated_Source\PSoC5/Pin_9_11.c **** 	 Pin_9_11__PORT == 15 && ((Pin_9_11__MASK & 0xC0) != 0))
+  23:Generated_Source\PSoC5/Pin_9_11.c **** 
+  24:Generated_Source\PSoC5/Pin_9_11.c **** 
+  25:Generated_Source\PSoC5/Pin_9_11.c **** /*******************************************************************************
+  26:Generated_Source\PSoC5/Pin_9_11.c **** * Function Name: Pin_9_11_Write
+  27:Generated_Source\PSoC5/Pin_9_11.c **** ****************************************************************************//**
+  28:Generated_Source\PSoC5/Pin_9_11.c **** *
+  29:Generated_Source\PSoC5/Pin_9_11.c **** * \brief Writes the value to the physical port (data output register), masking
+  30:Generated_Source\PSoC5/Pin_9_11.c **** *  and shifting the bits appropriately. 
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\cchmBSOj.s 			page 2
+
+
+  31:Generated_Source\PSoC5/Pin_9_11.c **** *
+  32:Generated_Source\PSoC5/Pin_9_11.c **** * The data output register controls the signal applied to the physical pin in 
+  33:Generated_Source\PSoC5/Pin_9_11.c **** * conjunction with the drive mode parameter. This function avoids changing 
+  34:Generated_Source\PSoC5/Pin_9_11.c **** * other bits in the port by using the appropriate method (read-modify-write or
+  35:Generated_Source\PSoC5/Pin_9_11.c **** * bit banding).
+  36:Generated_Source\PSoC5/Pin_9_11.c **** *
+  37:Generated_Source\PSoC5/Pin_9_11.c **** * <b>Note</b> This function should not be used on a hardware digital output pin 
+  38:Generated_Source\PSoC5/Pin_9_11.c **** * as it is driven by the hardware signal attached to it.
+  39:Generated_Source\PSoC5/Pin_9_11.c **** *
+  40:Generated_Source\PSoC5/Pin_9_11.c **** * \param value
+  41:Generated_Source\PSoC5/Pin_9_11.c **** *  Value to write to the component instance.
+  42:Generated_Source\PSoC5/Pin_9_11.c **** *
+  43:Generated_Source\PSoC5/Pin_9_11.c **** * \return 
+  44:Generated_Source\PSoC5/Pin_9_11.c **** *  None 
+  45:Generated_Source\PSoC5/Pin_9_11.c **** *
+  46:Generated_Source\PSoC5/Pin_9_11.c **** * \sideeffect
+  47:Generated_Source\PSoC5/Pin_9_11.c **** *  If you use read-modify-write operations that are not atomic; the Interrupt 
+  48:Generated_Source\PSoC5/Pin_9_11.c **** *  Service Routines (ISR) can cause corruption of this function. An ISR that 
+  49:Generated_Source\PSoC5/Pin_9_11.c **** *  interrupts this function and performs writes to the Pins component data 
+  50:Generated_Source\PSoC5/Pin_9_11.c **** *  register can cause corrupted port data. To avoid this issue, you should 
+  51:Generated_Source\PSoC5/Pin_9_11.c **** *  either use the Per-Pin APIs (primary method) or disable interrupts around 
+  52:Generated_Source\PSoC5/Pin_9_11.c **** *  this function.
+  53:Generated_Source\PSoC5/Pin_9_11.c **** *
+  54:Generated_Source\PSoC5/Pin_9_11.c **** * \funcusage
+  55:Generated_Source\PSoC5/Pin_9_11.c **** *  \snippet Pin_9_11_SUT.c usage_Pin_9_11_Write
+  56:Generated_Source\PSoC5/Pin_9_11.c **** *******************************************************************************/
+  57:Generated_Source\PSoC5/Pin_9_11.c **** void Pin_9_11_Write(uint8 value)
+  58:Generated_Source\PSoC5/Pin_9_11.c **** {
+  28              		.loc 1 58 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  33              	.LVL0:
+  59:Generated_Source\PSoC5/Pin_9_11.c ****     uint8 staticBits = (Pin_9_11_DR & (uint8)(~Pin_9_11_MASK));
+  34              		.loc 1 59 0
+  35 0000 044A     		ldr	r2, .L2
+  36 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  37 0004 03F08F03 		and	r3, r3, #143
+  38              	.LVL1:
+  60:Generated_Source\PSoC5/Pin_9_11.c ****     Pin_9_11_DR = staticBits | ((uint8)(value << Pin_9_11_SHIFT) & Pin_9_11_MASK);
+  39              		.loc 1 60 0
+  40 0008 0001     		lsls	r0, r0, #4
+  41              	.LVL2:
+  42 000a 00F07000 		and	r0, r0, #112
+  43 000e 1843     		orrs	r0, r0, r3
+  44 0010 1070     		strb	r0, [r2]
+  45 0012 7047     		bx	lr
+  46              	.L3:
+  47              		.align	2
+  48              	.L2:
+  49 0014 30510040 		.word	1073762608
+  50              		.cfi_endproc
+  51              	.LFE0:
+  52              		.size	Pin_9_11_Write, .-Pin_9_11_Write
+  53              		.section	.text.Pin_9_11_SetDriveMode,"ax",%progbits
+  54              		.align	2
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\cchmBSOj.s 			page 3
+
+
+  55              		.global	Pin_9_11_SetDriveMode
+  56              		.thumb
+  57              		.thumb_func
+  58              		.type	Pin_9_11_SetDriveMode, %function
+  59              	Pin_9_11_SetDriveMode:
+  60              	.LFB1:
+  61:Generated_Source\PSoC5/Pin_9_11.c **** }
+  62:Generated_Source\PSoC5/Pin_9_11.c **** 
+  63:Generated_Source\PSoC5/Pin_9_11.c **** 
+  64:Generated_Source\PSoC5/Pin_9_11.c **** /*******************************************************************************
+  65:Generated_Source\PSoC5/Pin_9_11.c **** * Function Name: Pin_9_11_SetDriveMode
+  66:Generated_Source\PSoC5/Pin_9_11.c **** ****************************************************************************//**
+  67:Generated_Source\PSoC5/Pin_9_11.c **** *
+  68:Generated_Source\PSoC5/Pin_9_11.c **** * \brief Sets the drive mode for each of the Pins component's pins.
+  69:Generated_Source\PSoC5/Pin_9_11.c **** * 
+  70:Generated_Source\PSoC5/Pin_9_11.c **** * <b>Note</b> This affects all pins in the Pins component instance. Use the
+  71:Generated_Source\PSoC5/Pin_9_11.c **** * Per-Pin APIs if you wish to control individual pin's drive modes.
+  72:Generated_Source\PSoC5/Pin_9_11.c **** *
+  73:Generated_Source\PSoC5/Pin_9_11.c **** * \param mode
+  74:Generated_Source\PSoC5/Pin_9_11.c **** *  Mode for the selected signals. Valid options are documented in 
+  75:Generated_Source\PSoC5/Pin_9_11.c **** *  \ref driveMode.
+  76:Generated_Source\PSoC5/Pin_9_11.c **** *
+  77:Generated_Source\PSoC5/Pin_9_11.c **** * \return
+  78:Generated_Source\PSoC5/Pin_9_11.c **** *  None
+  79:Generated_Source\PSoC5/Pin_9_11.c **** *
+  80:Generated_Source\PSoC5/Pin_9_11.c **** * \sideeffect
+  81:Generated_Source\PSoC5/Pin_9_11.c **** *  If you use read-modify-write operations that are not atomic, the ISR can
+  82:Generated_Source\PSoC5/Pin_9_11.c **** *  cause corruption of this function. An ISR that interrupts this function 
+  83:Generated_Source\PSoC5/Pin_9_11.c **** *  and performs writes to the Pins component Drive Mode registers can cause 
+  84:Generated_Source\PSoC5/Pin_9_11.c **** *  corrupted port data. To avoid this issue, you should either use the Per-Pin
+  85:Generated_Source\PSoC5/Pin_9_11.c **** *  APIs (primary method) or disable interrupts around this function.
+  86:Generated_Source\PSoC5/Pin_9_11.c **** *
+  87:Generated_Source\PSoC5/Pin_9_11.c **** * \funcusage
+  88:Generated_Source\PSoC5/Pin_9_11.c **** *  \snippet Pin_9_11_SUT.c usage_Pin_9_11_SetDriveMode
+  89:Generated_Source\PSoC5/Pin_9_11.c **** *******************************************************************************/
+  90:Generated_Source\PSoC5/Pin_9_11.c **** void Pin_9_11_SetDriveMode(uint8 mode)
+  91:Generated_Source\PSoC5/Pin_9_11.c **** {
+  61              		.loc 1 91 0
+  62              		.cfi_startproc
+  63              		@ args = 0, pretend = 0, frame = 0
+  64              		@ frame_needed = 0, uses_anonymous_args = 0
+  65              		@ link register save eliminated.
+  66              	.LVL3:
+  92:Generated_Source\PSoC5/Pin_9_11.c **** 	CyPins_SetPinDriveMode(Pin_9_11_0, mode);
+  67              		.loc 1 92 0
+  68 0000 0A4A     		ldr	r2, .L5
+  69 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  70 0004 00F00E00 		and	r0, r0, #14
+  71              	.LVL4:
+  72 0008 03F0F103 		and	r3, r3, #241
+  73 000c 0343     		orrs	r3, r3, r0
+  74 000e 1370     		strb	r3, [r2]
+  93:Generated_Source\PSoC5/Pin_9_11.c **** 	CyPins_SetPinDriveMode(Pin_9_11_1, mode);
+  75              		.loc 1 93 0
+  76 0010 0132     		adds	r2, r2, #1
+  77 0012 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  78 0014 03F0F103 		and	r3, r3, #241
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\cchmBSOj.s 			page 4
+
+
+  79 0018 0343     		orrs	r3, r3, r0
+  80 001a 1370     		strb	r3, [r2]
+  94:Generated_Source\PSoC5/Pin_9_11.c **** 	CyPins_SetPinDriveMode(Pin_9_11_2, mode);
+  81              		.loc 1 94 0
+  82 001c 0132     		adds	r2, r2, #1
+  83 001e 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  84 0020 03F0F103 		and	r3, r3, #241
+  85 0024 1843     		orrs	r0, r0, r3
+  86 0026 1070     		strb	r0, [r2]
+  87 0028 7047     		bx	lr
+  88              	.L6:
+  89 002a 00BF     		.align	2
+  90              	.L5:
+  91 002c 1C500040 		.word	1073762332
+  92              		.cfi_endproc
+  93              	.LFE1:
+  94              		.size	Pin_9_11_SetDriveMode, .-Pin_9_11_SetDriveMode
+  95              		.section	.text.Pin_9_11_Read,"ax",%progbits
+  96              		.align	2
+  97              		.global	Pin_9_11_Read
+  98              		.thumb
+  99              		.thumb_func
+ 100              		.type	Pin_9_11_Read, %function
+ 101              	Pin_9_11_Read:
+ 102              	.LFB2:
+  95:Generated_Source\PSoC5/Pin_9_11.c **** }
+  96:Generated_Source\PSoC5/Pin_9_11.c **** 
+  97:Generated_Source\PSoC5/Pin_9_11.c **** 
+  98:Generated_Source\PSoC5/Pin_9_11.c **** /*******************************************************************************
+  99:Generated_Source\PSoC5/Pin_9_11.c **** * Function Name: Pin_9_11_Read
+ 100:Generated_Source\PSoC5/Pin_9_11.c **** ****************************************************************************//**
+ 101:Generated_Source\PSoC5/Pin_9_11.c **** *
+ 102:Generated_Source\PSoC5/Pin_9_11.c **** * \brief Reads the associated physical port (pin status register) and masks 
+ 103:Generated_Source\PSoC5/Pin_9_11.c **** *  the required bits according to the width and bit position of the component
+ 104:Generated_Source\PSoC5/Pin_9_11.c **** *  instance. 
+ 105:Generated_Source\PSoC5/Pin_9_11.c **** *
+ 106:Generated_Source\PSoC5/Pin_9_11.c **** * The pin's status register returns the current logic level present on the 
+ 107:Generated_Source\PSoC5/Pin_9_11.c **** * physical pin.
+ 108:Generated_Source\PSoC5/Pin_9_11.c **** *
+ 109:Generated_Source\PSoC5/Pin_9_11.c **** * \return 
+ 110:Generated_Source\PSoC5/Pin_9_11.c **** *  The current value for the pins in the component as a right justified number.
+ 111:Generated_Source\PSoC5/Pin_9_11.c **** *
+ 112:Generated_Source\PSoC5/Pin_9_11.c **** * \funcusage
+ 113:Generated_Source\PSoC5/Pin_9_11.c **** *  \snippet Pin_9_11_SUT.c usage_Pin_9_11_Read  
+ 114:Generated_Source\PSoC5/Pin_9_11.c **** *******************************************************************************/
+ 115:Generated_Source\PSoC5/Pin_9_11.c **** uint8 Pin_9_11_Read(void)
+ 116:Generated_Source\PSoC5/Pin_9_11.c **** {
+ 103              		.loc 1 116 0
+ 104              		.cfi_startproc
+ 105              		@ args = 0, pretend = 0, frame = 0
+ 106              		@ frame_needed = 0, uses_anonymous_args = 0
+ 107              		@ link register save eliminated.
+ 117:Generated_Source\PSoC5/Pin_9_11.c ****     return (Pin_9_11_PS & Pin_9_11_MASK) >> Pin_9_11_SHIFT;
+ 108              		.loc 1 117 0
+ 109 0000 024B     		ldr	r3, .L8
+ 110 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 118:Generated_Source\PSoC5/Pin_9_11.c **** }
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\cchmBSOj.s 			page 5
+
+
+ 111              		.loc 1 118 0
+ 112 0004 C0F30210 		ubfx	r0, r0, #4, #3
+ 113 0008 7047     		bx	lr
+ 114              	.L9:
+ 115 000a 00BF     		.align	2
+ 116              	.L8:
+ 117 000c 31510040 		.word	1073762609
+ 118              		.cfi_endproc
+ 119              	.LFE2:
+ 120              		.size	Pin_9_11_Read, .-Pin_9_11_Read
+ 121              		.section	.text.Pin_9_11_ReadDataReg,"ax",%progbits
+ 122              		.align	2
+ 123              		.global	Pin_9_11_ReadDataReg
+ 124              		.thumb
+ 125              		.thumb_func
+ 126              		.type	Pin_9_11_ReadDataReg, %function
+ 127              	Pin_9_11_ReadDataReg:
+ 128              	.LFB3:
+ 119:Generated_Source\PSoC5/Pin_9_11.c **** 
+ 120:Generated_Source\PSoC5/Pin_9_11.c **** 
+ 121:Generated_Source\PSoC5/Pin_9_11.c **** /*******************************************************************************
+ 122:Generated_Source\PSoC5/Pin_9_11.c **** * Function Name: Pin_9_11_ReadDataReg
+ 123:Generated_Source\PSoC5/Pin_9_11.c **** ****************************************************************************//**
+ 124:Generated_Source\PSoC5/Pin_9_11.c **** *
+ 125:Generated_Source\PSoC5/Pin_9_11.c **** * \brief Reads the associated physical port's data output register and masks 
+ 126:Generated_Source\PSoC5/Pin_9_11.c **** *  the correct bits according to the width and bit position of the component 
+ 127:Generated_Source\PSoC5/Pin_9_11.c **** *  instance. 
+ 128:Generated_Source\PSoC5/Pin_9_11.c **** *
+ 129:Generated_Source\PSoC5/Pin_9_11.c **** * The data output register controls the signal applied to the physical pin in 
+ 130:Generated_Source\PSoC5/Pin_9_11.c **** * conjunction with the drive mode parameter. This is not the same as the 
+ 131:Generated_Source\PSoC5/Pin_9_11.c **** * preferred Pin_9_11_Read() API because the 
+ 132:Generated_Source\PSoC5/Pin_9_11.c **** * Pin_9_11_ReadDataReg() reads the data register instead of the status 
+ 133:Generated_Source\PSoC5/Pin_9_11.c **** * register. For output pins this is a useful function to determine the value 
+ 134:Generated_Source\PSoC5/Pin_9_11.c **** * just written to the pin.
+ 135:Generated_Source\PSoC5/Pin_9_11.c **** *
+ 136:Generated_Source\PSoC5/Pin_9_11.c **** * \return 
+ 137:Generated_Source\PSoC5/Pin_9_11.c **** *  The current value of the data register masked and shifted into a right 
+ 138:Generated_Source\PSoC5/Pin_9_11.c **** *  justified number for the component instance.
+ 139:Generated_Source\PSoC5/Pin_9_11.c **** *
+ 140:Generated_Source\PSoC5/Pin_9_11.c **** * \funcusage
+ 141:Generated_Source\PSoC5/Pin_9_11.c **** *  \snippet Pin_9_11_SUT.c usage_Pin_9_11_ReadDataReg 
+ 142:Generated_Source\PSoC5/Pin_9_11.c **** *******************************************************************************/
+ 143:Generated_Source\PSoC5/Pin_9_11.c **** uint8 Pin_9_11_ReadDataReg(void)
+ 144:Generated_Source\PSoC5/Pin_9_11.c **** {
+ 129              		.loc 1 144 0
+ 130              		.cfi_startproc
+ 131              		@ args = 0, pretend = 0, frame = 0
+ 132              		@ frame_needed = 0, uses_anonymous_args = 0
+ 133              		@ link register save eliminated.
+ 145:Generated_Source\PSoC5/Pin_9_11.c ****     return (Pin_9_11_DR & Pin_9_11_MASK) >> Pin_9_11_SHIFT;
+ 134              		.loc 1 145 0
+ 135 0000 024B     		ldr	r3, .L11
+ 136 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 146:Generated_Source\PSoC5/Pin_9_11.c **** }
+ 137              		.loc 1 146 0
+ 138 0004 C0F30210 		ubfx	r0, r0, #4, #3
+ 139 0008 7047     		bx	lr
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\cchmBSOj.s 			page 6
+
+
+ 140              	.L12:
+ 141 000a 00BF     		.align	2
+ 142              	.L11:
+ 143 000c 30510040 		.word	1073762608
+ 144              		.cfi_endproc
+ 145              	.LFE3:
+ 146              		.size	Pin_9_11_ReadDataReg, .-Pin_9_11_ReadDataReg
+ 147              		.text
+ 148              	.Letext0:
+ 149              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
+ 150              		.section	.debug_info,"",%progbits
+ 151              	.Ldebug_info0:
+ 152 0000 1B010000 		.4byte	0x11b
+ 153 0004 0400     		.2byte	0x4
+ 154 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 155 000a 04       		.byte	0x4
+ 156 000b 01       		.uleb128 0x1
+ 157 000c 3A000000 		.4byte	.LASF20
+ 158 0010 0C       		.byte	0xc
+ 159 0011 F0010000 		.4byte	.LASF21
+ 160 0015 4E010000 		.4byte	.LASF22
+ 161 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 162 001d 00000000 		.4byte	0
+ 163 0021 00000000 		.4byte	.Ldebug_line0
+ 164 0025 02       		.uleb128 0x2
+ 165 0026 01       		.byte	0x1
+ 166 0027 06       		.byte	0x6
+ 167 0028 CE010000 		.4byte	.LASF0
+ 168 002c 02       		.uleb128 0x2
+ 169 002d 01       		.byte	0x1
+ 170 002e 08       		.byte	0x8
+ 171 002f 2C000000 		.4byte	.LASF1
+ 172 0033 02       		.uleb128 0x2
+ 173 0034 02       		.byte	0x2
+ 174 0035 05       		.byte	0x5
+ 175 0036 44010000 		.4byte	.LASF2
+ 176 003a 02       		.uleb128 0x2
+ 177 003b 02       		.byte	0x2
+ 178 003c 07       		.byte	0x7
+ 179 003d EE000000 		.4byte	.LASF3
+ 180 0041 02       		.uleb128 0x2
+ 181 0042 04       		.byte	0x4
+ 182 0043 05       		.byte	0x5
+ 183 0044 B7010000 		.4byte	.LASF4
+ 184 0048 02       		.uleb128 0x2
+ 185 0049 04       		.byte	0x4
+ 186 004a 07       		.byte	0x7
+ 187 004b DC000000 		.4byte	.LASF5
+ 188 004f 02       		.uleb128 0x2
+ 189 0050 08       		.byte	0x8
+ 190 0051 05       		.byte	0x5
+ 191 0052 31010000 		.4byte	.LASF6
+ 192 0056 02       		.uleb128 0x2
+ 193 0057 08       		.byte	0x8
+ 194 0058 07       		.byte	0x7
+ 195 0059 15010000 		.4byte	.LASF7
+ 196 005d 03       		.uleb128 0x3
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\cchmBSOj.s 			page 7
+
+
+ 197 005e 04       		.byte	0x4
+ 198 005f 05       		.byte	0x5
+ 199 0060 696E7400 		.ascii	"int\000"
+ 200 0064 02       		.uleb128 0x2
+ 201 0065 04       		.byte	0x4
+ 202 0066 07       		.byte	0x7
+ 203 0067 08010000 		.4byte	.LASF8
+ 204 006b 04       		.uleb128 0x4
+ 205 006c B1010000 		.4byte	.LASF12
+ 206 0070 02       		.byte	0x2
+ 207 0071 E401     		.2byte	0x1e4
+ 208 0073 2C000000 		.4byte	0x2c
+ 209 0077 02       		.uleb128 0x2
+ 210 0078 04       		.byte	0x4
+ 211 0079 04       		.byte	0x4
+ 212 007a 26000000 		.4byte	.LASF9
+ 213 007e 02       		.uleb128 0x2
+ 214 007f 08       		.byte	0x8
+ 215 0080 04       		.byte	0x4
+ 216 0081 01010000 		.4byte	.LASF10
+ 217 0085 02       		.uleb128 0x2
+ 218 0086 01       		.byte	0x1
+ 219 0087 08       		.byte	0x8
+ 220 0088 3F010000 		.4byte	.LASF11
+ 221 008c 04       		.uleb128 0x4
+ 222 008d D7000000 		.4byte	.LASF13
+ 223 0091 02       		.byte	0x2
+ 224 0092 8E02     		.2byte	0x28e
+ 225 0094 98000000 		.4byte	0x98
+ 226 0098 05       		.uleb128 0x5
+ 227 0099 6B000000 		.4byte	0x6b
+ 228 009d 06       		.uleb128 0x6
+ 229 009e C8000000 		.4byte	.LASF14
+ 230 00a2 01       		.byte	0x1
+ 231 00a3 39       		.byte	0x39
+ 232 00a4 00000000 		.4byte	.LFB0
+ 233 00a8 18000000 		.4byte	.LFE0-.LFB0
+ 234 00ac 01       		.uleb128 0x1
+ 235 00ad 9C       		.byte	0x9c
+ 236 00ae CF000000 		.4byte	0xcf
+ 237 00b2 07       		.uleb128 0x7
+ 238 00b3 00000000 		.4byte	.LASF16
+ 239 00b7 01       		.byte	0x1
+ 240 00b8 39       		.byte	0x39
+ 241 00b9 6B000000 		.4byte	0x6b
+ 242 00bd 00000000 		.4byte	.LLST0
+ 243 00c1 08       		.uleb128 0x8
+ 244 00c2 1B000000 		.4byte	.LASF23
+ 245 00c6 01       		.byte	0x1
+ 246 00c7 3B       		.byte	0x3b
+ 247 00c8 6B000000 		.4byte	0x6b
+ 248 00cc 01       		.uleb128 0x1
+ 249 00cd 53       		.byte	0x53
+ 250 00ce 00       		.byte	0
+ 251 00cf 06       		.uleb128 0x6
+ 252 00d0 DA010000 		.4byte	.LASF15
+ 253 00d4 01       		.byte	0x1
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\cchmBSOj.s 			page 8
+
+
+ 254 00d5 5A       		.byte	0x5a
+ 255 00d6 00000000 		.4byte	.LFB1
+ 256 00da 30000000 		.4byte	.LFE1-.LFB1
+ 257 00de 01       		.uleb128 0x1
+ 258 00df 9C       		.byte	0x9c
+ 259 00e0 F4000000 		.4byte	0xf4
+ 260 00e4 07       		.uleb128 0x7
+ 261 00e5 2C010000 		.4byte	.LASF17
+ 262 00e9 01       		.byte	0x1
+ 263 00ea 5A       		.byte	0x5a
+ 264 00eb 6B000000 		.4byte	0x6b
+ 265 00ef 21000000 		.4byte	.LLST1
+ 266 00f3 00       		.byte	0
+ 267 00f4 09       		.uleb128 0x9
+ 268 00f5 C0010000 		.4byte	.LASF18
+ 269 00f9 01       		.byte	0x1
+ 270 00fa 73       		.byte	0x73
+ 271 00fb 6B000000 		.4byte	0x6b
+ 272 00ff 00000000 		.4byte	.LFB2
+ 273 0103 10000000 		.4byte	.LFE2-.LFB2
+ 274 0107 01       		.uleb128 0x1
+ 275 0108 9C       		.byte	0x9c
+ 276 0109 09       		.uleb128 0x9
+ 277 010a 06000000 		.4byte	.LASF19
+ 278 010e 01       		.byte	0x1
+ 279 010f 8F       		.byte	0x8f
+ 280 0110 6B000000 		.4byte	0x6b
+ 281 0114 00000000 		.4byte	.LFB3
+ 282 0118 10000000 		.4byte	.LFE3-.LFB3
+ 283 011c 01       		.uleb128 0x1
+ 284 011d 9C       		.byte	0x9c
+ 285 011e 00       		.byte	0
+ 286              		.section	.debug_abbrev,"",%progbits
+ 287              	.Ldebug_abbrev0:
+ 288 0000 01       		.uleb128 0x1
+ 289 0001 11       		.uleb128 0x11
+ 290 0002 01       		.byte	0x1
+ 291 0003 25       		.uleb128 0x25
+ 292 0004 0E       		.uleb128 0xe
+ 293 0005 13       		.uleb128 0x13
+ 294 0006 0B       		.uleb128 0xb
+ 295 0007 03       		.uleb128 0x3
+ 296 0008 0E       		.uleb128 0xe
+ 297 0009 1B       		.uleb128 0x1b
+ 298 000a 0E       		.uleb128 0xe
+ 299 000b 55       		.uleb128 0x55
+ 300 000c 17       		.uleb128 0x17
+ 301 000d 11       		.uleb128 0x11
+ 302 000e 01       		.uleb128 0x1
+ 303 000f 10       		.uleb128 0x10
+ 304 0010 17       		.uleb128 0x17
+ 305 0011 00       		.byte	0
+ 306 0012 00       		.byte	0
+ 307 0013 02       		.uleb128 0x2
+ 308 0014 24       		.uleb128 0x24
+ 309 0015 00       		.byte	0
+ 310 0016 0B       		.uleb128 0xb
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\cchmBSOj.s 			page 9
+
+
+ 311 0017 0B       		.uleb128 0xb
+ 312 0018 3E       		.uleb128 0x3e
+ 313 0019 0B       		.uleb128 0xb
+ 314 001a 03       		.uleb128 0x3
+ 315 001b 0E       		.uleb128 0xe
+ 316 001c 00       		.byte	0
+ 317 001d 00       		.byte	0
+ 318 001e 03       		.uleb128 0x3
+ 319 001f 24       		.uleb128 0x24
+ 320 0020 00       		.byte	0
+ 321 0021 0B       		.uleb128 0xb
+ 322 0022 0B       		.uleb128 0xb
+ 323 0023 3E       		.uleb128 0x3e
+ 324 0024 0B       		.uleb128 0xb
+ 325 0025 03       		.uleb128 0x3
+ 326 0026 08       		.uleb128 0x8
+ 327 0027 00       		.byte	0
+ 328 0028 00       		.byte	0
+ 329 0029 04       		.uleb128 0x4
+ 330 002a 16       		.uleb128 0x16
+ 331 002b 00       		.byte	0
+ 332 002c 03       		.uleb128 0x3
+ 333 002d 0E       		.uleb128 0xe
+ 334 002e 3A       		.uleb128 0x3a
+ 335 002f 0B       		.uleb128 0xb
+ 336 0030 3B       		.uleb128 0x3b
+ 337 0031 05       		.uleb128 0x5
+ 338 0032 49       		.uleb128 0x49
+ 339 0033 13       		.uleb128 0x13
+ 340 0034 00       		.byte	0
+ 341 0035 00       		.byte	0
+ 342 0036 05       		.uleb128 0x5
+ 343 0037 35       		.uleb128 0x35
+ 344 0038 00       		.byte	0
+ 345 0039 49       		.uleb128 0x49
+ 346 003a 13       		.uleb128 0x13
+ 347 003b 00       		.byte	0
+ 348 003c 00       		.byte	0
+ 349 003d 06       		.uleb128 0x6
+ 350 003e 2E       		.uleb128 0x2e
+ 351 003f 01       		.byte	0x1
+ 352 0040 3F       		.uleb128 0x3f
+ 353 0041 19       		.uleb128 0x19
+ 354 0042 03       		.uleb128 0x3
+ 355 0043 0E       		.uleb128 0xe
+ 356 0044 3A       		.uleb128 0x3a
+ 357 0045 0B       		.uleb128 0xb
+ 358 0046 3B       		.uleb128 0x3b
+ 359 0047 0B       		.uleb128 0xb
+ 360 0048 27       		.uleb128 0x27
+ 361 0049 19       		.uleb128 0x19
+ 362 004a 11       		.uleb128 0x11
+ 363 004b 01       		.uleb128 0x1
+ 364 004c 12       		.uleb128 0x12
+ 365 004d 06       		.uleb128 0x6
+ 366 004e 40       		.uleb128 0x40
+ 367 004f 18       		.uleb128 0x18
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\cchmBSOj.s 			page 10
+
+
+ 368 0050 9742     		.uleb128 0x2117
+ 369 0052 19       		.uleb128 0x19
+ 370 0053 01       		.uleb128 0x1
+ 371 0054 13       		.uleb128 0x13
+ 372 0055 00       		.byte	0
+ 373 0056 00       		.byte	0
+ 374 0057 07       		.uleb128 0x7
+ 375 0058 05       		.uleb128 0x5
+ 376 0059 00       		.byte	0
+ 377 005a 03       		.uleb128 0x3
+ 378 005b 0E       		.uleb128 0xe
+ 379 005c 3A       		.uleb128 0x3a
+ 380 005d 0B       		.uleb128 0xb
+ 381 005e 3B       		.uleb128 0x3b
+ 382 005f 0B       		.uleb128 0xb
+ 383 0060 49       		.uleb128 0x49
+ 384 0061 13       		.uleb128 0x13
+ 385 0062 02       		.uleb128 0x2
+ 386 0063 17       		.uleb128 0x17
+ 387 0064 00       		.byte	0
+ 388 0065 00       		.byte	0
+ 389 0066 08       		.uleb128 0x8
+ 390 0067 34       		.uleb128 0x34
+ 391 0068 00       		.byte	0
+ 392 0069 03       		.uleb128 0x3
+ 393 006a 0E       		.uleb128 0xe
+ 394 006b 3A       		.uleb128 0x3a
+ 395 006c 0B       		.uleb128 0xb
+ 396 006d 3B       		.uleb128 0x3b
+ 397 006e 0B       		.uleb128 0xb
+ 398 006f 49       		.uleb128 0x49
+ 399 0070 13       		.uleb128 0x13
+ 400 0071 02       		.uleb128 0x2
+ 401 0072 18       		.uleb128 0x18
+ 402 0073 00       		.byte	0
+ 403 0074 00       		.byte	0
+ 404 0075 09       		.uleb128 0x9
+ 405 0076 2E       		.uleb128 0x2e
+ 406 0077 00       		.byte	0
+ 407 0078 3F       		.uleb128 0x3f
+ 408 0079 19       		.uleb128 0x19
+ 409 007a 03       		.uleb128 0x3
+ 410 007b 0E       		.uleb128 0xe
+ 411 007c 3A       		.uleb128 0x3a
+ 412 007d 0B       		.uleb128 0xb
+ 413 007e 3B       		.uleb128 0x3b
+ 414 007f 0B       		.uleb128 0xb
+ 415 0080 27       		.uleb128 0x27
+ 416 0081 19       		.uleb128 0x19
+ 417 0082 49       		.uleb128 0x49
+ 418 0083 13       		.uleb128 0x13
+ 419 0084 11       		.uleb128 0x11
+ 420 0085 01       		.uleb128 0x1
+ 421 0086 12       		.uleb128 0x12
+ 422 0087 06       		.uleb128 0x6
+ 423 0088 40       		.uleb128 0x40
+ 424 0089 18       		.uleb128 0x18
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\cchmBSOj.s 			page 11
+
+
+ 425 008a 9742     		.uleb128 0x2117
+ 426 008c 19       		.uleb128 0x19
+ 427 008d 00       		.byte	0
+ 428 008e 00       		.byte	0
+ 429 008f 00       		.byte	0
+ 430              		.section	.debug_loc,"",%progbits
+ 431              	.Ldebug_loc0:
+ 432              	.LLST0:
+ 433 0000 00000000 		.4byte	.LVL0
+ 434 0004 0A000000 		.4byte	.LVL2
+ 435 0008 0100     		.2byte	0x1
+ 436 000a 50       		.byte	0x50
+ 437 000b 0A000000 		.4byte	.LVL2
+ 438 000f 18000000 		.4byte	.LFE0
+ 439 0013 0400     		.2byte	0x4
+ 440 0015 F3       		.byte	0xf3
+ 441 0016 01       		.uleb128 0x1
+ 442 0017 50       		.byte	0x50
+ 443 0018 9F       		.byte	0x9f
+ 444 0019 00000000 		.4byte	0
+ 445 001d 00000000 		.4byte	0
+ 446              	.LLST1:
+ 447 0021 00000000 		.4byte	.LVL3
+ 448 0025 08000000 		.4byte	.LVL4
+ 449 0029 0100     		.2byte	0x1
+ 450 002b 50       		.byte	0x50
+ 451 002c 08000000 		.4byte	.LVL4
+ 452 0030 30000000 		.4byte	.LFE1
+ 453 0034 0400     		.2byte	0x4
+ 454 0036 F3       		.byte	0xf3
+ 455 0037 01       		.uleb128 0x1
+ 456 0038 50       		.byte	0x50
+ 457 0039 9F       		.byte	0x9f
+ 458 003a 00000000 		.4byte	0
+ 459 003e 00000000 		.4byte	0
+ 460              		.section	.debug_aranges,"",%progbits
+ 461 0000 34000000 		.4byte	0x34
+ 462 0004 0200     		.2byte	0x2
+ 463 0006 00000000 		.4byte	.Ldebug_info0
+ 464 000a 04       		.byte	0x4
+ 465 000b 00       		.byte	0
+ 466 000c 0000     		.2byte	0
+ 467 000e 0000     		.2byte	0
+ 468 0010 00000000 		.4byte	.LFB0
+ 469 0014 18000000 		.4byte	.LFE0-.LFB0
+ 470 0018 00000000 		.4byte	.LFB1
+ 471 001c 30000000 		.4byte	.LFE1-.LFB1
+ 472 0020 00000000 		.4byte	.LFB2
+ 473 0024 10000000 		.4byte	.LFE2-.LFB2
+ 474 0028 00000000 		.4byte	.LFB3
+ 475 002c 10000000 		.4byte	.LFE3-.LFB3
+ 476 0030 00000000 		.4byte	0
+ 477 0034 00000000 		.4byte	0
+ 478              		.section	.debug_ranges,"",%progbits
+ 479              	.Ldebug_ranges0:
+ 480 0000 00000000 		.4byte	.LFB0
+ 481 0004 18000000 		.4byte	.LFE0
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\cchmBSOj.s 			page 12
+
+
+ 482 0008 00000000 		.4byte	.LFB1
+ 483 000c 30000000 		.4byte	.LFE1
+ 484 0010 00000000 		.4byte	.LFB2
+ 485 0014 10000000 		.4byte	.LFE2
+ 486 0018 00000000 		.4byte	.LFB3
+ 487 001c 10000000 		.4byte	.LFE3
+ 488 0020 00000000 		.4byte	0
+ 489 0024 00000000 		.4byte	0
+ 490              		.section	.debug_line,"",%progbits
+ 491              	.Ldebug_line0:
+ 492 0000 93000000 		.section	.debug_str,"MS",%progbits,1
+ 492      02004500 
+ 492      00000201 
+ 492      FB0E0D00 
+ 492      01010101 
+ 493              	.LASF16:
+ 494 0000 76616C75 		.ascii	"value\000"
+ 494      6500
+ 495              	.LASF19:
+ 496 0006 50696E5F 		.ascii	"Pin_9_11_ReadDataReg\000"
+ 496      395F3131 
+ 496      5F526561 
+ 496      64446174 
+ 496      61526567 
+ 497              	.LASF23:
+ 498 001b 73746174 		.ascii	"staticBits\000"
+ 498      69634269 
+ 498      747300
+ 499              	.LASF9:
+ 500 0026 666C6F61 		.ascii	"float\000"
+ 500      7400
+ 501              	.LASF1:
+ 502 002c 756E7369 		.ascii	"unsigned char\000"
+ 502      676E6564 
+ 502      20636861 
+ 502      7200
+ 503              	.LASF20:
+ 504 003a 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 504      43313120 
+ 504      352E342E 
+ 504      31203230 
+ 504      31363036 
+ 505 006d 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 505      20726576 
+ 505      6973696F 
+ 505      6E203233 
+ 505      37373135 
+ 506 00a0 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 506      66756E63 
+ 506      74696F6E 
+ 506      2D736563 
+ 506      74696F6E 
+ 507              	.LASF14:
+ 508 00c8 50696E5F 		.ascii	"Pin_9_11_Write\000"
+ 508      395F3131 
+ 508      5F577269 
+ 508      746500
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\cchmBSOj.s 			page 13
+
+
+ 509              	.LASF13:
+ 510 00d7 72656738 		.ascii	"reg8\000"
+ 510      00
+ 511              	.LASF5:
+ 512 00dc 6C6F6E67 		.ascii	"long unsigned int\000"
+ 512      20756E73 
+ 512      69676E65 
+ 512      6420696E 
+ 512      7400
+ 513              	.LASF3:
+ 514 00ee 73686F72 		.ascii	"short unsigned int\000"
+ 514      7420756E 
+ 514      7369676E 
+ 514      65642069 
+ 514      6E7400
+ 515              	.LASF10:
+ 516 0101 646F7562 		.ascii	"double\000"
+ 516      6C6500
+ 517              	.LASF8:
+ 518 0108 756E7369 		.ascii	"unsigned int\000"
+ 518      676E6564 
+ 518      20696E74 
+ 518      00
+ 519              	.LASF7:
+ 520 0115 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 520      206C6F6E 
+ 520      6720756E 
+ 520      7369676E 
+ 520      65642069 
+ 521              	.LASF17:
+ 522 012c 6D6F6465 		.ascii	"mode\000"
+ 522      00
+ 523              	.LASF6:
+ 524 0131 6C6F6E67 		.ascii	"long long int\000"
+ 524      206C6F6E 
+ 524      6720696E 
+ 524      7400
+ 525              	.LASF11:
+ 526 013f 63686172 		.ascii	"char\000"
+ 526      00
+ 527              	.LASF2:
+ 528 0144 73686F72 		.ascii	"short int\000"
+ 528      7420696E 
+ 528      7400
+ 529              	.LASF22:
+ 530 014e 433A5C55 		.ascii	"C:\\Users\\Chantilly Robotics\\Desktop\\FRC 2019-20"
+ 530      73657273 
+ 530      5C436861 
+ 530      6E74696C 
+ 530      6C792052 
+ 531 017d 32305C43 		.ascii	"20\\Custom Gunner Controls\\2020-Control-Scheme.cyd"
+ 531      7573746F 
+ 531      6D204775 
+ 531      6E6E6572 
+ 531      20436F6E 
+ 532 01ae 736E00   		.ascii	"sn\000"
+ 533              	.LASF12:
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\cchmBSOj.s 			page 14
+
+
+ 534 01b1 75696E74 		.ascii	"uint8\000"
+ 534      3800
+ 535              	.LASF4:
+ 536 01b7 6C6F6E67 		.ascii	"long int\000"
+ 536      20696E74 
+ 536      00
+ 537              	.LASF18:
+ 538 01c0 50696E5F 		.ascii	"Pin_9_11_Read\000"
+ 538      395F3131 
+ 538      5F526561 
+ 538      6400
+ 539              	.LASF0:
+ 540 01ce 7369676E 		.ascii	"signed char\000"
+ 540      65642063 
+ 540      68617200 
+ 541              	.LASF15:
+ 542 01da 50696E5F 		.ascii	"Pin_9_11_SetDriveMode\000"
+ 542      395F3131 
+ 542      5F536574 
+ 542      44726976 
+ 542      654D6F64 
+ 543              	.LASF21:
+ 544 01f0 47656E65 		.ascii	"Generated_Source\\PSoC5\\Pin_9_11.c\000"
+ 544      72617465 
+ 544      645F536F 
+ 544      75726365 
+ 544      5C50536F 
+ 545              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
