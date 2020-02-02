@@ -1,7 +1,7 @@
 #include "project.h"
 
-#define EP_IN 0
-#define EP_OUT 1
+#define EP_IN 1
+#define EP_OUT 2
 
 #define BUTTON_SIZE 2
 
@@ -53,5 +53,3 @@ int main(void)
     }
     }
 }
-
-/* [] END OF FILE */

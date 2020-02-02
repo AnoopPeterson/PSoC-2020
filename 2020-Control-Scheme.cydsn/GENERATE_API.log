@@ -1,3 +1,6 @@
---------------- Build Started: 02/01/2020 16:00:53 Project: 2020-Control-Scheme, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
-The code generation step is up to date.
---------------- Build Skipped: 02/01/2020 16:00:53 ---------------
+--------------- Build Started: 02/02/2020 18:45:37 Project: 2020-Control-Scheme, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+cydsfit.exe -.appdatapath "C:\Users\anoop.DESKTOP-AK0U51E\AppData\Local\Cypress Semiconductor\PSoC Creator\4.2" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\anoop.DESKTOP-AK0U51E\Documents\612_Code\PSOC\2020_CONTROL_SCHEME\PSoC-2020\2020-Control-Scheme.cydsn\2020-Control-Scheme.cyprj -d CY8C5888LTI-LP097 -s C:\Users\anoop.DESKTOP-AK0U51E\Documents\612_Code\PSOC\2020_CONTROL_SCHEME\PSoC-2020\2020-Control-Scheme.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+Elaborating Design...
+ADD: sdb.M0052: error: Unable to find component "cy_boot_v5_80".
+Error: fit.M0050: The fitter aborted due to errors, please address all errors and rebuild. (App=cydsfit)
+--------------- Build Failed: 02/02/2020 18:45:40 ---------------

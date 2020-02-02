@@ -1026,7 +1026,7 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x648a
+.debug_info     0x00000000     0x6496
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x2ef .\CortexM3\ARM_GCC_541\Debug\main.o
  .debug_info    0x000002ef      0x513 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
@@ -1045,11 +1045,11 @@ END GROUP
  .debug_info    0x000034a5      0x174 .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(USB_Dp.o)
  .debug_info    0x00003619     0x1374 .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(CyLib.o)
  .debug_info    0x0000498d      0xa2a .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(cyPm.o)
- .debug_info    0x000053b7       0xb1 .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(CyBootAsmGnu.o)
- .debug_info    0x00005468      0x1de .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(USB_cls.o)
- .debug_info    0x00005646      0x2a7 .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(USB_descr.o)
- .debug_info    0x000058ed      0x64d .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(CyFlash.o)
- .debug_info    0x00005f3a      0x550 .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(CySpc.o)
+ .debug_info    0x000053b7       0xbd .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(CyBootAsmGnu.o)
+ .debug_info    0x00005474      0x1de .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(USB_cls.o)
+ .debug_info    0x00005652      0x2a7 .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(USB_descr.o)
+ .debug_info    0x000058f9      0x64d .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(CyFlash.o)
+ .debug_info    0x00005f46      0x550 .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(CySpc.o)
 
 .debug_abbrev   0x00000000     0x1a4d
  *(.debug_abbrev)
@@ -1128,50 +1128,50 @@ END GROUP
  .debug_frame   0x00001700       0x28 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
  .debug_frame   0x00001728       0x20 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
 
-.debug_str      0x00000000     0x2114
+.debug_str      0x00000000     0x2120
  *(.debug_str)
- .debug_str     0x00000000      0x235 .\CortexM3\ARM_GCC_541\Debug\main.o
-                                0x27d (size before relaxing)
- .debug_str     0x00000235      0x181 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
-                                0x330 (size before relaxing)
- .debug_str     0x000003b6       0x7f .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .debug_str     0x00000000      0x241 .\CortexM3\ARM_GCC_541\Debug\main.o
+                                0x289 (size before relaxing)
+ .debug_str     0x00000241      0x181 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                                0x33c (size before relaxing)
+ .debug_str     0x000003c2       0x7f .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+                                0x211 (size before relaxing)
+ .debug_str     0x00000441      0x144 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                                0x337 (size before relaxing)
+ .debug_str     0x00000585       0x57 .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(led.o)
                                 0x205 (size before relaxing)
- .debug_str     0x00000435      0x144 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
-                                0x32b (size before relaxing)
- .debug_str     0x00000579       0x57 .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(led.o)
-                                0x1f9 (size before relaxing)
- .debug_str     0x000005d0      0x3ca .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(USB.o)
-                                0x5fb (size before relaxing)
- .debug_str     0x0000099a      0x2de .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(USB_drv.o)
-                                0x5c1 (size before relaxing)
- .debug_str     0x00000c78       0x4f .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(USB_episr.o)
-                                0x2bb (size before relaxing)
- .debug_str     0x00000cc7      0x10e .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(USB_hid.o)
-                                0x3cf (size before relaxing)
- .debug_str     0x00000dd5       0xaa .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(USB_pm.o)
-                                0x2e1 (size before relaxing)
- .debug_str     0x00000e7f      0x1a7 .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(USB_std.o)
-                                0x670 (size before relaxing)
- .debug_str     0x00001026       0x21 .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(USB_vnd.o)
-                                0x202 (size before relaxing)
- .debug_str     0x00001047       0x98 .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(Status_1_8.o)
-                                0x27c (size before relaxing)
- .debug_str     0x000010df       0x89 .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(Status_9_11.o)
-                                0x282 (size before relaxing)
- .debug_str     0x00001168       0x81 .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(USB_Dp.o)
-                                0x246 (size before relaxing)
- .debug_str     0x000011e9      0x7dc .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(CyLib.o)
-                                0xa68 (size before relaxing)
- .debug_str     0x000019c5      0x365 .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(cyPm.o)
-                                0x754 (size before relaxing)
- .debug_str     0x00001d2a       0x21 .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(USB_cls.o)
-                                0x2b1 (size before relaxing)
- .debug_str     0x00001d4b      0x162 .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(USB_descr.o)
-                                0x374 (size before relaxing)
- .debug_str     0x00001ead      0x1bb .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(CyFlash.o)
-                                0x3e1 (size before relaxing)
- .debug_str     0x00002068       0xac .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(CySpc.o)
-                                0x359 (size before relaxing)
+ .debug_str     0x000005dc      0x3ca .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(USB.o)
+                                0x607 (size before relaxing)
+ .debug_str     0x000009a6      0x2de .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(USB_drv.o)
+                                0x5cd (size before relaxing)
+ .debug_str     0x00000c84       0x4f .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(USB_episr.o)
+                                0x2c7 (size before relaxing)
+ .debug_str     0x00000cd3      0x10e .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(USB_hid.o)
+                                0x3db (size before relaxing)
+ .debug_str     0x00000de1       0xaa .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(USB_pm.o)
+                                0x2ed (size before relaxing)
+ .debug_str     0x00000e8b      0x1a7 .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(USB_std.o)
+                                0x67c (size before relaxing)
+ .debug_str     0x00001032       0x21 .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(USB_vnd.o)
+                                0x20e (size before relaxing)
+ .debug_str     0x00001053       0x98 .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(Status_1_8.o)
+                                0x288 (size before relaxing)
+ .debug_str     0x000010eb       0x89 .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(Status_9_11.o)
+                                0x28e (size before relaxing)
+ .debug_str     0x00001174       0x81 .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(USB_Dp.o)
+                                0x252 (size before relaxing)
+ .debug_str     0x000011f5      0x7dc .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(CyLib.o)
+                                0xa74 (size before relaxing)
+ .debug_str     0x000019d1      0x365 .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(cyPm.o)
+                                0x760 (size before relaxing)
+ .debug_str     0x00001d36       0x21 .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(USB_cls.o)
+                                0x2bd (size before relaxing)
+ .debug_str     0x00001d57      0x162 .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(USB_descr.o)
+                                0x380 (size before relaxing)
+ .debug_str     0x00001eb9      0x1bb .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(CyFlash.o)
+                                0x3ed (size before relaxing)
+ .debug_str     0x00002074       0xac .\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.a(CySpc.o)
+                                0x365 (size before relaxing)
 
 .debug_loc      0x00000000     0x2d12
  *(.debug_loc)
@@ -1329,4 +1329,4 @@ END GROUP
 
 /DISCARD/
  *(.note.GNU-stack)
-OUTPUT(C:\Users\Chantilly Robotics\Desktop\FRC 2019-2020\Custom Gunner Controls\2020-Control-Scheme.cydsn\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.elf elf32-littlearm)
+OUTPUT(C:\Users\anoop.DESKTOP-AK0U51E\Documents\612_Code\PSOC\2020_CONTROL_SCHEME\PSoC-2020\2020-Control-Scheme.cydsn\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.elf elf32-littlearm)
