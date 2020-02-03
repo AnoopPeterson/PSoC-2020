@@ -2,7 +2,7 @@
 --	Conversion of 2020-Control-Scheme.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Sun Feb 02 18:46:26 2020
+--	Mon Feb 03 00:25:48 2020
 --
 
 USE cypress.cypress.all;

@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="612-2020\2020-Control-Scheme\Source Files\main.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="612-2020\2020-Control-Scheme\TopDesign">
 <ExpandedNodeIds>
 <v>612-2020</v>
 <v>612-2020\2020-Control-Scheme</v>
@@ -152,48 +152,6 @@
 <VisibleNodeIds>
 <v>612-2020</v>
 <v>612-2020\2020-Control-Scheme</v>
-<v>612-2020\2020-Control-Scheme\CortexM3</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock.lst</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug\Listing Files\led.lst</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_1_8.lst</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_9_11.lst</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug\Listing Files\Status_1_8.lst</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug\Listing Files\Status_9_11.lst</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug\Listing Files\USB.lst</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_audio.lst</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_boot.lst</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_cdc.lst</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_cls.lst</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_descr.lst</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_Dm.lst</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_Dp.lst</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_drv.lst</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_episr.lst</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_hid.lst</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_midi.lst</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_msc.lst</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_pm.lst</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_std.lst</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug\Listing Files\USB_vnd.lst</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.elf</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.hex</v>
-<v>612-2020\2020-Control-Scheme\CortexM3\ARM_GCC_541\Debug\2020-Control-Scheme.map</v>
-<v>612-2020\2020-Control-Scheme\2020-Control-Scheme.gpdsc</v>
 <v>612-2020\2020-Control-Scheme\2020-Control-Scheme.rpt</v>
 <v>612-2020\2020-Control-Scheme\2020-Control-Scheme_timing.html</v>
 </VisibleNodeIds>
@@ -245,6 +203,7 @@
 <Unloaded />
 <OpenDocs>
 <name v=".\2020-Control-Scheme.cydsn\main.c" />
+<name v=".\2020-Control-Scheme.cydsn\TopDesign\TopDesign.cysch" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -252,7 +211,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1439, 711" SelectedTabbedMdiWindow="a4a5c63c-3a9f-402a-8992-b6d0e927e943"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="58f6544b-0149-44b1-a0ac-b3148720c957" /><DocumentWindow Key="C:\Users\anoop.DESKTOP-AK0U51E\Documents\612_Code\PSOC\2020_CONTROL_SCHEME\PSoC-2020\2020-Control-Scheme.cydsn\main.c" Guid="a4a5c63c-3a9f-402a-8992-b6d0e927e943" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1439, 711" SelectedTabbedMdiWindow="6da6489a-d3cd-4d59-b29b-a4ceba7a15b7"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="58f6544b-0149-44b1-a0ac-b3148720c957" /><DocumentWindow Key="C:\Users\anoop.DESKTOP-AK0U51E\Documents\612_Code\PSOC\2020_CONTROL_SCHEME\PSoC-2020\2020-Control-Scheme.cydsn\main.c" Guid="a4a5c63c-3a9f-402a-8992-b6d0e927e943" /><DocumentWindow Key="C:\Users\anoop.DESKTOP-AK0U51E\Documents\612_Code\PSOC\2020_CONTROL_SCHEME\PSoC-2020\2020-Control-Scheme.cydsn\TopDesign\TopDesign.cysch" Guid="6da6489a-d3cd-4d59-b29b-a4ceba7a15b7" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
