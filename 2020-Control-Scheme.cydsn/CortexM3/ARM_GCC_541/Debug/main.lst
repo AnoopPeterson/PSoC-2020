@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccemkpGs.s 			page 1
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccemkpGs.s 			page 1
   41              	.LVL1:
   42              	.L3:
   43              		.loc 1 14 0 is_stmt 0 discriminator 3
-ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccemkpGs.s 			page 2
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 2
 
 
   44 0006 0133     		adds	r3, r3, #1
@@ -71,7 +71,7 @@ ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccemkpGs.s 			page 1
   51 000c FBD9     		bls	.L3
   52 000e 0023     		movs	r3, #0
   53              	.LVL4:
-  54 0010 04E0     		b	.L4
+  54 0010 01E0     		b	.L4
   55              	.LVL5:
   56              	.L5:
   57              	.LBE2:
@@ -79,1199 +79,1117 @@ ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccemkpGs.s 			page 1
   15:main.c        ****         BUTTON_INPUT[i] = 0;
   16:main.c        ****     }
   17:main.c        ****     for(uint8 j = 0; j < sizeof(BUTTON_INPUT); j++){
+  59              		.loc 1 17 0 is_stmt 1 discriminator 3
+  60 0012 0133     		adds	r3, r3, #1
+  61              	.LVL6:
+  62 0014 DBB2     		uxtb	r3, r3
+  63              	.LVL7:
+  64              	.L4:
+  65              		.loc 1 17 0 is_stmt 0 discriminator 1
+  66 0016 012B     		cmp	r3, #1
+  67 0018 FBD9     		bls	.L5
+  68 001a 0023     		movs	r3, #0
+  69              	.LVL8:
+  70 001c 04E0     		b	.L6
+  71              	.LVL9:
+  72              	.L7:
+  73              	.LBE3:
+  74              	.LBB4:
   18:main.c        ****         USB_INPUT[j] = 0;
-  59              		.loc 1 18 0 is_stmt 1 discriminator 3
-  60 0012 0021     		movs	r1, #0
-  61 0014 0A4A     		ldr	r2, .L9
-  62 0016 D154     		strb	r1, [r2, r3]
-  17:main.c        ****         USB_INPUT[j] = 0;
-  63              		.loc 1 17 0 discriminator 3
-  64 0018 0133     		adds	r3, r3, #1
-  65              	.LVL6:
-  66 001a DBB2     		uxtb	r3, r3
-  67              	.LVL7:
-  68              	.L4:
-  17:main.c        ****         USB_INPUT[j] = 0;
-  69              		.loc 1 17 0 is_stmt 0 discriminator 1
-  70 001c 012B     		cmp	r3, #1
-  71 001e F8D9     		bls	.L5
-  72 0020 0023     		movs	r3, #0
-  73              	.LVL8:
-  74 0022 05E0     		b	.L6
-  75              	.LVL9:
-  76              	.L7:
-  77              	.LBE3:
-  78              	.LBB4:
   19:main.c        ****     }    
   20:main.c        ****     for(uint8 k = 0; k < sizeof(BUTTON_INPUT); k++){
   21:main.c        ****         USB_OUTPUT[k] = 0;
-  79              		.loc 1 21 0 is_stmt 1 discriminator 3
-  80 0024 064A     		ldr	r2, .L9
-  81 0026 1A44     		add	r2, r2, r3
-  82 0028 0021     		movs	r1, #0
-  83 002a 1171     		strb	r1, [r2, #4]
+  75              		.loc 1 21 0 is_stmt 1 discriminator 3
+  76 001e 0021     		movs	r1, #0
+  77 0020 054A     		ldr	r2, .L9
+  78 0022 D154     		strb	r1, [r2, r3]
   20:main.c        ****         USB_OUTPUT[k] = 0;
-  84              		.loc 1 20 0 discriminator 3
-  85 002c 0133     		adds	r3, r3, #1
-  86              	.LVL10:
-  87 002e DBB2     		uxtb	r3, r3
-  88              	.LVL11:
-  89              	.L6:
+  79              		.loc 1 20 0 discriminator 3
+  80 0024 0133     		adds	r3, r3, #1
+  81              	.LVL10:
+  82 0026 DBB2     		uxtb	r3, r3
+  83              	.LVL11:
+  84              	.L6:
   20:main.c        ****         USB_OUTPUT[k] = 0;
-ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccemkpGs.s 			page 3
-
-
-  90              		.loc 1 20 0 is_stmt 0 discriminator 1
-  91 0030 012B     		cmp	r3, #1
-  92 0032 F7D9     		bls	.L7
-  93              	.LBE4:
+  85              		.loc 1 20 0 is_stmt 0 discriminator 1
+  86 0028 012B     		cmp	r3, #1
+  87 002a F8D9     		bls	.L7
+  88              	.LBE4:
   22:main.c        ****     }  
   23:main.c        ****     USB_Start(0, USB_DWR_VDDD_OPERATION);
-  94              		.loc 1 23 0 is_stmt 1
-  95 0034 0221     		movs	r1, #2
-  96 0036 0020     		movs	r0, #0
-  97 0038 FFF7FEFF 		bl	USB_Start
-  98              	.LVL12:
-  99 003c 08BD     		pop	{r3, pc}
- 100              	.L10:
- 101 003e 00BF     		.align	2
- 102              	.L9:
- 103 0040 00000000 		.word	.LANCHOR0
- 104              		.cfi_endproc
- 105              	.LFE63:
- 106              		.size	startup, .-startup
- 107              		.section	.text.read_buttons,"ax",%progbits
- 108              		.align	2
- 109              		.global	read_buttons
- 110              		.thumb
- 111              		.thumb_func
- 112              		.type	read_buttons, %function
- 113              	read_buttons:
- 114              	.LFB64:
+  89              		.loc 1 23 0 is_stmt 1
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 3
+
+
+  90 002c 0221     		movs	r1, #2
+  91 002e 0020     		movs	r0, #0
+  92 0030 FFF7FEFF 		bl	USB_Start
+  93              	.LVL12:
+  94 0034 08BD     		pop	{r3, pc}
+  95              	.L10:
+  96 0036 00BF     		.align	2
+  97              	.L9:
+  98 0038 00000000 		.word	.LANCHOR0
+  99              		.cfi_endproc
+ 100              	.LFE63:
+ 101              		.size	startup, .-startup
+ 102              		.section	.text.read_buttons,"ax",%progbits
+ 103              		.align	2
+ 104              		.global	read_buttons
+ 105              		.thumb
+ 106              		.thumb_func
+ 107              		.type	read_buttons, %function
+ 108              	read_buttons:
+ 109              	.LFB64:
   24:main.c        **** }
   25:main.c        **** 
   26:main.c        **** void read_buttons(void){
- 115              		.loc 1 26 0
- 116              		.cfi_startproc
- 117              		@ args = 0, pretend = 0, frame = 0
- 118              		@ frame_needed = 0, uses_anonymous_args = 0
- 119 0000 08B5     		push	{r3, lr}
- 120              		.cfi_def_cfa_offset 8
- 121              		.cfi_offset 3, -8
- 122              		.cfi_offset 14, -4
+ 110              		.loc 1 26 0
+ 111              		.cfi_startproc
+ 112              		@ args = 0, pretend = 0, frame = 0
+ 113              		@ frame_needed = 0, uses_anonymous_args = 0
+ 114 0000 08B5     		push	{r3, lr}
+ 115              		.cfi_def_cfa_offset 8
+ 116              		.cfi_offset 3, -8
+ 117              		.cfi_offset 14, -4
   27:main.c        ****     BUTTON_INPUT[0] = Status_1_8_Read();
- 123              		.loc 1 27 0
- 124 0002 FFF7FEFF 		bl	Status_1_8_Read
- 125              	.LVL13:
+ 118              		.loc 1 27 0
+ 119 0002 FFF7FEFF 		bl	Status_1_8_Read
+ 120              	.LVL13:
   28:main.c        ****     BUTTON_INPUT[1] = Status_9_11_Read();
- 126              		.loc 1 28 0
- 127 0006 FFF7FEFF 		bl	Status_9_11_Read
- 128              	.LVL14:
- 129 000a 08BD     		pop	{r3, pc}
- 130              		.cfi_endproc
- 131              	.LFE64:
- 132              		.size	read_buttons, .-read_buttons
- 133              		.section	.text.main,"ax",%progbits
- 134              		.align	2
- 135              		.global	main
- 136              		.thumb
- 137              		.thumb_func
- 138              		.type	main, %function
- 139              	main:
-ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccemkpGs.s 			page 4
-
-
- 140              	.LFB65:
+ 121              		.loc 1 28 0
+ 122 0006 FFF7FEFF 		bl	Status_9_11_Read
+ 123              	.LVL14:
+ 124 000a 08BD     		pop	{r3, pc}
+ 125              		.cfi_endproc
+ 126              	.LFE64:
+ 127              		.size	read_buttons, .-read_buttons
+ 128              		.section	.text.main,"ax",%progbits
+ 129              		.align	2
+ 130              		.global	main
+ 131              		.thumb
+ 132              		.thumb_func
+ 133              		.type	main, %function
+ 134              	main:
+ 135              	.LFB65:
   29:main.c        **** }
   30:main.c        **** 
   31:main.c        **** 
   32:main.c        **** int main(void)
   33:main.c        **** {
- 141              		.loc 1 33 0
- 142              		.cfi_startproc
- 143              		@ Volatile: function does not return.
- 144              		@ args = 0, pretend = 0, frame = 0
- 145              		@ frame_needed = 0, uses_anonymous_args = 0
- 146 0000 08B5     		push	{r3, lr}
- 147              		.cfi_def_cfa_offset 8
- 148              		.cfi_offset 3, -8
- 149              		.cfi_offset 14, -4
+ 136              		.loc 1 33 0
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 4
+
+
+ 137              		.cfi_startproc
+ 138              		@ Volatile: function does not return.
+ 139              		@ args = 0, pretend = 0, frame = 0
+ 140              		@ frame_needed = 0, uses_anonymous_args = 0
+ 141 0000 08B5     		push	{r3, lr}
+ 142              		.cfi_def_cfa_offset 8
+ 143              		.cfi_offset 3, -8
+ 144              		.cfi_offset 14, -4
   34:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */ 
- 150              		.loc 1 34 0
- 151              		.syntax unified
- 152              	@ 34 "main.c" 1
- 153 0002 62B6     		CPSIE   i
- 154              	@ 0 "" 2
- 155              		.thumb
- 156              		.syntax unified
- 157              	.L16:
-  35:main.c        ****     for(;;)
-  36:main.c        ****     {
-  37:main.c        ****     led_Write(1);
- 158              		.loc 1 37 0
- 159 0004 0120     		movs	r0, #1
- 160 0006 FFF7FEFF 		bl	led_Write
- 161              	.LVL15:
-  38:main.c        ****     CyDelay(500);
- 162              		.loc 1 38 0
- 163 000a 4FF4FA70 		mov	r0, #500
- 164 000e FFF7FEFF 		bl	CyDelay
- 165              	.LVL16:
-  39:main.c        ****     led_Write(0);
- 166              		.loc 1 39 0
- 167 0012 0020     		movs	r0, #0
- 168 0014 FFF7FEFF 		bl	led_Write
- 169              	.LVL17:
+ 145              		.loc 1 34 0
+ 146              		.syntax unified
+ 147              	@ 34 "main.c" 1
+ 148 0002 62B6     		CPSIE   i
+ 149              	@ 0 "" 2
+  35:main.c        ****     startup();
+ 150              		.loc 1 35 0
+ 151              		.thumb
+ 152              		.syntax unified
+ 153 0004 FFF7FEFF 		bl	startup
+ 154              	.LVL15:
+ 155              	.L15:
+  36:main.c        ****     
+  37:main.c        ****     for(;;)
+  38:main.c        ****     {
+  39:main.c        ****     led_Write(1);
+ 156              		.loc 1 39 0
+ 157 0008 0120     		movs	r0, #1
+ 158 000a FFF7FEFF 		bl	led_Write
+ 159              	.LVL16:
   40:main.c        ****     CyDelay(500);
- 170              		.loc 1 40 0
- 171 0018 4FF4FA70 		mov	r0, #500
- 172 001c FFF7FEFF 		bl	CyDelay
- 173              	.LVL18:
- 174              	.L14:
-  41:main.c        ****     
-  42:main.c        ****      while(!USB_GetEPAckState(EP_IN));
- 175              		.loc 1 42 0 discriminator 1
- 176 0020 0120     		movs	r0, #1
- 177 0022 FFF7FEFF 		bl	USB_GetEPAckState
- 178              	.LVL19:
- 179 0026 0028     		cmp	r0, #0
- 180 0028 FAD0     		beq	.L14
-  43:main.c        ****      
-  44:main.c        ****     read_buttons();
-ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccemkpGs.s 			page 5
+ 160              		.loc 1 40 0
+ 161 000e 4FF4FA70 		mov	r0, #500
+ 162 0012 FFF7FEFF 		bl	CyDelay
+ 163              	.LVL17:
+  41:main.c        ****     led_Write(0);
+ 164              		.loc 1 41 0
+ 165 0016 0020     		movs	r0, #0
+ 166 0018 FFF7FEFF 		bl	led_Write
+ 167              	.LVL18:
+  42:main.c        ****     CyDelay(500);
+ 168              		.loc 1 42 0
+ 169 001c 4FF4FA70 		mov	r0, #500
+ 170 0020 FFF7FEFF 		bl	CyDelay
+ 171              	.LVL19:
+ 172              	.L14:
+  43:main.c        ****     
+  44:main.c        ****      while(!USB_GetEPAckState(EP_OUT));
+ 173              		.loc 1 44 0 discriminator 1
+ 174 0024 0220     		movs	r0, #2
+ 175 0026 FFF7FEFF 		bl	USB_GetEPAckState
+ 176              	.LVL20:
+ 177 002a 0028     		cmp	r0, #0
+ 178 002c FAD0     		beq	.L14
+  45:main.c        ****      
+  46:main.c        ****     read_buttons();
+ 179              		.loc 1 46 0
+ 180 002e FFF7FEFF 		bl	read_buttons
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 5
 
 
- 181              		.loc 1 44 0
- 182 002a FFF7FEFF 		bl	read_buttons
- 183              	.LVL20:
-  45:main.c        ****     
-  46:main.c        ****      // if usb reading data is empty, write
-  47:main.c        ****     if (USB_GetEPState(EP_IN) == USB_IN_BUFFER_EMPTY){
- 184              		.loc 1 47 0
- 185 002e 0120     		movs	r0, #1
- 186 0030 FFF7FEFF 		bl	USB_GetEPState
- 187              	.LVL21:
- 188 0034 0128     		cmp	r0, #1
- 189 0036 04D1     		bne	.L15
-  48:main.c        ****         USB_LoadInEP(EP_OUT, (uint8 *)USB_OUTPUT, 11); // check last parameter
- 190              		.loc 1 48 0
- 191 0038 0B22     		movs	r2, #11
- 192 003a 0749     		ldr	r1, .L19
- 193 003c 0220     		movs	r0, #2
- 194 003e FFF7FEFF 		bl	USB_LoadInEP
- 195              	.LVL22:
- 196              	.L15:
-  49:main.c        ****     }
-  50:main.c        ****      // if usb reading data is full, read 
-  51:main.c        ****     if (USB_GetEPState(EP_IN) == USB_IN_BUFFER_FULL){
- 197              		.loc 1 51 0
- 198 0042 0120     		movs	r0, #1
- 199 0044 FFF7FEFF 		bl	USB_GetEPState
- 200              	.LVL23:
- 201 0048 0028     		cmp	r0, #0
- 202 004a DBD1     		bne	.L16
-  52:main.c        ****         USB_ReadOutEP(EP_OUT, (uint8 *)USB_INPUT, 11); 
- 203              		.loc 1 52 0
- 204 004c 0B22     		movs	r2, #11
- 205 004e 0349     		ldr	r1, .L19+4
- 206 0050 0220     		movs	r0, #2
- 207 0052 FFF7FEFF 		bl	USB_ReadOutEP
- 208              	.LVL24:
- 209 0056 D5E7     		b	.L16
- 210              	.L20:
- 211              		.align	2
- 212              	.L19:
- 213 0058 04000000 		.word	.LANCHOR0+4
- 214 005c 00000000 		.word	.LANCHOR0
- 215              		.cfi_endproc
- 216              	.LFE65:
- 217              		.size	main, .-main
- 218              		.bss
- 219              		.align	2
- 220              		.set	.LANCHOR0,. + 0
- 221              		.type	USB_INPUT, %object
- 222              		.size	USB_INPUT, 2
- 223              	USB_INPUT:
- 224 0000 0000     		.space	2
- 225 0002 0000     		.space	2
- 226              		.type	USB_OUTPUT, %object
- 227              		.size	USB_OUTPUT, 2
- 228              	USB_OUTPUT:
- 229 0004 0000     		.space	2
-ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccemkpGs.s 			page 6
+ 181              	.LVL21:
+  47:main.c        ****     
+  48:main.c        ****      // if usb reading data is empty, write
+  49:main.c        ****     if (USB_GetEPState(EP_OUT) == USB_IN_BUFFER_EMPTY){
+ 182              		.loc 1 49 0
+ 183 0032 0220     		movs	r0, #2
+ 184 0034 FFF7FEFF 		bl	USB_GetEPState
+ 185              	.LVL22:
+ 186 0038 0128     		cmp	r0, #1
+ 187 003a E5D1     		bne	.L15
+  50:main.c        ****         USB_LoadInEP(EP_IN, (uint8 *)USB_OUTPUT, 11); // check last parameter
+ 188              		.loc 1 50 0
+ 189 003c 0B22     		movs	r2, #11
+ 190 003e 0249     		ldr	r1, .L18
+ 191 0040 FFF7FEFF 		bl	USB_LoadInEP
+ 192              	.LVL23:
+ 193 0044 E0E7     		b	.L15
+ 194              	.L19:
+ 195 0046 00BF     		.align	2
+ 196              	.L18:
+ 197 0048 00000000 		.word	.LANCHOR0
+ 198              		.cfi_endproc
+ 199              	.LFE65:
+ 200              		.size	main, .-main
+ 201              		.bss
+ 202              		.align	2
+ 203              		.set	.LANCHOR0,. + 0
+ 204              		.type	USB_OUTPUT, %object
+ 205              		.size	USB_OUTPUT, 2
+ 206              	USB_OUTPUT:
+ 207 0000 0000     		.space	2
+ 208              		.text
+ 209              	.Letext0:
+ 210              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 211              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 212              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 213              		.file 5 "Generated_Source\\PSoC5/USB.h"
+ 214              		.file 6 "Generated_Source\\PSoC5/Status_1_8.h"
+ 215              		.file 7 "Generated_Source\\PSoC5/Status_9_11.h"
+ 216              		.file 8 "Generated_Source\\PSoC5/led.h"
+ 217              		.file 9 "Generated_Source\\PSoC5/CyLib.h"
+ 218              		.file 10 "Generated_Source\\PSoC5/core_cm3.h"
+ 219              		.section	.debug_info,"",%progbits
+ 220              	.Ldebug_info0:
+ 221 0000 AE020000 		.4byte	0x2ae
+ 222 0004 0400     		.2byte	0x4
+ 223 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 224 000a 04       		.byte	0x4
+ 225 000b 01       		.uleb128 0x1
+ 226 000c 35000000 		.4byte	.LASF30
+ 227 0010 0C       		.byte	0xc
+ 228 0011 A3010000 		.4byte	.LASF31
+ 229 0015 B9010000 		.4byte	.LASF32
+ 230 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 231 001d 00000000 		.4byte	0
+ 232 0021 00000000 		.4byte	.Ldebug_line0
+ 233 0025 02       		.uleb128 0x2
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 6
 
 
- 230              		.text
- 231              	.Letext0:
- 232              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
- 233              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
- 234              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
- 235              		.file 5 "Generated_Source\\PSoC5/USB.h"
- 236              		.file 6 "Generated_Source\\PSoC5/Status_1_8.h"
- 237              		.file 7 "Generated_Source\\PSoC5/Status_9_11.h"
- 238              		.file 8 "Generated_Source\\PSoC5/led.h"
- 239              		.file 9 "Generated_Source\\PSoC5/CyLib.h"
- 240              		.file 10 "Generated_Source\\PSoC5/core_cm3.h"
- 241              		.section	.debug_info,"",%progbits
- 242              	.Ldebug_info0:
- 243 0000 F0020000 		.4byte	0x2f0
- 244 0004 0400     		.2byte	0x4
- 245 0006 00000000 		.4byte	.Ldebug_abbrev0
- 246 000a 04       		.byte	0x4
- 247 000b 01       		.uleb128 0x1
- 248 000c 3C000000 		.4byte	.LASF30
- 249 0010 0C       		.byte	0xc
- 250 0011 20020000 		.4byte	.LASF31
- 251 0015 1B010000 		.4byte	.LASF32
- 252 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 253 001d 00000000 		.4byte	0
- 254 0021 00000000 		.4byte	.Ldebug_line0
- 255 0025 02       		.uleb128 0x2
- 256 0026 01       		.byte	0x1
- 257 0027 06       		.byte	0x6
- 258 0028 75020000 		.4byte	.LASF0
- 259 002c 02       		.uleb128 0x2
- 260 002d 01       		.byte	0x1
- 261 002e 08       		.byte	0x8
- 262 002f 2E000000 		.4byte	.LASF1
- 263 0033 02       		.uleb128 0x2
- 264 0034 02       		.byte	0x2
- 265 0035 05       		.byte	0x5
- 266 0036 2C020000 		.4byte	.LASF2
- 267 003a 02       		.uleb128 0x2
- 268 003b 02       		.byte	0x2
- 269 003c 07       		.byte	0x7
- 270 003d EB000000 		.4byte	.LASF3
- 271 0041 03       		.uleb128 0x3
- 272 0042 0D000000 		.4byte	.LASF9
- 273 0046 02       		.byte	0x2
- 274 0047 3F       		.byte	0x3f
- 275 0048 4C000000 		.4byte	0x4c
- 276 004c 02       		.uleb128 0x2
- 277 004d 04       		.byte	0x4
- 278 004e 05       		.byte	0x5
- 279 004f 53020000 		.4byte	.LASF4
- 280 0053 02       		.uleb128 0x2
- 281 0054 04       		.byte	0x4
- 282 0055 07       		.byte	0x7
- 283 0056 D9000000 		.4byte	.LASF5
- 284 005a 02       		.uleb128 0x2
- 285 005b 08       		.byte	0x8
- 286 005c 05       		.byte	0x5
-ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccemkpGs.s 			page 7
+ 234 0026 01       		.byte	0x1
+ 235 0027 06       		.byte	0x6
+ 236 0028 5B020000 		.4byte	.LASF0
+ 237 002c 02       		.uleb128 0x2
+ 238 002d 01       		.byte	0x1
+ 239 002e 08       		.byte	0x8
+ 240 002f 27000000 		.4byte	.LASF1
+ 241 0033 02       		.uleb128 0x2
+ 242 0034 02       		.byte	0x2
+ 243 0035 05       		.byte	0x5
+ 244 0036 AF010000 		.4byte	.LASF2
+ 245 003a 02       		.uleb128 0x2
+ 246 003b 02       		.byte	0x2
+ 247 003c 07       		.byte	0x7
+ 248 003d E4000000 		.4byte	.LASF3
+ 249 0041 03       		.uleb128 0x3
+ 250 0042 0D000000 		.4byte	.LASF9
+ 251 0046 02       		.byte	0x2
+ 252 0047 3F       		.byte	0x3f
+ 253 0048 4C000000 		.4byte	0x4c
+ 254 004c 02       		.uleb128 0x2
+ 255 004d 04       		.byte	0x4
+ 256 004e 05       		.byte	0x5
+ 257 004f 39020000 		.4byte	.LASF4
+ 258 0053 02       		.uleb128 0x2
+ 259 0054 04       		.byte	0x4
+ 260 0055 07       		.byte	0x7
+ 261 0056 D2000000 		.4byte	.LASF5
+ 262 005a 02       		.uleb128 0x2
+ 263 005b 08       		.byte	0x8
+ 264 005c 05       		.byte	0x5
+ 265 005d 95010000 		.4byte	.LASF6
+ 266 0061 02       		.uleb128 0x2
+ 267 0062 08       		.byte	0x8
+ 268 0063 07       		.byte	0x7
+ 269 0064 54010000 		.4byte	.LASF7
+ 270 0068 04       		.uleb128 0x4
+ 271 0069 04       		.byte	0x4
+ 272 006a 05       		.byte	0x5
+ 273 006b 696E7400 		.ascii	"int\000"
+ 274 006f 02       		.uleb128 0x2
+ 275 0070 04       		.byte	0x4
+ 276 0071 07       		.byte	0x7
+ 277 0072 32010000 		.4byte	.LASF8
+ 278 0076 03       		.uleb128 0x3
+ 279 0077 7C010000 		.4byte	.LASF10
+ 280 007b 03       		.byte	0x3
+ 281 007c 2C       		.byte	0x2c
+ 282 007d 41000000 		.4byte	0x41
+ 283 0081 05       		.uleb128 0x5
+ 284 0082 1C020000 		.4byte	.LASF11
+ 285 0086 04       		.byte	0x4
+ 286 0087 E401     		.2byte	0x1e4
+ 287 0089 2C000000 		.4byte	0x2c
+ 288 008d 02       		.uleb128 0x2
+ 289 008e 04       		.byte	0x4
+ 290 008f 04       		.byte	0x4
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 7
 
 
- 287 005d 12020000 		.4byte	.LASF6
- 288 0061 02       		.uleb128 0x2
- 289 0062 08       		.byte	0x8
- 290 0063 07       		.byte	0x7
- 291 0064 C3010000 		.4byte	.LASF7
- 292 0068 04       		.uleb128 0x4
- 293 0069 04       		.byte	0x4
- 294 006a 05       		.byte	0x5
- 295 006b 696E7400 		.ascii	"int\000"
- 296 006f 02       		.uleb128 0x2
- 297 0070 04       		.byte	0x4
- 298 0071 07       		.byte	0x7
- 299 0072 A1010000 		.4byte	.LASF8
- 300 0076 03       		.uleb128 0x3
- 301 0077 F9010000 		.4byte	.LASF10
- 302 007b 03       		.byte	0x3
- 303 007c 2C       		.byte	0x2c
- 304 007d 41000000 		.4byte	0x41
- 305 0081 05       		.uleb128 0x5
- 306 0082 36020000 		.4byte	.LASF11
- 307 0086 04       		.byte	0x4
- 308 0087 E401     		.2byte	0x1e4
- 309 0089 2C000000 		.4byte	0x2c
- 310 008d 02       		.uleb128 0x2
- 311 008e 04       		.byte	0x4
- 312 008f 04       		.byte	0x4
- 313 0090 28000000 		.4byte	.LASF12
- 314 0094 02       		.uleb128 0x2
- 315 0095 08       		.byte	0x8
- 316 0096 04       		.byte	0x4
- 317 0097 17000000 		.4byte	.LASF13
- 318 009b 02       		.uleb128 0x2
- 319 009c 01       		.byte	0x1
- 320 009d 08       		.byte	0x8
- 321 009e 27020000 		.4byte	.LASF14
- 322 00a2 02       		.uleb128 0x2
- 323 00a3 08       		.byte	0x8
- 324 00a4 04       		.byte	0x4
- 325 00a5 69020000 		.4byte	.LASF15
- 326 00a9 02       		.uleb128 0x2
- 327 00aa 04       		.byte	0x4
- 328 00ab 07       		.byte	0x7
- 329 00ac 01020000 		.4byte	.LASF16
- 330 00b0 06       		.uleb128 0x6
- 331 00b1 0A020000 		.4byte	.LASF17
- 332 00b5 01       		.byte	0x1
- 333 00b6 0D       		.byte	0xd
- 334 00b7 00000000 		.4byte	.LFB63
- 335 00bb 44000000 		.4byte	.LFE63-.LFB63
- 336 00bf 01       		.uleb128 0x1
- 337 00c0 9C       		.byte	0x9c
- 338 00c1 2B010000 		.4byte	0x12b
- 339 00c5 07       		.uleb128 0x7
- 340 00c6 02000000 		.4byte	.LBB2
- 341 00ca 10000000 		.4byte	.LBE2-.LBB2
- 342 00ce E0000000 		.4byte	0xe0
- 343 00d2 08       		.uleb128 0x8
-ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccemkpGs.s 			page 8
+ 291 0090 21000000 		.4byte	.LASF12
+ 292 0094 02       		.uleb128 0x2
+ 293 0095 08       		.byte	0x8
+ 294 0096 04       		.byte	0x4
+ 295 0097 14010000 		.4byte	.LASF13
+ 296 009b 02       		.uleb128 0x2
+ 297 009c 01       		.byte	0x1
+ 298 009d 08       		.byte	0x8
+ 299 009e AA010000 		.4byte	.LASF14
+ 300 00a2 02       		.uleb128 0x2
+ 301 00a3 08       		.byte	0x8
+ 302 00a4 04       		.byte	0x4
+ 303 00a5 4F020000 		.4byte	.LASF15
+ 304 00a9 02       		.uleb128 0x2
+ 305 00aa 04       		.byte	0x4
+ 306 00ab 07       		.byte	0x7
+ 307 00ac 84010000 		.4byte	.LASF16
+ 308 00b0 06       		.uleb128 0x6
+ 309 00b1 8D010000 		.4byte	.LASF17
+ 310 00b5 01       		.byte	0x1
+ 311 00b6 0D       		.byte	0xd
+ 312 00b7 00000000 		.4byte	.LFB63
+ 313 00bb 3C000000 		.4byte	.LFE63-.LFB63
+ 314 00bf 01       		.uleb128 0x1
+ 315 00c0 9C       		.byte	0x9c
+ 316 00c1 2B010000 		.4byte	0x12b
+ 317 00c5 07       		.uleb128 0x7
+ 318 00c6 02000000 		.4byte	.LBB2
+ 319 00ca 10000000 		.4byte	.LBE2-.LBB2
+ 320 00ce E0000000 		.4byte	0xe0
+ 321 00d2 08       		.uleb128 0x8
+ 322 00d3 6900     		.ascii	"i\000"
+ 323 00d5 01       		.byte	0x1
+ 324 00d6 0E       		.byte	0xe
+ 325 00d7 81000000 		.4byte	0x81
+ 326 00db 00000000 		.4byte	.LLST0
+ 327 00df 00       		.byte	0
+ 328 00e0 07       		.uleb128 0x7
+ 329 00e1 12000000 		.4byte	.LBB3
+ 330 00e5 0C000000 		.4byte	.LBE3-.LBB3
+ 331 00e9 FB000000 		.4byte	0xfb
+ 332 00ed 08       		.uleb128 0x8
+ 333 00ee 6A00     		.ascii	"j\000"
+ 334 00f0 01       		.byte	0x1
+ 335 00f1 11       		.byte	0x11
+ 336 00f2 81000000 		.4byte	0x81
+ 337 00f6 2A000000 		.4byte	.LLST1
+ 338 00fa 00       		.byte	0
+ 339 00fb 07       		.uleb128 0x7
+ 340 00fc 1E000000 		.4byte	.LBB4
+ 341 0100 0E000000 		.4byte	.LBE4-.LBB4
+ 342 0104 16010000 		.4byte	0x116
+ 343 0108 08       		.uleb128 0x8
+ 344 0109 6B00     		.ascii	"k\000"
+ 345 010b 01       		.byte	0x1
+ 346 010c 14       		.byte	0x14
+ 347 010d 81000000 		.4byte	0x81
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 8
 
 
- 344 00d3 6900     		.ascii	"i\000"
- 345 00d5 01       		.byte	0x1
- 346 00d6 0E       		.byte	0xe
- 347 00d7 81000000 		.4byte	0x81
- 348 00db 00000000 		.4byte	.LLST0
- 349 00df 00       		.byte	0
- 350 00e0 07       		.uleb128 0x7
- 351 00e1 12000000 		.4byte	.LBB3
- 352 00e5 12000000 		.4byte	.LBE3-.LBB3
- 353 00e9 FB000000 		.4byte	0xfb
- 354 00ed 08       		.uleb128 0x8
- 355 00ee 6A00     		.ascii	"j\000"
- 356 00f0 01       		.byte	0x1
- 357 00f1 11       		.byte	0x11
- 358 00f2 81000000 		.4byte	0x81
- 359 00f6 2A000000 		.4byte	.LLST1
- 360 00fa 00       		.byte	0
- 361 00fb 07       		.uleb128 0x7
- 362 00fc 24000000 		.4byte	.LBB4
- 363 0100 10000000 		.4byte	.LBE4-.LBB4
- 364 0104 16010000 		.4byte	0x116
- 365 0108 08       		.uleb128 0x8
- 366 0109 6B00     		.ascii	"k\000"
- 367 010b 01       		.byte	0x1
- 368 010c 14       		.byte	0x14
- 369 010d 81000000 		.4byte	0x81
- 370 0111 48000000 		.4byte	.LLST2
- 371 0115 00       		.byte	0
- 372 0116 09       		.uleb128 0x9
- 373 0117 3C000000 		.4byte	.LVL12
- 374 011b 8B020000 		.4byte	0x28b
- 375 011f 0A       		.uleb128 0xa
- 376 0120 01       		.uleb128 0x1
- 377 0121 50       		.byte	0x50
- 378 0122 01       		.uleb128 0x1
- 379 0123 30       		.byte	0x30
- 380 0124 0A       		.uleb128 0xa
- 381 0125 01       		.uleb128 0x1
- 382 0126 51       		.byte	0x51
- 383 0127 01       		.uleb128 0x1
- 384 0128 32       		.byte	0x32
- 385 0129 00       		.byte	0
- 386 012a 00       		.byte	0
- 387 012b 06       		.uleb128 0x6
- 388 012c 46020000 		.4byte	.LASF18
- 389 0130 01       		.byte	0x1
- 390 0131 1A       		.byte	0x1a
- 391 0132 00000000 		.4byte	.LFB64
- 392 0136 0C000000 		.4byte	.LFE64-.LFB64
- 393 013a 01       		.uleb128 0x1
- 394 013b 9C       		.byte	0x9c
- 395 013c 53010000 		.4byte	0x153
- 396 0140 0B       		.uleb128 0xb
- 397 0141 06000000 		.4byte	.LVL13
- 398 0145 97020000 		.4byte	0x297
- 399 0149 0B       		.uleb128 0xb
- 400 014a 0A000000 		.4byte	.LVL14
-ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccemkpGs.s 			page 9
+ 348 0111 48000000 		.4byte	.LLST2
+ 349 0115 00       		.byte	0
+ 350 0116 09       		.uleb128 0x9
+ 351 0117 34000000 		.4byte	.LVL12
+ 352 011b 55020000 		.4byte	0x255
+ 353 011f 0A       		.uleb128 0xa
+ 354 0120 01       		.uleb128 0x1
+ 355 0121 50       		.byte	0x50
+ 356 0122 01       		.uleb128 0x1
+ 357 0123 30       		.byte	0x30
+ 358 0124 0A       		.uleb128 0xa
+ 359 0125 01       		.uleb128 0x1
+ 360 0126 51       		.byte	0x51
+ 361 0127 01       		.uleb128 0x1
+ 362 0128 32       		.byte	0x32
+ 363 0129 00       		.byte	0
+ 364 012a 00       		.byte	0
+ 365 012b 06       		.uleb128 0x6
+ 366 012c 2C020000 		.4byte	.LASF18
+ 367 0130 01       		.byte	0x1
+ 368 0131 1A       		.byte	0x1a
+ 369 0132 00000000 		.4byte	.LFB64
+ 370 0136 0C000000 		.4byte	.LFE64-.LFB64
+ 371 013a 01       		.uleb128 0x1
+ 372 013b 9C       		.byte	0x9c
+ 373 013c 53010000 		.4byte	0x153
+ 374 0140 0B       		.uleb128 0xb
+ 375 0141 06000000 		.4byte	.LVL13
+ 376 0145 61020000 		.4byte	0x261
+ 377 0149 0B       		.uleb128 0xb
+ 378 014a 0A000000 		.4byte	.LVL14
+ 379 014e 6C020000 		.4byte	0x26c
+ 380 0152 00       		.byte	0
+ 381 0153 0C       		.uleb128 0xc
+ 382 0154 1B010000 		.4byte	.LASF33
+ 383 0158 01       		.byte	0x1
+ 384 0159 20       		.byte	0x20
+ 385 015a 68000000 		.4byte	0x68
+ 386 015e 00000000 		.4byte	.LFB65
+ 387 0162 4C000000 		.4byte	.LFE65-.LFB65
+ 388 0166 01       		.uleb128 0x1
+ 389 0167 9C       		.byte	0x9c
+ 390 0168 0D020000 		.4byte	0x20d
+ 391 016c 0B       		.uleb128 0xb
+ 392 016d 08000000 		.4byte	.LVL15
+ 393 0171 B0000000 		.4byte	0xb0
+ 394 0175 0D       		.uleb128 0xd
+ 395 0176 0E000000 		.4byte	.LVL16
+ 396 017a 77020000 		.4byte	0x277
+ 397 017e 88010000 		.4byte	0x188
+ 398 0182 0A       		.uleb128 0xa
+ 399 0183 01       		.uleb128 0x1
+ 400 0184 50       		.byte	0x50
+ 401 0185 01       		.uleb128 0x1
+ 402 0186 31       		.byte	0x31
+ 403 0187 00       		.byte	0
+ 404 0188 0D       		.uleb128 0xd
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 9
 
 
- 401 014e A2020000 		.4byte	0x2a2
- 402 0152 00       		.byte	0
- 403 0153 0C       		.uleb128 0xc
- 404 0154 8A010000 		.4byte	.LASF33
- 405 0158 01       		.byte	0x1
- 406 0159 20       		.byte	0x20
- 407 015a 68000000 		.4byte	0x68
- 408 015e 00000000 		.4byte	.LFB65
- 409 0162 60000000 		.4byte	.LFE65-.LFB65
- 410 0166 01       		.uleb128 0x1
- 411 0167 9C       		.byte	0x9c
- 412 0168 3D020000 		.4byte	0x23d
- 413 016c 0D       		.uleb128 0xd
- 414 016d 0A000000 		.4byte	.LVL15
- 415 0171 AD020000 		.4byte	0x2ad
- 416 0175 7F010000 		.4byte	0x17f
- 417 0179 0A       		.uleb128 0xa
- 418 017a 01       		.uleb128 0x1
- 419 017b 50       		.byte	0x50
- 420 017c 01       		.uleb128 0x1
- 421 017d 31       		.byte	0x31
- 422 017e 00       		.byte	0
- 423 017f 0D       		.uleb128 0xd
- 424 0180 12000000 		.4byte	.LVL16
- 425 0184 B8020000 		.4byte	0x2b8
- 426 0188 94010000 		.4byte	0x194
- 427 018c 0A       		.uleb128 0xa
- 428 018d 01       		.uleb128 0x1
- 429 018e 50       		.byte	0x50
- 430 018f 03       		.uleb128 0x3
- 431 0190 0A       		.byte	0xa
- 432 0191 F401     		.2byte	0x1f4
- 433 0193 00       		.byte	0
- 434 0194 0D       		.uleb128 0xd
- 435 0195 18000000 		.4byte	.LVL17
- 436 0199 AD020000 		.4byte	0x2ad
- 437 019d A7010000 		.4byte	0x1a7
- 438 01a1 0A       		.uleb128 0xa
- 439 01a2 01       		.uleb128 0x1
- 440 01a3 50       		.byte	0x50
- 441 01a4 01       		.uleb128 0x1
- 442 01a5 30       		.byte	0x30
- 443 01a6 00       		.byte	0
- 444 01a7 0D       		.uleb128 0xd
- 445 01a8 20000000 		.4byte	.LVL18
- 446 01ac B8020000 		.4byte	0x2b8
- 447 01b0 BC010000 		.4byte	0x1bc
- 448 01b4 0A       		.uleb128 0xa
- 449 01b5 01       		.uleb128 0x1
- 450 01b6 50       		.byte	0x50
- 451 01b7 03       		.uleb128 0x3
- 452 01b8 0A       		.byte	0xa
- 453 01b9 F401     		.2byte	0x1f4
- 454 01bb 00       		.byte	0
- 455 01bc 0D       		.uleb128 0xd
- 456 01bd 26000000 		.4byte	.LVL19
- 457 01c1 C3020000 		.4byte	0x2c3
-ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccemkpGs.s 			page 10
+ 405 0189 16000000 		.4byte	.LVL17
+ 406 018d 82020000 		.4byte	0x282
+ 407 0191 9D010000 		.4byte	0x19d
+ 408 0195 0A       		.uleb128 0xa
+ 409 0196 01       		.uleb128 0x1
+ 410 0197 50       		.byte	0x50
+ 411 0198 03       		.uleb128 0x3
+ 412 0199 0A       		.byte	0xa
+ 413 019a F401     		.2byte	0x1f4
+ 414 019c 00       		.byte	0
+ 415 019d 0D       		.uleb128 0xd
+ 416 019e 1C000000 		.4byte	.LVL18
+ 417 01a2 77020000 		.4byte	0x277
+ 418 01a6 B0010000 		.4byte	0x1b0
+ 419 01aa 0A       		.uleb128 0xa
+ 420 01ab 01       		.uleb128 0x1
+ 421 01ac 50       		.byte	0x50
+ 422 01ad 01       		.uleb128 0x1
+ 423 01ae 30       		.byte	0x30
+ 424 01af 00       		.byte	0
+ 425 01b0 0D       		.uleb128 0xd
+ 426 01b1 24000000 		.4byte	.LVL19
+ 427 01b5 82020000 		.4byte	0x282
+ 428 01b9 C5010000 		.4byte	0x1c5
+ 429 01bd 0A       		.uleb128 0xa
+ 430 01be 01       		.uleb128 0x1
+ 431 01bf 50       		.byte	0x50
+ 432 01c0 03       		.uleb128 0x3
+ 433 01c1 0A       		.byte	0xa
+ 434 01c2 F401     		.2byte	0x1f4
+ 435 01c4 00       		.byte	0
+ 436 01c5 0D       		.uleb128 0xd
+ 437 01c6 2A000000 		.4byte	.LVL20
+ 438 01ca 8D020000 		.4byte	0x28d
+ 439 01ce D8010000 		.4byte	0x1d8
+ 440 01d2 0A       		.uleb128 0xa
+ 441 01d3 01       		.uleb128 0x1
+ 442 01d4 50       		.byte	0x50
+ 443 01d5 01       		.uleb128 0x1
+ 444 01d6 32       		.byte	0x32
+ 445 01d7 00       		.byte	0
+ 446 01d8 0B       		.uleb128 0xb
+ 447 01d9 32000000 		.4byte	.LVL21
+ 448 01dd 2B010000 		.4byte	0x12b
+ 449 01e1 0D       		.uleb128 0xd
+ 450 01e2 38000000 		.4byte	.LVL22
+ 451 01e6 99020000 		.4byte	0x299
+ 452 01ea F4010000 		.4byte	0x1f4
+ 453 01ee 0A       		.uleb128 0xa
+ 454 01ef 01       		.uleb128 0x1
+ 455 01f0 50       		.byte	0x50
+ 456 01f1 01       		.uleb128 0x1
+ 457 01f2 32       		.byte	0x32
+ 458 01f3 00       		.byte	0
+ 459 01f4 09       		.uleb128 0x9
+ 460 01f5 44000000 		.4byte	.LVL23
+ 461 01f9 A5020000 		.4byte	0x2a5
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 10
 
 
- 458 01c5 CF010000 		.4byte	0x1cf
- 459 01c9 0A       		.uleb128 0xa
- 460 01ca 01       		.uleb128 0x1
- 461 01cb 50       		.byte	0x50
- 462 01cc 01       		.uleb128 0x1
- 463 01cd 31       		.byte	0x31
- 464 01ce 00       		.byte	0
- 465 01cf 0B       		.uleb128 0xb
- 466 01d0 2E000000 		.4byte	.LVL20
- 467 01d4 2B010000 		.4byte	0x12b
- 468 01d8 0D       		.uleb128 0xd
- 469 01d9 34000000 		.4byte	.LVL21
- 470 01dd CF020000 		.4byte	0x2cf
- 471 01e1 EB010000 		.4byte	0x1eb
- 472 01e5 0A       		.uleb128 0xa
- 473 01e6 01       		.uleb128 0x1
- 474 01e7 50       		.byte	0x50
- 475 01e8 01       		.uleb128 0x1
- 476 01e9 31       		.byte	0x31
- 477 01ea 00       		.byte	0
- 478 01eb 0D       		.uleb128 0xd
- 479 01ec 42000000 		.4byte	.LVL22
- 480 01f0 DB020000 		.4byte	0x2db
- 481 01f4 0C020000 		.4byte	0x20c
- 482 01f8 0A       		.uleb128 0xa
- 483 01f9 01       		.uleb128 0x1
- 484 01fa 50       		.byte	0x50
- 485 01fb 01       		.uleb128 0x1
- 486 01fc 32       		.byte	0x32
- 487 01fd 0A       		.uleb128 0xa
- 488 01fe 01       		.uleb128 0x1
- 489 01ff 51       		.byte	0x51
- 490 0200 05       		.uleb128 0x5
- 491 0201 03       		.byte	0x3
- 492 0202 04000000 		.4byte	.LANCHOR0+4
- 493 0206 0A       		.uleb128 0xa
- 494 0207 01       		.uleb128 0x1
- 495 0208 52       		.byte	0x52
- 496 0209 01       		.uleb128 0x1
- 497 020a 3B       		.byte	0x3b
- 498 020b 00       		.byte	0
- 499 020c 0D       		.uleb128 0xd
- 500 020d 48000000 		.4byte	.LVL23
- 501 0211 CF020000 		.4byte	0x2cf
- 502 0215 1F020000 		.4byte	0x21f
- 503 0219 0A       		.uleb128 0xa
- 504 021a 01       		.uleb128 0x1
- 505 021b 50       		.byte	0x50
- 506 021c 01       		.uleb128 0x1
- 507 021d 31       		.byte	0x31
- 508 021e 00       		.byte	0
- 509 021f 09       		.uleb128 0x9
- 510 0220 56000000 		.4byte	.LVL24
- 511 0224 E7020000 		.4byte	0x2e7
- 512 0228 0A       		.uleb128 0xa
- 513 0229 01       		.uleb128 0x1
- 514 022a 50       		.byte	0x50
-ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccemkpGs.s 			page 11
+ 462 01fd 0A       		.uleb128 0xa
+ 463 01fe 01       		.uleb128 0x1
+ 464 01ff 51       		.byte	0x51
+ 465 0200 05       		.uleb128 0x5
+ 466 0201 03       		.byte	0x3
+ 467 0202 00000000 		.4byte	.LANCHOR0
+ 468 0206 0A       		.uleb128 0xa
+ 469 0207 01       		.uleb128 0x1
+ 470 0208 52       		.byte	0x52
+ 471 0209 01       		.uleb128 0x1
+ 472 020a 3B       		.byte	0x3b
+ 473 020b 00       		.byte	0
+ 474 020c 00       		.byte	0
+ 475 020d 0E       		.uleb128 0xe
+ 476 020e 81000000 		.4byte	0x81
+ 477 0212 1D020000 		.4byte	0x21d
+ 478 0216 0F       		.uleb128 0xf
+ 479 0217 A9000000 		.4byte	0xa9
+ 480 021b 01       		.byte	0x1
+ 481 021c 00       		.byte	0
+ 482 021d 10       		.uleb128 0x10
+ 483 021e 42020000 		.4byte	.LASF19
+ 484 0222 01       		.byte	0x1
+ 485 0223 09       		.byte	0x9
+ 486 0224 0D020000 		.4byte	0x20d
+ 487 0228 10       		.uleb128 0x10
+ 488 0229 3F010000 		.4byte	.LASF20
+ 489 022d 01       		.byte	0x1
+ 490 022e 0A       		.byte	0xa
+ 491 022f 0D020000 		.4byte	0x20d
+ 492 0233 11       		.uleb128 0x11
+ 493 0234 49010000 		.4byte	.LASF21
+ 494 0238 01       		.byte	0x1
+ 495 0239 0B       		.byte	0xb
+ 496 023a 0D020000 		.4byte	0x20d
+ 497 023e 05       		.uleb128 0x5
+ 498 023f 03       		.byte	0x3
+ 499 0240 00000000 		.4byte	USB_OUTPUT
+ 500 0244 12       		.uleb128 0x12
+ 501 0245 07010000 		.4byte	.LASF34
+ 502 0249 0A       		.byte	0xa
+ 503 024a 1207     		.2byte	0x712
+ 504 024c 50020000 		.4byte	0x250
+ 505 0250 13       		.uleb128 0x13
+ 506 0251 76000000 		.4byte	0x76
+ 507 0255 14       		.uleb128 0x14
+ 508 0256 22020000 		.4byte	.LASF22
+ 509 025a 22020000 		.4byte	.LASF22
+ 510 025e 05       		.byte	0x5
+ 511 025f 2F01     		.2byte	0x12f
+ 512 0261 15       		.uleb128 0x15
+ 513 0262 F7000000 		.4byte	.LASF23
+ 514 0266 F7000000 		.4byte	.LASF23
+ 515 026a 06       		.byte	0x6
+ 516 026b 30       		.byte	0x30
+ 517 026c 15       		.uleb128 0x15
+ 518 026d 6B010000 		.4byte	.LASF24
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 11
 
 
- 515 022b 01       		.uleb128 0x1
- 516 022c 32       		.byte	0x32
- 517 022d 0A       		.uleb128 0xa
- 518 022e 01       		.uleb128 0x1
- 519 022f 51       		.byte	0x51
- 520 0230 05       		.uleb128 0x5
- 521 0231 03       		.byte	0x3
- 522 0232 00000000 		.4byte	.LANCHOR0
- 523 0236 0A       		.uleb128 0xa
- 524 0237 01       		.uleb128 0x1
- 525 0238 52       		.byte	0x52
- 526 0239 01       		.uleb128 0x1
- 527 023a 3B       		.byte	0x3b
- 528 023b 00       		.byte	0
- 529 023c 00       		.byte	0
- 530 023d 0E       		.uleb128 0xe
- 531 023e 81000000 		.4byte	0x81
- 532 0242 4D020000 		.4byte	0x24d
- 533 0246 0F       		.uleb128 0xf
- 534 0247 A9000000 		.4byte	0xa9
- 535 024b 01       		.byte	0x1
- 536 024c 00       		.byte	0
- 537 024d 10       		.uleb128 0x10
- 538 024e 5C020000 		.4byte	.LASF34
- 539 0252 01       		.byte	0x1
- 540 0253 09       		.byte	0x9
- 541 0254 3D020000 		.4byte	0x23d
- 542 0258 11       		.uleb128 0x11
- 543 0259 AE010000 		.4byte	.LASF19
- 544 025d 01       		.byte	0x1
- 545 025e 0A       		.byte	0xa
- 546 025f 3D020000 		.4byte	0x23d
- 547 0263 05       		.uleb128 0x5
- 548 0264 03       		.byte	0x3
- 549 0265 00000000 		.4byte	USB_INPUT
- 550 0269 11       		.uleb128 0x11
- 551 026a B8010000 		.4byte	.LASF20
- 552 026e 01       		.byte	0x1
- 553 026f 0B       		.byte	0xb
- 554 0270 3D020000 		.4byte	0x23d
- 555 0274 05       		.uleb128 0x5
- 556 0275 03       		.byte	0x3
- 557 0276 04000000 		.4byte	USB_OUTPUT
- 558 027a 12       		.uleb128 0x12
- 559 027b 0E010000 		.4byte	.LASF35
- 560 027f 0A       		.byte	0xa
- 561 0280 1207     		.2byte	0x712
- 562 0282 86020000 		.4byte	0x286
- 563 0286 13       		.uleb128 0x13
- 564 0287 76000000 		.4byte	0x76
- 565 028b 14       		.uleb128 0x14
- 566 028c 3C020000 		.4byte	.LASF21
- 567 0290 3C020000 		.4byte	.LASF21
- 568 0294 05       		.byte	0x5
- 569 0295 2F01     		.2byte	0x12f
- 570 0297 15       		.uleb128 0x15
- 571 0298 FE000000 		.4byte	.LASF22
-ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccemkpGs.s 			page 12
+ 519 0271 6B010000 		.4byte	.LASF24
+ 520 0275 07       		.byte	0x7
+ 521 0276 30       		.byte	0x30
+ 522 0277 15       		.uleb128 0x15
+ 523 0278 17000000 		.4byte	.LASF25
+ 524 027c 17000000 		.4byte	.LASF25
+ 525 0280 08       		.byte	0x8
+ 526 0281 26       		.byte	0x26
+ 527 0282 15       		.uleb128 0x15
+ 528 0283 67020000 		.4byte	.LASF26
+ 529 0287 67020000 		.4byte	.LASF26
+ 530 028b 09       		.byte	0x9
+ 531 028c 76       		.byte	0x76
+ 532 028d 14       		.uleb128 0x14
+ 533 028e 20010000 		.4byte	.LASF27
+ 534 0292 20010000 		.4byte	.LASF27
+ 535 0296 05       		.byte	0x5
+ 536 0297 3E01     		.2byte	0x13e
+ 537 0299 14       		.uleb128 0x14
+ 538 029a C3000000 		.4byte	.LASF28
+ 539 029e C3000000 		.4byte	.LASF28
+ 540 02a2 05       		.byte	0x5
+ 541 02a3 3501     		.2byte	0x135
+ 542 02a5 14       		.uleb128 0x14
+ 543 02a6 00000000 		.4byte	.LASF29
+ 544 02aa 00000000 		.4byte	.LASF29
+ 545 02ae 05       		.byte	0x5
+ 546 02af 3701     		.2byte	0x137
+ 547 02b1 00       		.byte	0
+ 548              		.section	.debug_abbrev,"",%progbits
+ 549              	.Ldebug_abbrev0:
+ 550 0000 01       		.uleb128 0x1
+ 551 0001 11       		.uleb128 0x11
+ 552 0002 01       		.byte	0x1
+ 553 0003 25       		.uleb128 0x25
+ 554 0004 0E       		.uleb128 0xe
+ 555 0005 13       		.uleb128 0x13
+ 556 0006 0B       		.uleb128 0xb
+ 557 0007 03       		.uleb128 0x3
+ 558 0008 0E       		.uleb128 0xe
+ 559 0009 1B       		.uleb128 0x1b
+ 560 000a 0E       		.uleb128 0xe
+ 561 000b 55       		.uleb128 0x55
+ 562 000c 17       		.uleb128 0x17
+ 563 000d 11       		.uleb128 0x11
+ 564 000e 01       		.uleb128 0x1
+ 565 000f 10       		.uleb128 0x10
+ 566 0010 17       		.uleb128 0x17
+ 567 0011 00       		.byte	0
+ 568 0012 00       		.byte	0
+ 569 0013 02       		.uleb128 0x2
+ 570 0014 24       		.uleb128 0x24
+ 571 0015 00       		.byte	0
+ 572 0016 0B       		.uleb128 0xb
+ 573 0017 0B       		.uleb128 0xb
+ 574 0018 3E       		.uleb128 0x3e
+ 575 0019 0B       		.uleb128 0xb
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 12
 
 
- 572 029c FE000000 		.4byte	.LASF22
- 573 02a0 06       		.byte	0x6
- 574 02a1 30       		.byte	0x30
- 575 02a2 15       		.uleb128 0x15
- 576 02a3 E8010000 		.4byte	.LASF23
- 577 02a7 E8010000 		.4byte	.LASF23
- 578 02ab 07       		.byte	0x7
- 579 02ac 30       		.byte	0x30
- 580 02ad 15       		.uleb128 0x15
- 581 02ae 1E000000 		.4byte	.LASF24
- 582 02b2 1E000000 		.4byte	.LASF24
- 583 02b6 08       		.byte	0x8
- 584 02b7 26       		.byte	0x26
- 585 02b8 15       		.uleb128 0x15
- 586 02b9 81020000 		.4byte	.LASF25
- 587 02bd 81020000 		.4byte	.LASF25
- 588 02c1 09       		.byte	0x9
- 589 02c2 76       		.byte	0x76
- 590 02c3 14       		.uleb128 0x14
- 591 02c4 8F010000 		.4byte	.LASF26
- 592 02c8 8F010000 		.4byte	.LASF26
- 593 02cc 05       		.byte	0x5
- 594 02cd 3E01     		.2byte	0x13e
- 595 02cf 14       		.uleb128 0x14
- 596 02d0 CA000000 		.4byte	.LASF27
- 597 02d4 CA000000 		.4byte	.LASF27
- 598 02d8 05       		.byte	0x5
- 599 02d9 3501     		.2byte	0x135
- 600 02db 14       		.uleb128 0x14
- 601 02dc 00000000 		.4byte	.LASF28
- 602 02e0 00000000 		.4byte	.LASF28
- 603 02e4 05       		.byte	0x5
- 604 02e5 3701     		.2byte	0x137
- 605 02e7 14       		.uleb128 0x14
- 606 02e8 DA010000 		.4byte	.LASF29
- 607 02ec DA010000 		.4byte	.LASF29
- 608 02f0 05       		.byte	0x5
- 609 02f1 3901     		.2byte	0x139
- 610 02f3 00       		.byte	0
- 611              		.section	.debug_abbrev,"",%progbits
- 612              	.Ldebug_abbrev0:
- 613 0000 01       		.uleb128 0x1
- 614 0001 11       		.uleb128 0x11
- 615 0002 01       		.byte	0x1
- 616 0003 25       		.uleb128 0x25
- 617 0004 0E       		.uleb128 0xe
- 618 0005 13       		.uleb128 0x13
- 619 0006 0B       		.uleb128 0xb
- 620 0007 03       		.uleb128 0x3
- 621 0008 0E       		.uleb128 0xe
- 622 0009 1B       		.uleb128 0x1b
- 623 000a 0E       		.uleb128 0xe
- 624 000b 55       		.uleb128 0x55
- 625 000c 17       		.uleb128 0x17
- 626 000d 11       		.uleb128 0x11
- 627 000e 01       		.uleb128 0x1
- 628 000f 10       		.uleb128 0x10
-ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccemkpGs.s 			page 13
+ 576 001a 03       		.uleb128 0x3
+ 577 001b 0E       		.uleb128 0xe
+ 578 001c 00       		.byte	0
+ 579 001d 00       		.byte	0
+ 580 001e 03       		.uleb128 0x3
+ 581 001f 16       		.uleb128 0x16
+ 582 0020 00       		.byte	0
+ 583 0021 03       		.uleb128 0x3
+ 584 0022 0E       		.uleb128 0xe
+ 585 0023 3A       		.uleb128 0x3a
+ 586 0024 0B       		.uleb128 0xb
+ 587 0025 3B       		.uleb128 0x3b
+ 588 0026 0B       		.uleb128 0xb
+ 589 0027 49       		.uleb128 0x49
+ 590 0028 13       		.uleb128 0x13
+ 591 0029 00       		.byte	0
+ 592 002a 00       		.byte	0
+ 593 002b 04       		.uleb128 0x4
+ 594 002c 24       		.uleb128 0x24
+ 595 002d 00       		.byte	0
+ 596 002e 0B       		.uleb128 0xb
+ 597 002f 0B       		.uleb128 0xb
+ 598 0030 3E       		.uleb128 0x3e
+ 599 0031 0B       		.uleb128 0xb
+ 600 0032 03       		.uleb128 0x3
+ 601 0033 08       		.uleb128 0x8
+ 602 0034 00       		.byte	0
+ 603 0035 00       		.byte	0
+ 604 0036 05       		.uleb128 0x5
+ 605 0037 16       		.uleb128 0x16
+ 606 0038 00       		.byte	0
+ 607 0039 03       		.uleb128 0x3
+ 608 003a 0E       		.uleb128 0xe
+ 609 003b 3A       		.uleb128 0x3a
+ 610 003c 0B       		.uleb128 0xb
+ 611 003d 3B       		.uleb128 0x3b
+ 612 003e 05       		.uleb128 0x5
+ 613 003f 49       		.uleb128 0x49
+ 614 0040 13       		.uleb128 0x13
+ 615 0041 00       		.byte	0
+ 616 0042 00       		.byte	0
+ 617 0043 06       		.uleb128 0x6
+ 618 0044 2E       		.uleb128 0x2e
+ 619 0045 01       		.byte	0x1
+ 620 0046 3F       		.uleb128 0x3f
+ 621 0047 19       		.uleb128 0x19
+ 622 0048 03       		.uleb128 0x3
+ 623 0049 0E       		.uleb128 0xe
+ 624 004a 3A       		.uleb128 0x3a
+ 625 004b 0B       		.uleb128 0xb
+ 626 004c 3B       		.uleb128 0x3b
+ 627 004d 0B       		.uleb128 0xb
+ 628 004e 27       		.uleb128 0x27
+ 629 004f 19       		.uleb128 0x19
+ 630 0050 11       		.uleb128 0x11
+ 631 0051 01       		.uleb128 0x1
+ 632 0052 12       		.uleb128 0x12
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 13
 
 
- 629 0010 17       		.uleb128 0x17
- 630 0011 00       		.byte	0
- 631 0012 00       		.byte	0
- 632 0013 02       		.uleb128 0x2
- 633 0014 24       		.uleb128 0x24
- 634 0015 00       		.byte	0
- 635 0016 0B       		.uleb128 0xb
- 636 0017 0B       		.uleb128 0xb
- 637 0018 3E       		.uleb128 0x3e
- 638 0019 0B       		.uleb128 0xb
- 639 001a 03       		.uleb128 0x3
- 640 001b 0E       		.uleb128 0xe
- 641 001c 00       		.byte	0
- 642 001d 00       		.byte	0
- 643 001e 03       		.uleb128 0x3
- 644 001f 16       		.uleb128 0x16
- 645 0020 00       		.byte	0
- 646 0021 03       		.uleb128 0x3
- 647 0022 0E       		.uleb128 0xe
- 648 0023 3A       		.uleb128 0x3a
- 649 0024 0B       		.uleb128 0xb
- 650 0025 3B       		.uleb128 0x3b
- 651 0026 0B       		.uleb128 0xb
- 652 0027 49       		.uleb128 0x49
- 653 0028 13       		.uleb128 0x13
- 654 0029 00       		.byte	0
- 655 002a 00       		.byte	0
- 656 002b 04       		.uleb128 0x4
- 657 002c 24       		.uleb128 0x24
- 658 002d 00       		.byte	0
- 659 002e 0B       		.uleb128 0xb
- 660 002f 0B       		.uleb128 0xb
- 661 0030 3E       		.uleb128 0x3e
- 662 0031 0B       		.uleb128 0xb
- 663 0032 03       		.uleb128 0x3
- 664 0033 08       		.uleb128 0x8
- 665 0034 00       		.byte	0
- 666 0035 00       		.byte	0
- 667 0036 05       		.uleb128 0x5
- 668 0037 16       		.uleb128 0x16
- 669 0038 00       		.byte	0
- 670 0039 03       		.uleb128 0x3
- 671 003a 0E       		.uleb128 0xe
- 672 003b 3A       		.uleb128 0x3a
- 673 003c 0B       		.uleb128 0xb
- 674 003d 3B       		.uleb128 0x3b
- 675 003e 05       		.uleb128 0x5
- 676 003f 49       		.uleb128 0x49
- 677 0040 13       		.uleb128 0x13
- 678 0041 00       		.byte	0
- 679 0042 00       		.byte	0
- 680 0043 06       		.uleb128 0x6
- 681 0044 2E       		.uleb128 0x2e
- 682 0045 01       		.byte	0x1
- 683 0046 3F       		.uleb128 0x3f
- 684 0047 19       		.uleb128 0x19
- 685 0048 03       		.uleb128 0x3
-ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccemkpGs.s 			page 14
+ 633 0053 06       		.uleb128 0x6
+ 634 0054 40       		.uleb128 0x40
+ 635 0055 18       		.uleb128 0x18
+ 636 0056 9742     		.uleb128 0x2117
+ 637 0058 19       		.uleb128 0x19
+ 638 0059 01       		.uleb128 0x1
+ 639 005a 13       		.uleb128 0x13
+ 640 005b 00       		.byte	0
+ 641 005c 00       		.byte	0
+ 642 005d 07       		.uleb128 0x7
+ 643 005e 0B       		.uleb128 0xb
+ 644 005f 01       		.byte	0x1
+ 645 0060 11       		.uleb128 0x11
+ 646 0061 01       		.uleb128 0x1
+ 647 0062 12       		.uleb128 0x12
+ 648 0063 06       		.uleb128 0x6
+ 649 0064 01       		.uleb128 0x1
+ 650 0065 13       		.uleb128 0x13
+ 651 0066 00       		.byte	0
+ 652 0067 00       		.byte	0
+ 653 0068 08       		.uleb128 0x8
+ 654 0069 34       		.uleb128 0x34
+ 655 006a 00       		.byte	0
+ 656 006b 03       		.uleb128 0x3
+ 657 006c 08       		.uleb128 0x8
+ 658 006d 3A       		.uleb128 0x3a
+ 659 006e 0B       		.uleb128 0xb
+ 660 006f 3B       		.uleb128 0x3b
+ 661 0070 0B       		.uleb128 0xb
+ 662 0071 49       		.uleb128 0x49
+ 663 0072 13       		.uleb128 0x13
+ 664 0073 02       		.uleb128 0x2
+ 665 0074 17       		.uleb128 0x17
+ 666 0075 00       		.byte	0
+ 667 0076 00       		.byte	0
+ 668 0077 09       		.uleb128 0x9
+ 669 0078 898201   		.uleb128 0x4109
+ 670 007b 01       		.byte	0x1
+ 671 007c 11       		.uleb128 0x11
+ 672 007d 01       		.uleb128 0x1
+ 673 007e 31       		.uleb128 0x31
+ 674 007f 13       		.uleb128 0x13
+ 675 0080 00       		.byte	0
+ 676 0081 00       		.byte	0
+ 677 0082 0A       		.uleb128 0xa
+ 678 0083 8A8201   		.uleb128 0x410a
+ 679 0086 00       		.byte	0
+ 680 0087 02       		.uleb128 0x2
+ 681 0088 18       		.uleb128 0x18
+ 682 0089 9142     		.uleb128 0x2111
+ 683 008b 18       		.uleb128 0x18
+ 684 008c 00       		.byte	0
+ 685 008d 00       		.byte	0
+ 686 008e 0B       		.uleb128 0xb
+ 687 008f 898201   		.uleb128 0x4109
+ 688 0092 00       		.byte	0
+ 689 0093 11       		.uleb128 0x11
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 14
 
 
- 686 0049 0E       		.uleb128 0xe
- 687 004a 3A       		.uleb128 0x3a
- 688 004b 0B       		.uleb128 0xb
- 689 004c 3B       		.uleb128 0x3b
- 690 004d 0B       		.uleb128 0xb
- 691 004e 27       		.uleb128 0x27
- 692 004f 19       		.uleb128 0x19
- 693 0050 11       		.uleb128 0x11
- 694 0051 01       		.uleb128 0x1
- 695 0052 12       		.uleb128 0x12
- 696 0053 06       		.uleb128 0x6
- 697 0054 40       		.uleb128 0x40
- 698 0055 18       		.uleb128 0x18
- 699 0056 9742     		.uleb128 0x2117
- 700 0058 19       		.uleb128 0x19
- 701 0059 01       		.uleb128 0x1
- 702 005a 13       		.uleb128 0x13
- 703 005b 00       		.byte	0
- 704 005c 00       		.byte	0
- 705 005d 07       		.uleb128 0x7
- 706 005e 0B       		.uleb128 0xb
- 707 005f 01       		.byte	0x1
- 708 0060 11       		.uleb128 0x11
- 709 0061 01       		.uleb128 0x1
- 710 0062 12       		.uleb128 0x12
- 711 0063 06       		.uleb128 0x6
- 712 0064 01       		.uleb128 0x1
- 713 0065 13       		.uleb128 0x13
- 714 0066 00       		.byte	0
- 715 0067 00       		.byte	0
- 716 0068 08       		.uleb128 0x8
- 717 0069 34       		.uleb128 0x34
- 718 006a 00       		.byte	0
- 719 006b 03       		.uleb128 0x3
- 720 006c 08       		.uleb128 0x8
- 721 006d 3A       		.uleb128 0x3a
- 722 006e 0B       		.uleb128 0xb
- 723 006f 3B       		.uleb128 0x3b
- 724 0070 0B       		.uleb128 0xb
- 725 0071 49       		.uleb128 0x49
- 726 0072 13       		.uleb128 0x13
- 727 0073 02       		.uleb128 0x2
- 728 0074 17       		.uleb128 0x17
- 729 0075 00       		.byte	0
- 730 0076 00       		.byte	0
- 731 0077 09       		.uleb128 0x9
- 732 0078 898201   		.uleb128 0x4109
- 733 007b 01       		.byte	0x1
- 734 007c 11       		.uleb128 0x11
- 735 007d 01       		.uleb128 0x1
- 736 007e 31       		.uleb128 0x31
- 737 007f 13       		.uleb128 0x13
- 738 0080 00       		.byte	0
- 739 0081 00       		.byte	0
- 740 0082 0A       		.uleb128 0xa
- 741 0083 8A8201   		.uleb128 0x410a
- 742 0086 00       		.byte	0
-ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccemkpGs.s 			page 15
+ 690 0094 01       		.uleb128 0x1
+ 691 0095 31       		.uleb128 0x31
+ 692 0096 13       		.uleb128 0x13
+ 693 0097 00       		.byte	0
+ 694 0098 00       		.byte	0
+ 695 0099 0C       		.uleb128 0xc
+ 696 009a 2E       		.uleb128 0x2e
+ 697 009b 01       		.byte	0x1
+ 698 009c 3F       		.uleb128 0x3f
+ 699 009d 19       		.uleb128 0x19
+ 700 009e 03       		.uleb128 0x3
+ 701 009f 0E       		.uleb128 0xe
+ 702 00a0 3A       		.uleb128 0x3a
+ 703 00a1 0B       		.uleb128 0xb
+ 704 00a2 3B       		.uleb128 0x3b
+ 705 00a3 0B       		.uleb128 0xb
+ 706 00a4 27       		.uleb128 0x27
+ 707 00a5 19       		.uleb128 0x19
+ 708 00a6 49       		.uleb128 0x49
+ 709 00a7 13       		.uleb128 0x13
+ 710 00a8 8701     		.uleb128 0x87
+ 711 00aa 19       		.uleb128 0x19
+ 712 00ab 11       		.uleb128 0x11
+ 713 00ac 01       		.uleb128 0x1
+ 714 00ad 12       		.uleb128 0x12
+ 715 00ae 06       		.uleb128 0x6
+ 716 00af 40       		.uleb128 0x40
+ 717 00b0 18       		.uleb128 0x18
+ 718 00b1 9742     		.uleb128 0x2117
+ 719 00b3 19       		.uleb128 0x19
+ 720 00b4 01       		.uleb128 0x1
+ 721 00b5 13       		.uleb128 0x13
+ 722 00b6 00       		.byte	0
+ 723 00b7 00       		.byte	0
+ 724 00b8 0D       		.uleb128 0xd
+ 725 00b9 898201   		.uleb128 0x4109
+ 726 00bc 01       		.byte	0x1
+ 727 00bd 11       		.uleb128 0x11
+ 728 00be 01       		.uleb128 0x1
+ 729 00bf 31       		.uleb128 0x31
+ 730 00c0 13       		.uleb128 0x13
+ 731 00c1 01       		.uleb128 0x1
+ 732 00c2 13       		.uleb128 0x13
+ 733 00c3 00       		.byte	0
+ 734 00c4 00       		.byte	0
+ 735 00c5 0E       		.uleb128 0xe
+ 736 00c6 01       		.uleb128 0x1
+ 737 00c7 01       		.byte	0x1
+ 738 00c8 49       		.uleb128 0x49
+ 739 00c9 13       		.uleb128 0x13
+ 740 00ca 01       		.uleb128 0x1
+ 741 00cb 13       		.uleb128 0x13
+ 742 00cc 00       		.byte	0
+ 743 00cd 00       		.byte	0
+ 744 00ce 0F       		.uleb128 0xf
+ 745 00cf 21       		.uleb128 0x21
+ 746 00d0 00       		.byte	0
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 15
 
 
- 743 0087 02       		.uleb128 0x2
- 744 0088 18       		.uleb128 0x18
- 745 0089 9142     		.uleb128 0x2111
- 746 008b 18       		.uleb128 0x18
- 747 008c 00       		.byte	0
- 748 008d 00       		.byte	0
- 749 008e 0B       		.uleb128 0xb
- 750 008f 898201   		.uleb128 0x4109
- 751 0092 00       		.byte	0
- 752 0093 11       		.uleb128 0x11
- 753 0094 01       		.uleb128 0x1
- 754 0095 31       		.uleb128 0x31
- 755 0096 13       		.uleb128 0x13
- 756 0097 00       		.byte	0
- 757 0098 00       		.byte	0
- 758 0099 0C       		.uleb128 0xc
- 759 009a 2E       		.uleb128 0x2e
- 760 009b 01       		.byte	0x1
- 761 009c 3F       		.uleb128 0x3f
- 762 009d 19       		.uleb128 0x19
- 763 009e 03       		.uleb128 0x3
- 764 009f 0E       		.uleb128 0xe
- 765 00a0 3A       		.uleb128 0x3a
- 766 00a1 0B       		.uleb128 0xb
- 767 00a2 3B       		.uleb128 0x3b
- 768 00a3 0B       		.uleb128 0xb
- 769 00a4 27       		.uleb128 0x27
- 770 00a5 19       		.uleb128 0x19
- 771 00a6 49       		.uleb128 0x49
- 772 00a7 13       		.uleb128 0x13
- 773 00a8 8701     		.uleb128 0x87
- 774 00aa 19       		.uleb128 0x19
- 775 00ab 11       		.uleb128 0x11
- 776 00ac 01       		.uleb128 0x1
- 777 00ad 12       		.uleb128 0x12
- 778 00ae 06       		.uleb128 0x6
- 779 00af 40       		.uleb128 0x40
- 780 00b0 18       		.uleb128 0x18
- 781 00b1 9742     		.uleb128 0x2117
- 782 00b3 19       		.uleb128 0x19
- 783 00b4 01       		.uleb128 0x1
- 784 00b5 13       		.uleb128 0x13
- 785 00b6 00       		.byte	0
- 786 00b7 00       		.byte	0
- 787 00b8 0D       		.uleb128 0xd
- 788 00b9 898201   		.uleb128 0x4109
- 789 00bc 01       		.byte	0x1
- 790 00bd 11       		.uleb128 0x11
- 791 00be 01       		.uleb128 0x1
- 792 00bf 31       		.uleb128 0x31
- 793 00c0 13       		.uleb128 0x13
- 794 00c1 01       		.uleb128 0x1
- 795 00c2 13       		.uleb128 0x13
- 796 00c3 00       		.byte	0
- 797 00c4 00       		.byte	0
- 798 00c5 0E       		.uleb128 0xe
- 799 00c6 01       		.uleb128 0x1
-ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccemkpGs.s 			page 16
+ 747 00d1 49       		.uleb128 0x49
+ 748 00d2 13       		.uleb128 0x13
+ 749 00d3 2F       		.uleb128 0x2f
+ 750 00d4 0B       		.uleb128 0xb
+ 751 00d5 00       		.byte	0
+ 752 00d6 00       		.byte	0
+ 753 00d7 10       		.uleb128 0x10
+ 754 00d8 34       		.uleb128 0x34
+ 755 00d9 00       		.byte	0
+ 756 00da 03       		.uleb128 0x3
+ 757 00db 0E       		.uleb128 0xe
+ 758 00dc 3A       		.uleb128 0x3a
+ 759 00dd 0B       		.uleb128 0xb
+ 760 00de 3B       		.uleb128 0x3b
+ 761 00df 0B       		.uleb128 0xb
+ 762 00e0 49       		.uleb128 0x49
+ 763 00e1 13       		.uleb128 0x13
+ 764 00e2 00       		.byte	0
+ 765 00e3 00       		.byte	0
+ 766 00e4 11       		.uleb128 0x11
+ 767 00e5 34       		.uleb128 0x34
+ 768 00e6 00       		.byte	0
+ 769 00e7 03       		.uleb128 0x3
+ 770 00e8 0E       		.uleb128 0xe
+ 771 00e9 3A       		.uleb128 0x3a
+ 772 00ea 0B       		.uleb128 0xb
+ 773 00eb 3B       		.uleb128 0x3b
+ 774 00ec 0B       		.uleb128 0xb
+ 775 00ed 49       		.uleb128 0x49
+ 776 00ee 13       		.uleb128 0x13
+ 777 00ef 02       		.uleb128 0x2
+ 778 00f0 18       		.uleb128 0x18
+ 779 00f1 00       		.byte	0
+ 780 00f2 00       		.byte	0
+ 781 00f3 12       		.uleb128 0x12
+ 782 00f4 34       		.uleb128 0x34
+ 783 00f5 00       		.byte	0
+ 784 00f6 03       		.uleb128 0x3
+ 785 00f7 0E       		.uleb128 0xe
+ 786 00f8 3A       		.uleb128 0x3a
+ 787 00f9 0B       		.uleb128 0xb
+ 788 00fa 3B       		.uleb128 0x3b
+ 789 00fb 05       		.uleb128 0x5
+ 790 00fc 49       		.uleb128 0x49
+ 791 00fd 13       		.uleb128 0x13
+ 792 00fe 3F       		.uleb128 0x3f
+ 793 00ff 19       		.uleb128 0x19
+ 794 0100 3C       		.uleb128 0x3c
+ 795 0101 19       		.uleb128 0x19
+ 796 0102 00       		.byte	0
+ 797 0103 00       		.byte	0
+ 798 0104 13       		.uleb128 0x13
+ 799 0105 35       		.uleb128 0x35
+ 800 0106 00       		.byte	0
+ 801 0107 49       		.uleb128 0x49
+ 802 0108 13       		.uleb128 0x13
+ 803 0109 00       		.byte	0
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 16
 
 
- 800 00c7 01       		.byte	0x1
- 801 00c8 49       		.uleb128 0x49
- 802 00c9 13       		.uleb128 0x13
- 803 00ca 01       		.uleb128 0x1
- 804 00cb 13       		.uleb128 0x13
- 805 00cc 00       		.byte	0
- 806 00cd 00       		.byte	0
- 807 00ce 0F       		.uleb128 0xf
- 808 00cf 21       		.uleb128 0x21
- 809 00d0 00       		.byte	0
- 810 00d1 49       		.uleb128 0x49
- 811 00d2 13       		.uleb128 0x13
- 812 00d3 2F       		.uleb128 0x2f
- 813 00d4 0B       		.uleb128 0xb
- 814 00d5 00       		.byte	0
- 815 00d6 00       		.byte	0
- 816 00d7 10       		.uleb128 0x10
- 817 00d8 34       		.uleb128 0x34
- 818 00d9 00       		.byte	0
- 819 00da 03       		.uleb128 0x3
- 820 00db 0E       		.uleb128 0xe
- 821 00dc 3A       		.uleb128 0x3a
- 822 00dd 0B       		.uleb128 0xb
- 823 00de 3B       		.uleb128 0x3b
- 824 00df 0B       		.uleb128 0xb
- 825 00e0 49       		.uleb128 0x49
- 826 00e1 13       		.uleb128 0x13
- 827 00e2 00       		.byte	0
- 828 00e3 00       		.byte	0
- 829 00e4 11       		.uleb128 0x11
- 830 00e5 34       		.uleb128 0x34
- 831 00e6 00       		.byte	0
- 832 00e7 03       		.uleb128 0x3
- 833 00e8 0E       		.uleb128 0xe
- 834 00e9 3A       		.uleb128 0x3a
- 835 00ea 0B       		.uleb128 0xb
- 836 00eb 3B       		.uleb128 0x3b
- 837 00ec 0B       		.uleb128 0xb
- 838 00ed 49       		.uleb128 0x49
- 839 00ee 13       		.uleb128 0x13
- 840 00ef 02       		.uleb128 0x2
- 841 00f0 18       		.uleb128 0x18
- 842 00f1 00       		.byte	0
- 843 00f2 00       		.byte	0
- 844 00f3 12       		.uleb128 0x12
- 845 00f4 34       		.uleb128 0x34
- 846 00f5 00       		.byte	0
- 847 00f6 03       		.uleb128 0x3
- 848 00f7 0E       		.uleb128 0xe
- 849 00f8 3A       		.uleb128 0x3a
- 850 00f9 0B       		.uleb128 0xb
- 851 00fa 3B       		.uleb128 0x3b
- 852 00fb 05       		.uleb128 0x5
- 853 00fc 49       		.uleb128 0x49
- 854 00fd 13       		.uleb128 0x13
- 855 00fe 3F       		.uleb128 0x3f
- 856 00ff 19       		.uleb128 0x19
-ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccemkpGs.s 			page 17
+ 804 010a 00       		.byte	0
+ 805 010b 14       		.uleb128 0x14
+ 806 010c 2E       		.uleb128 0x2e
+ 807 010d 00       		.byte	0
+ 808 010e 3F       		.uleb128 0x3f
+ 809 010f 19       		.uleb128 0x19
+ 810 0110 3C       		.uleb128 0x3c
+ 811 0111 19       		.uleb128 0x19
+ 812 0112 6E       		.uleb128 0x6e
+ 813 0113 0E       		.uleb128 0xe
+ 814 0114 03       		.uleb128 0x3
+ 815 0115 0E       		.uleb128 0xe
+ 816 0116 3A       		.uleb128 0x3a
+ 817 0117 0B       		.uleb128 0xb
+ 818 0118 3B       		.uleb128 0x3b
+ 819 0119 05       		.uleb128 0x5
+ 820 011a 00       		.byte	0
+ 821 011b 00       		.byte	0
+ 822 011c 15       		.uleb128 0x15
+ 823 011d 2E       		.uleb128 0x2e
+ 824 011e 00       		.byte	0
+ 825 011f 3F       		.uleb128 0x3f
+ 826 0120 19       		.uleb128 0x19
+ 827 0121 3C       		.uleb128 0x3c
+ 828 0122 19       		.uleb128 0x19
+ 829 0123 6E       		.uleb128 0x6e
+ 830 0124 0E       		.uleb128 0xe
+ 831 0125 03       		.uleb128 0x3
+ 832 0126 0E       		.uleb128 0xe
+ 833 0127 3A       		.uleb128 0x3a
+ 834 0128 0B       		.uleb128 0xb
+ 835 0129 3B       		.uleb128 0x3b
+ 836 012a 0B       		.uleb128 0xb
+ 837 012b 00       		.byte	0
+ 838 012c 00       		.byte	0
+ 839 012d 00       		.byte	0
+ 840              		.section	.debug_loc,"",%progbits
+ 841              	.Ldebug_loc0:
+ 842              	.LLST0:
+ 843 0000 02000000 		.4byte	.LVL0
+ 844 0004 06000000 		.4byte	.LVL1
+ 845 0008 0200     		.2byte	0x2
+ 846 000a 30       		.byte	0x30
+ 847 000b 9F       		.byte	0x9f
+ 848 000c 06000000 		.4byte	.LVL1
+ 849 0010 08000000 		.4byte	.LVL2
+ 850 0014 0100     		.2byte	0x1
+ 851 0016 53       		.byte	0x53
+ 852 0017 0A000000 		.4byte	.LVL3
+ 853 001b 10000000 		.4byte	.LVL4
+ 854 001f 0100     		.2byte	0x1
+ 855 0021 53       		.byte	0x53
+ 856 0022 00000000 		.4byte	0
+ 857 0026 00000000 		.4byte	0
+ 858              	.LLST1:
+ 859 002a 12000000 		.4byte	.LVL5
+ 860 002e 14000000 		.4byte	.LVL6
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 17
 
 
- 857 0100 3C       		.uleb128 0x3c
- 858 0101 19       		.uleb128 0x19
- 859 0102 00       		.byte	0
- 860 0103 00       		.byte	0
- 861 0104 13       		.uleb128 0x13
- 862 0105 35       		.uleb128 0x35
- 863 0106 00       		.byte	0
- 864 0107 49       		.uleb128 0x49
- 865 0108 13       		.uleb128 0x13
- 866 0109 00       		.byte	0
- 867 010a 00       		.byte	0
- 868 010b 14       		.uleb128 0x14
- 869 010c 2E       		.uleb128 0x2e
- 870 010d 00       		.byte	0
- 871 010e 3F       		.uleb128 0x3f
- 872 010f 19       		.uleb128 0x19
- 873 0110 3C       		.uleb128 0x3c
- 874 0111 19       		.uleb128 0x19
- 875 0112 6E       		.uleb128 0x6e
- 876 0113 0E       		.uleb128 0xe
- 877 0114 03       		.uleb128 0x3
- 878 0115 0E       		.uleb128 0xe
- 879 0116 3A       		.uleb128 0x3a
- 880 0117 0B       		.uleb128 0xb
- 881 0118 3B       		.uleb128 0x3b
- 882 0119 05       		.uleb128 0x5
- 883 011a 00       		.byte	0
- 884 011b 00       		.byte	0
- 885 011c 15       		.uleb128 0x15
- 886 011d 2E       		.uleb128 0x2e
- 887 011e 00       		.byte	0
- 888 011f 3F       		.uleb128 0x3f
- 889 0120 19       		.uleb128 0x19
- 890 0121 3C       		.uleb128 0x3c
- 891 0122 19       		.uleb128 0x19
- 892 0123 6E       		.uleb128 0x6e
- 893 0124 0E       		.uleb128 0xe
- 894 0125 03       		.uleb128 0x3
- 895 0126 0E       		.uleb128 0xe
- 896 0127 3A       		.uleb128 0x3a
- 897 0128 0B       		.uleb128 0xb
- 898 0129 3B       		.uleb128 0x3b
- 899 012a 0B       		.uleb128 0xb
- 900 012b 00       		.byte	0
- 901 012c 00       		.byte	0
- 902 012d 00       		.byte	0
- 903              		.section	.debug_loc,"",%progbits
- 904              	.Ldebug_loc0:
- 905              	.LLST0:
- 906 0000 02000000 		.4byte	.LVL0
- 907 0004 06000000 		.4byte	.LVL1
- 908 0008 0200     		.2byte	0x2
- 909 000a 30       		.byte	0x30
- 910 000b 9F       		.byte	0x9f
- 911 000c 06000000 		.4byte	.LVL1
- 912 0010 08000000 		.4byte	.LVL2
- 913 0014 0100     		.2byte	0x1
-ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccemkpGs.s 			page 18
+ 861 0032 0100     		.2byte	0x1
+ 862 0034 53       		.byte	0x53
+ 863 0035 16000000 		.4byte	.LVL7
+ 864 0039 1C000000 		.4byte	.LVL8
+ 865 003d 0100     		.2byte	0x1
+ 866 003f 53       		.byte	0x53
+ 867 0040 00000000 		.4byte	0
+ 868 0044 00000000 		.4byte	0
+ 869              	.LLST2:
+ 870 0048 1E000000 		.4byte	.LVL9
+ 871 004c 26000000 		.4byte	.LVL10
+ 872 0050 0100     		.2byte	0x1
+ 873 0052 53       		.byte	0x53
+ 874 0053 28000000 		.4byte	.LVL11
+ 875 0057 33000000 		.4byte	.LVL12-1
+ 876 005b 0100     		.2byte	0x1
+ 877 005d 53       		.byte	0x53
+ 878 005e 00000000 		.4byte	0
+ 879 0062 00000000 		.4byte	0
+ 880              		.section	.debug_aranges,"",%progbits
+ 881 0000 2C000000 		.4byte	0x2c
+ 882 0004 0200     		.2byte	0x2
+ 883 0006 00000000 		.4byte	.Ldebug_info0
+ 884 000a 04       		.byte	0x4
+ 885 000b 00       		.byte	0
+ 886 000c 0000     		.2byte	0
+ 887 000e 0000     		.2byte	0
+ 888 0010 00000000 		.4byte	.LFB63
+ 889 0014 3C000000 		.4byte	.LFE63-.LFB63
+ 890 0018 00000000 		.4byte	.LFB64
+ 891 001c 0C000000 		.4byte	.LFE64-.LFB64
+ 892 0020 00000000 		.4byte	.LFB65
+ 893 0024 4C000000 		.4byte	.LFE65-.LFB65
+ 894 0028 00000000 		.4byte	0
+ 895 002c 00000000 		.4byte	0
+ 896              		.section	.debug_ranges,"",%progbits
+ 897              	.Ldebug_ranges0:
+ 898 0000 00000000 		.4byte	.LFB63
+ 899 0004 3C000000 		.4byte	.LFE63
+ 900 0008 00000000 		.4byte	.LFB64
+ 901 000c 0C000000 		.4byte	.LFE64
+ 902 0010 00000000 		.4byte	.LFB65
+ 903 0014 4C000000 		.4byte	.LFE65
+ 904 0018 00000000 		.4byte	0
+ 905 001c 00000000 		.4byte	0
+ 906              		.section	.debug_line,"",%progbits
+ 907              	.Ldebug_line0:
+ 908 0000 F8010000 		.section	.debug_str,"MS",%progbits,1
+ 908      02008A01 
+ 908      00000201 
+ 908      FB0E0D00 
+ 908      01010101 
+ 909              	.LASF29:
+ 910 0000 5553425F 		.ascii	"USB_LoadInEP\000"
+ 910      4C6F6164 
+ 910      496E4550 
+ 910      00
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 18
 
 
- 914 0016 53       		.byte	0x53
- 915 0017 0A000000 		.4byte	.LVL3
- 916 001b 10000000 		.4byte	.LVL4
- 917 001f 0100     		.2byte	0x1
- 918 0021 53       		.byte	0x53
- 919 0022 00000000 		.4byte	0
- 920 0026 00000000 		.4byte	0
- 921              	.LLST1:
- 922 002a 12000000 		.4byte	.LVL5
- 923 002e 1A000000 		.4byte	.LVL6
- 924 0032 0100     		.2byte	0x1
- 925 0034 53       		.byte	0x53
- 926 0035 1C000000 		.4byte	.LVL7
- 927 0039 22000000 		.4byte	.LVL8
- 928 003d 0100     		.2byte	0x1
- 929 003f 53       		.byte	0x53
- 930 0040 00000000 		.4byte	0
- 931 0044 00000000 		.4byte	0
- 932              	.LLST2:
- 933 0048 24000000 		.4byte	.LVL9
- 934 004c 2E000000 		.4byte	.LVL10
- 935 0050 0100     		.2byte	0x1
- 936 0052 53       		.byte	0x53
- 937 0053 30000000 		.4byte	.LVL11
- 938 0057 3B000000 		.4byte	.LVL12-1
- 939 005b 0100     		.2byte	0x1
- 940 005d 53       		.byte	0x53
- 941 005e 00000000 		.4byte	0
- 942 0062 00000000 		.4byte	0
- 943              		.section	.debug_aranges,"",%progbits
- 944 0000 2C000000 		.4byte	0x2c
- 945 0004 0200     		.2byte	0x2
- 946 0006 00000000 		.4byte	.Ldebug_info0
- 947 000a 04       		.byte	0x4
- 948 000b 00       		.byte	0
- 949 000c 0000     		.2byte	0
- 950 000e 0000     		.2byte	0
- 951 0010 00000000 		.4byte	.LFB63
- 952 0014 44000000 		.4byte	.LFE63-.LFB63
- 953 0018 00000000 		.4byte	.LFB64
- 954 001c 0C000000 		.4byte	.LFE64-.LFB64
- 955 0020 00000000 		.4byte	.LFB65
- 956 0024 60000000 		.4byte	.LFE65-.LFB65
- 957 0028 00000000 		.4byte	0
- 958 002c 00000000 		.4byte	0
- 959              		.section	.debug_ranges,"",%progbits
- 960              	.Ldebug_ranges0:
- 961 0000 00000000 		.4byte	.LFB63
- 962 0004 44000000 		.4byte	.LFE63
- 963 0008 00000000 		.4byte	.LFB64
- 964 000c 0C000000 		.4byte	.LFE64
- 965 0010 00000000 		.4byte	.LFB65
- 966 0014 60000000 		.4byte	.LFE65
- 967 0018 00000000 		.4byte	0
- 968 001c 00000000 		.4byte	0
- 969              		.section	.debug_line,"",%progbits
- 970              	.Ldebug_line0:
-ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccemkpGs.s 			page 19
+ 911              	.LASF9:
+ 912 000d 5F5F696E 		.ascii	"__int32_t\000"
+ 912      7433325F 
+ 912      7400
+ 913              	.LASF25:
+ 914 0017 6C65645F 		.ascii	"led_Write\000"
+ 914      57726974 
+ 914      6500
+ 915              	.LASF12:
+ 916 0021 666C6F61 		.ascii	"float\000"
+ 916      7400
+ 917              	.LASF1:
+ 918 0027 756E7369 		.ascii	"unsigned char\000"
+ 918      676E6564 
+ 918      20636861 
+ 918      7200
+ 919              	.LASF30:
+ 920 0035 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 920      43313120 
+ 920      352E342E 
+ 920      31203230 
+ 920      31363036 
+ 921 0068 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 921      20726576 
+ 921      6973696F 
+ 921      6E203233 
+ 921      37373135 
+ 922 009b 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 922      66756E63 
+ 922      74696F6E 
+ 922      2D736563 
+ 922      74696F6E 
+ 923              	.LASF28:
+ 924 00c3 5553425F 		.ascii	"USB_GetEPState\000"
+ 924      47657445 
+ 924      50537461 
+ 924      746500
+ 925              	.LASF5:
+ 926 00d2 6C6F6E67 		.ascii	"long unsigned int\000"
+ 926      20756E73 
+ 926      69676E65 
+ 926      6420696E 
+ 926      7400
+ 927              	.LASF3:
+ 928 00e4 73686F72 		.ascii	"short unsigned int\000"
+ 928      7420756E 
+ 928      7369676E 
+ 928      65642069 
+ 928      6E7400
+ 929              	.LASF23:
+ 930 00f7 53746174 		.ascii	"Status_1_8_Read\000"
+ 930      75735F31 
+ 930      5F385F52 
+ 930      65616400 
+ 931              	.LASF34:
+ 932 0107 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 932      52784275 
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 19
 
 
- 971 0000 FE010000 		.section	.debug_str,"MS",%progbits,1
- 971      02008A01 
- 971      00000201 
- 971      FB0E0D00 
- 971      01010101 
- 972              	.LASF28:
- 973 0000 5553425F 		.ascii	"USB_LoadInEP\000"
- 973      4C6F6164 
- 973      496E4550 
- 973      00
- 974              	.LASF9:
- 975 000d 5F5F696E 		.ascii	"__int32_t\000"
- 975      7433325F 
- 975      7400
- 976              	.LASF13:
- 977 0017 646F7562 		.ascii	"double\000"
- 977      6C6500
- 978              	.LASF24:
- 979 001e 6C65645F 		.ascii	"led_Write\000"
- 979      57726974 
- 979      6500
- 980              	.LASF12:
- 981 0028 666C6F61 		.ascii	"float\000"
- 981      7400
- 982              	.LASF1:
- 983 002e 756E7369 		.ascii	"unsigned char\000"
- 983      676E6564 
- 983      20636861 
- 983      7200
- 984              	.LASF30:
- 985 003c 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 985      43313120 
- 985      352E342E 
- 985      31203230 
- 985      31363036 
- 986 006f 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 986      20726576 
- 986      6973696F 
- 986      6E203233 
- 986      37373135 
- 987 00a2 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 987      66756E63 
- 987      74696F6E 
- 987      2D736563 
- 987      74696F6E 
- 988              	.LASF27:
- 989 00ca 5553425F 		.ascii	"USB_GetEPState\000"
- 989      47657445 
- 989      50537461 
- 989      746500
- 990              	.LASF5:
- 991 00d9 6C6F6E67 		.ascii	"long unsigned int\000"
- 991      20756E73 
- 991      69676E65 
- 991      6420696E 
- 991      7400
- 992              	.LASF3:
-ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccemkpGs.s 			page 20
+ 932      66666572 
+ 932      00
+ 933              	.LASF13:
+ 934 0114 646F7562 		.ascii	"double\000"
+ 934      6C6500
+ 935              	.LASF33:
+ 936 011b 6D61696E 		.ascii	"main\000"
+ 936      00
+ 937              	.LASF27:
+ 938 0120 5553425F 		.ascii	"USB_GetEPAckState\000"
+ 938      47657445 
+ 938      5041636B 
+ 938      53746174 
+ 938      6500
+ 939              	.LASF8:
+ 940 0132 756E7369 		.ascii	"unsigned int\000"
+ 940      676E6564 
+ 940      20696E74 
+ 940      00
+ 941              	.LASF20:
+ 942 013f 5553425F 		.ascii	"USB_INPUT\000"
+ 942      494E5055 
+ 942      5400
+ 943              	.LASF21:
+ 944 0149 5553425F 		.ascii	"USB_OUTPUT\000"
+ 944      4F555450 
+ 944      555400
+ 945              	.LASF7:
+ 946 0154 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 946      206C6F6E 
+ 946      6720756E 
+ 946      7369676E 
+ 946      65642069 
+ 947              	.LASF24:
+ 948 016b 53746174 		.ascii	"Status_9_11_Read\000"
+ 948      75735F39 
+ 948      5F31315F 
+ 948      52656164 
+ 948      00
+ 949              	.LASF10:
+ 950 017c 696E7433 		.ascii	"int32_t\000"
+ 950      325F7400 
+ 951              	.LASF16:
+ 952 0184 73697A65 		.ascii	"sizetype\000"
+ 952      74797065 
+ 952      00
+ 953              	.LASF17:
+ 954 018d 73746172 		.ascii	"startup\000"
+ 954      74757000 
+ 955              	.LASF6:
+ 956 0195 6C6F6E67 		.ascii	"long long int\000"
+ 956      206C6F6E 
+ 956      6720696E 
+ 956      7400
+ 957              	.LASF31:
+ 958 01a3 6D61696E 		.ascii	"main.c\000"
+ 958      2E6300
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 20
 
 
- 993 00eb 73686F72 		.ascii	"short unsigned int\000"
- 993      7420756E 
- 993      7369676E 
- 993      65642069 
- 993      6E7400
- 994              	.LASF22:
- 995 00fe 53746174 		.ascii	"Status_1_8_Read\000"
- 995      75735F31 
- 995      5F385F52 
- 995      65616400 
- 996              	.LASF35:
- 997 010e 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 997      52784275 
- 997      66666572 
- 997      00
- 998              	.LASF32:
- 999 011b 433A5C55 		.ascii	"C:\\Users\\anoop.DESKTOP-AK0U51E\\Documents\\612_Co"
- 999      73657273 
- 999      5C616E6F 
- 999      6F702E44 
- 999      45534B54 
- 1000 014a 64655C50 		.ascii	"de\\PSOC\\2020_CONTROL_SCHEME\\PSoC-2020\\2020-Cont"
- 1000      534F435C 
- 1000      32303230 
- 1000      5F434F4E 
- 1000      54524F4C 
- 1001 0179 726F6C2D 		.ascii	"rol-Scheme.cydsn\000"
- 1001      53636865 
- 1001      6D652E63 
- 1001      7964736E 
- 1001      00
- 1002              	.LASF33:
- 1003 018a 6D61696E 		.ascii	"main\000"
- 1003      00
- 1004              	.LASF26:
- 1005 018f 5553425F 		.ascii	"USB_GetEPAckState\000"
- 1005      47657445 
- 1005      5041636B 
- 1005      53746174 
- 1005      6500
- 1006              	.LASF8:
- 1007 01a1 756E7369 		.ascii	"unsigned int\000"
- 1007      676E6564 
- 1007      20696E74 
- 1007      00
- 1008              	.LASF19:
- 1009 01ae 5553425F 		.ascii	"USB_INPUT\000"
- 1009      494E5055 
- 1009      5400
- 1010              	.LASF20:
- 1011 01b8 5553425F 		.ascii	"USB_OUTPUT\000"
- 1011      4F555450 
- 1011      555400
- 1012              	.LASF7:
- 1013 01c3 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1013      206C6F6E 
- 1013      6720756E 
-ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccemkpGs.s 			page 21
-
-
- 1013      7369676E 
- 1013      65642069 
- 1014              	.LASF29:
- 1015 01da 5553425F 		.ascii	"USB_ReadOutEP\000"
- 1015      52656164 
- 1015      4F757445 
- 1015      5000
- 1016              	.LASF23:
- 1017 01e8 53746174 		.ascii	"Status_9_11_Read\000"
- 1017      75735F39 
- 1017      5F31315F 
- 1017      52656164 
- 1017      00
- 1018              	.LASF10:
- 1019 01f9 696E7433 		.ascii	"int32_t\000"
- 1019      325F7400 
- 1020              	.LASF16:
- 1021 0201 73697A65 		.ascii	"sizetype\000"
- 1021      74797065 
- 1021      00
- 1022              	.LASF17:
- 1023 020a 73746172 		.ascii	"startup\000"
- 1023      74757000 
- 1024              	.LASF6:
- 1025 0212 6C6F6E67 		.ascii	"long long int\000"
- 1025      206C6F6E 
- 1025      6720696E 
- 1025      7400
- 1026              	.LASF31:
- 1027 0220 6D61696E 		.ascii	"main.c\000"
- 1027      2E6300
- 1028              	.LASF14:
- 1029 0227 63686172 		.ascii	"char\000"
- 1029      00
- 1030              	.LASF2:
- 1031 022c 73686F72 		.ascii	"short int\000"
- 1031      7420696E 
- 1031      7400
- 1032              	.LASF11:
- 1033 0236 75696E74 		.ascii	"uint8\000"
- 1033      3800
- 1034              	.LASF21:
- 1035 023c 5553425F 		.ascii	"USB_Start\000"
- 1035      53746172 
- 1035      7400
- 1036              	.LASF18:
- 1037 0246 72656164 		.ascii	"read_buttons\000"
- 1037      5F627574 
- 1037      746F6E73 
- 1037      00
- 1038              	.LASF4:
- 1039 0253 6C6F6E67 		.ascii	"long int\000"
- 1039      20696E74 
- 1039      00
- 1040              	.LASF34:
- 1041 025c 42555454 		.ascii	"BUTTON_INPUT\000"
- 1041      4F4E5F49 
-ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccemkpGs.s 			page 22
-
-
- 1041      4E505554 
- 1041      00
- 1042              	.LASF15:
- 1043 0269 6C6F6E67 		.ascii	"long double\000"
- 1043      20646F75 
- 1043      626C6500 
- 1044              	.LASF0:
- 1045 0275 7369676E 		.ascii	"signed char\000"
- 1045      65642063 
- 1045      68617200 
- 1046              	.LASF25:
- 1047 0281 43794465 		.ascii	"CyDelay\000"
- 1047      6C617900 
- 1048              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 959              	.LASF14:
+ 960 01aa 63686172 		.ascii	"char\000"
+ 960      00
+ 961              	.LASF2:
+ 962 01af 73686F72 		.ascii	"short int\000"
+ 962      7420696E 
+ 962      7400
+ 963              	.LASF32:
+ 964 01b9 433A5C55 		.ascii	"C:\\Users\\Chantilly Robotics\\Desktop\\FRC 2019-20"
+ 964      73657273 
+ 964      5C436861 
+ 964      6E74696C 
+ 964      6C792052 
+ 965 01e8 32305C43 		.ascii	"20\\Custom Gunner Controls\\2020-Control-Scheme.cyd"
+ 965      7573746F 
+ 965      6D204775 
+ 965      6E6E6572 
+ 965      20436F6E 
+ 966 0219 736E00   		.ascii	"sn\000"
+ 967              	.LASF11:
+ 968 021c 75696E74 		.ascii	"uint8\000"
+ 968      3800
+ 969              	.LASF22:
+ 970 0222 5553425F 		.ascii	"USB_Start\000"
+ 970      53746172 
+ 970      7400
+ 971              	.LASF18:
+ 972 022c 72656164 		.ascii	"read_buttons\000"
+ 972      5F627574 
+ 972      746F6E73 
+ 972      00
+ 973              	.LASF4:
+ 974 0239 6C6F6E67 		.ascii	"long int\000"
+ 974      20696E74 
+ 974      00
+ 975              	.LASF19:
+ 976 0242 42555454 		.ascii	"BUTTON_INPUT\000"
+ 976      4F4E5F49 
+ 976      4E505554 
+ 976      00
+ 977              	.LASF15:
+ 978 024f 6C6F6E67 		.ascii	"long double\000"
+ 978      20646F75 
+ 978      626C6500 
+ 979              	.LASF0:
+ 980 025b 7369676E 		.ascii	"signed char\000"
+ 980      65642063 
+ 980      68617200 
+ 981              	.LASF26:
+ 982 0267 43794465 		.ascii	"CyDelay\000"
+ 982      6C617900 
+ 983              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

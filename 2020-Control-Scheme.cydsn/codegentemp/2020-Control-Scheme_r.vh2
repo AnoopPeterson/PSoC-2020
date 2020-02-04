@@ -1,5 +1,5 @@
 -- Project:   2020-Control-Scheme
--- Generated: 02/03/2020 00:25:51
+-- Generated: 02/03/2020 20:45:20
 -- PSoC Creator  4.2
 
 ENTITY \2020-Control-Scheme\ IS
@@ -39,7 +39,6 @@ ARCHITECTURE __DEFAULT__ OF \2020-Control-Scheme\ IS
     SIGNAL ClockBlock_PLL_OUT : bit;
     SIGNAL ClockBlock_XTAL : bit;
     SIGNAL ClockBlock_XTAL_32KHZ : bit;
-    SIGNAL Net_127 : bit;
     SIGNAL Net_172_0 : bit;
     SIGNAL Net_172_1 : bit;
     SIGNAL Net_172_2 : bit;
@@ -73,6 +72,7 @@ ARCHITECTURE __DEFAULT__ OF \2020-Control-Scheme\ IS
     ATTRIBUTE placement_force OF Net_207_1 : SIGNAL IS "U(3,2,B)0";
     SIGNAL Net_207_2 : bit;
     ATTRIBUTE placement_force OF Net_207_2 : SIGNAL IS "U(3,2,A)3";
+    SIGNAL Net_208 : bit;
     SIGNAL Pin_1_8(0)__PA : bit;
     SIGNAL Pin_1_8(1)__PA : bit;
     SIGNAL Pin_1_8(2)__PA : bit;
@@ -1047,7 +1047,7 @@ BEGIN
         GENERIC MAP(
             cy_registers => "")
         PORT MAP(
-            sof_int => Net_127,
+            sof_int => Net_208,
             arb_int => \USB:Net_1889\,
             usb_int => \USB:Net_1876\,
             ept_int_8 => \USB:ep_int_8\,

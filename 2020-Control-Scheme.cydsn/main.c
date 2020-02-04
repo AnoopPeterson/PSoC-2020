@@ -32,6 +32,8 @@ void read_buttons(void){
 int main(void)
 {
     CyGlobalIntEnable; /* Enable global interrupts. */ 
+    startup();
+    
     for(;;)
     {
     led_Write(1);
@@ -39,17 +41,17 @@ int main(void)
     led_Write(0);
     CyDelay(500);
     
-     while(!USB_GetEPAckState(EP_IN));
+     while(!USB_GetEPAckState(EP_OUT));
      
     read_buttons();
     
      // if usb reading data is empty, write
-    if (USB_GetEPState(EP_IN) == USB_IN_BUFFER_EMPTY){
-        USB_LoadInEP(EP_OUT, (uint8 *)USB_OUTPUT, 11); // check last parameter
+    if (USB_GetEPState(EP_OUT) == USB_IN_BUFFER_EMPTY){
+        USB_LoadInEP(EP_IN, (uint8 *)USB_OUTPUT, 11); // check last parameter
     }
      // if usb reading data is full, read 
-    if (USB_GetEPState(EP_IN) == USB_IN_BUFFER_FULL){
+    /*if (USB_GetEPState(EP_OUT) == USB_IN_BUFFER_FULL){
         USB_ReadOutEP(EP_OUT, (uint8 *)USB_INPUT, 11); 
-    }
+    }*/
     }
 }

@@ -89,19 +89,19 @@ const uint8 CYCODE USB_DEVICE0_CONFIGURATION0_DESCR[41u] = {
 *********************************************************************/
 /*  Endpoint Descriptor Length             */ 0x07u,
 /*  DescriptorType: ENDPOINT               */ 0x05u,
-/*  bEndpointAddress                       */ 0x01u,
-/*  bmAttributes                           */ 0x03u,
-/*  wMaxPacketSize                         */ 0x02u, 0x00u,
-/*  bInterval                              */ 0x0Au,
+/*  bEndpointAddress                       */ 0x81u,
+/*  bmAttributes                           */ 0x02u,
+/*  wMaxPacketSize                         */ 0x10u, 0x00u,
+/*  bInterval                              */ 0x00u,
 /*********************************************************************
 * Endpoint Descriptor
 *********************************************************************/
 /*  Endpoint Descriptor Length             */ 0x07u,
 /*  DescriptorType: ENDPOINT               */ 0x05u,
-/*  bEndpointAddress                       */ 0x82u,
-/*  bmAttributes                           */ 0x02u,
-/*  wMaxPacketSize                         */ 0x08u, 0x00u,
-/*  bInterval                              */ 0x00u
+/*  bEndpointAddress                       */ 0x02u,
+/*  bmAttributes                           */ 0x03u,
+/*  wMaxPacketSize                         */ 0x02u, 0x00u,
+/*  bInterval                              */ 0x0Au
 };
 
 /*********************************************************************
@@ -218,8 +218,8 @@ const T_USB_LUT CYCODE USB_DEVICE0_CONFIGURATION0_INTERFACE0_TABLE[1u] = {
 *********************************************************************/
 const T_USB_EP_SETTINGS_BLOCK CYCODE USB_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE[2u] = {
 /* IFC  ALT    EPAddr bmAttr MaxPktSize Class ********************/
-{0x00u, 0x00u, 0x01u, 0x03u, 0x0002u,   0x03u},
-{0x00u, 0x00u, 0x82u, 0x02u, 0x0008u,   0x03u}
+{0x00u, 0x00u, 0x81u, 0x02u, 0x0010u,   0x03u},
+{0x00u, 0x00u, 0x02u, 0x03u, 0x0002u,   0x03u}
 };
 const uint8 CYCODE USB_DEVICE0_CONFIGURATION0_INTERFACE_CLASS[1u] = {
 0x03u
