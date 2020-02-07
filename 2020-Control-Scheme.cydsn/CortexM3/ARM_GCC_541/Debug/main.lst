@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 1
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccC0xZAx.s 			page 1
 
 
    1              		.syntax unified
@@ -26,22 +26,23 @@ ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 1
   23              		.thumb_func
   24              		.type	startup, %function
   25              	startup:
-  26              	.LFB63:
+  26              	.LFB64:
   27              		.file 1 "main.c"
    1:main.c        **** #include "project.h"
-   2:main.c        **** 
-   3:main.c        **** #define EP_IN 1
-   4:main.c        **** #define EP_OUT 2
-   5:main.c        **** 
-   6:main.c        **** #define BUTTON_SIZE 2
-   7:main.c        **** 
+   2:main.c        **** #include <stdio.h>
+   3:main.c        **** 
+   4:main.c        **** #define EP_IN 1
+   5:main.c        **** #define EP_OUT 2
+   6:main.c        **** 
+   7:main.c        **** #define BUTTON_SIZE 2
    8:main.c        **** 
-   9:main.c        **** static uint8 BUTTON_INPUT[BUTTON_SIZE];
-  10:main.c        **** static uint8 USB_INPUT[BUTTON_SIZE];
-  11:main.c        **** static uint8 USB_OUTPUT[BUTTON_SIZE];
-  12:main.c        **** 
-  13:main.c        **** void startup(void){
-  28              		.loc 1 13 0
+   9:main.c        **** 
+  10:main.c        **** static uint8 BUTTON_INPUT[BUTTON_SIZE];
+  11:main.c        **** static uint8 USB_INPUT[BUTTON_SIZE];
+  12:main.c        **** static uint8 USB_OUTPUT[BUTTON_SIZE];
+  13:main.c        **** 
+  14:main.c        **** void startup(void){
+  28              		.loc 1 14 0
   29              		.cfi_startproc
   30              		@ args = 0, pretend = 0, frame = 0
   31              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -51,1145 +52,1403 @@ ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 1
   35              		.cfi_offset 14, -4
   36              	.LVL0:
   37              	.LBB2:
-  14:main.c        ****     for(uint8 i = 0; i < sizeof(BUTTON_INPUT); i++){
-  38              		.loc 1 14 0
+  15:main.c        ****     for(uint8 j = 0; j < sizeof(BUTTON_INPUT); j++){
+  38              		.loc 1 15 0
   39 0002 0023     		movs	r3, #0
-  40 0004 01E0     		b	.L2
+  40 0004 04E0     		b	.L2
   41              	.LVL1:
   42              	.L3:
-  43              		.loc 1 14 0 is_stmt 0 discriminator 3
-ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 2
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccC0xZAx.s 			page 2
 
 
-  44 0006 0133     		adds	r3, r3, #1
-  45              	.LVL2:
-  46 0008 DBB2     		uxtb	r3, r3
-  47              	.LVL3:
-  48              	.L2:
-  49              		.loc 1 14 0 discriminator 1
-  50 000a 012B     		cmp	r3, #1
-  51 000c FBD9     		bls	.L3
-  52 000e 0023     		movs	r3, #0
-  53              	.LVL4:
-  54 0010 01E0     		b	.L4
-  55              	.LVL5:
-  56              	.L5:
-  57              	.LBE2:
-  58              	.LBB3:
-  15:main.c        ****         BUTTON_INPUT[i] = 0;
-  16:main.c        ****     }
-  17:main.c        ****     for(uint8 j = 0; j < sizeof(BUTTON_INPUT); j++){
-  59              		.loc 1 17 0 is_stmt 1 discriminator 3
-  60 0012 0133     		adds	r3, r3, #1
-  61              	.LVL6:
-  62 0014 DBB2     		uxtb	r3, r3
-  63              	.LVL7:
-  64              	.L4:
-  65              		.loc 1 17 0 is_stmt 0 discriminator 1
-  66 0016 012B     		cmp	r3, #1
-  67 0018 FBD9     		bls	.L5
-  68 001a 0023     		movs	r3, #0
-  69              	.LVL8:
-  70 001c 04E0     		b	.L6
-  71              	.LVL9:
-  72              	.L7:
-  73              	.LBE3:
-  74              	.LBB4:
-  18:main.c        ****         USB_INPUT[j] = 0;
-  19:main.c        ****     }    
-  20:main.c        ****     for(uint8 k = 0; k < sizeof(BUTTON_INPUT); k++){
-  21:main.c        ****         USB_OUTPUT[k] = 0;
-  75              		.loc 1 21 0 is_stmt 1 discriminator 3
-  76 001e 0021     		movs	r1, #0
-  77 0020 054A     		ldr	r2, .L9
-  78 0022 D154     		strb	r1, [r2, r3]
-  20:main.c        ****         USB_OUTPUT[k] = 0;
-  79              		.loc 1 20 0 discriminator 3
-  80 0024 0133     		adds	r3, r3, #1
-  81              	.LVL10:
-  82 0026 DBB2     		uxtb	r3, r3
-  83              	.LVL11:
-  84              	.L6:
-  20:main.c        ****         USB_OUTPUT[k] = 0;
-  85              		.loc 1 20 0 is_stmt 0 discriminator 1
-  86 0028 012B     		cmp	r3, #1
-  87 002a F8D9     		bls	.L7
-  88              	.LBE4:
-  22:main.c        ****     }  
+  16:main.c        ****         USB_INPUT[j] = 0;
+  43              		.loc 1 16 0 discriminator 3
+  44 0006 0021     		movs	r1, #0
+  45 0008 104A     		ldr	r2, .L8
+  46 000a D154     		strb	r1, [r2, r3]
+  15:main.c        ****     for(uint8 j = 0; j < sizeof(BUTTON_INPUT); j++){
+  47              		.loc 1 15 0 discriminator 3
+  48 000c 0133     		adds	r3, r3, #1
+  49              	.LVL2:
+  50 000e DBB2     		uxtb	r3, r3
+  51              	.LVL3:
+  52              	.L2:
+  15:main.c        ****     for(uint8 j = 0; j < sizeof(BUTTON_INPUT); j++){
+  53              		.loc 1 15 0 is_stmt 0 discriminator 1
+  54 0010 012B     		cmp	r3, #1
+  55 0012 F8D9     		bls	.L3
+  56 0014 0023     		movs	r3, #0
+  57              	.LVL4:
+  58 0016 05E0     		b	.L4
+  59              	.LVL5:
+  60              	.L5:
+  61              	.LBE2:
+  62              	.LBB3:
+  17:main.c        ****     }    
+  18:main.c        ****     for(uint8 k = 0; k < sizeof(BUTTON_INPUT); k++){
+  19:main.c        ****         USB_OUTPUT[k] = 0;
+  63              		.loc 1 19 0 is_stmt 1 discriminator 3
+  64 0018 0C4A     		ldr	r2, .L8
+  65 001a 1A44     		add	r2, r2, r3
+  66 001c 0021     		movs	r1, #0
+  67 001e 1171     		strb	r1, [r2, #4]
+  18:main.c        ****         USB_OUTPUT[k] = 0;
+  68              		.loc 1 18 0 discriminator 3
+  69 0020 0133     		adds	r3, r3, #1
+  70              	.LVL6:
+  71 0022 DBB2     		uxtb	r3, r3
+  72              	.LVL7:
+  73              	.L4:
+  18:main.c        ****         USB_OUTPUT[k] = 0;
+  74              		.loc 1 18 0 is_stmt 0 discriminator 1
+  75 0024 012B     		cmp	r3, #1
+  76 0026 F7D9     		bls	.L5
+  77              	.LBE3:
+  20:main.c        ****     }  
+  21:main.c        ****     
+  22:main.c        ****     CyGlobalIntEnable
+  78              		.loc 1 22 0 is_stmt 1
+  79              		.syntax unified
+  80              	@ 22 "main.c" 1
+  81 0028 62B6     		CPSIE   i
+  82              	@ 0 "" 2
   23:main.c        ****     USB_Start(0, USB_DWR_VDDD_OPERATION);
-  89              		.loc 1 23 0 is_stmt 1
-ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 3
+  83              		.loc 1 23 0
+  84              		.thumb
+  85              		.syntax unified
+  86 002a 0221     		movs	r1, #2
+  87 002c 0020     		movs	r0, #0
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccC0xZAx.s 			page 3
 
 
-  90 002c 0221     		movs	r1, #2
-  91 002e 0020     		movs	r0, #0
-  92 0030 FFF7FEFF 		bl	USB_Start
-  93              	.LVL12:
-  94 0034 08BD     		pop	{r3, pc}
-  95              	.L10:
-  96 0036 00BF     		.align	2
-  97              	.L9:
-  98 0038 00000000 		.word	.LANCHOR0
-  99              		.cfi_endproc
- 100              	.LFE63:
- 101              		.size	startup, .-startup
- 102              		.section	.text.read_buttons,"ax",%progbits
- 103              		.align	2
- 104              		.global	read_buttons
- 105              		.thumb
- 106              		.thumb_func
- 107              		.type	read_buttons, %function
- 108              	read_buttons:
- 109              	.LFB64:
-  24:main.c        **** }
-  25:main.c        **** 
-  26:main.c        **** void read_buttons(void){
- 110              		.loc 1 26 0
- 111              		.cfi_startproc
- 112              		@ args = 0, pretend = 0, frame = 0
- 113              		@ frame_needed = 0, uses_anonymous_args = 0
- 114 0000 08B5     		push	{r3, lr}
- 115              		.cfi_def_cfa_offset 8
- 116              		.cfi_offset 3, -8
- 117              		.cfi_offset 14, -4
-  27:main.c        ****     BUTTON_INPUT[0] = Status_1_8_Read();
- 118              		.loc 1 27 0
- 119 0002 FFF7FEFF 		bl	Status_1_8_Read
- 120              	.LVL13:
-  28:main.c        ****     BUTTON_INPUT[1] = Status_9_11_Read();
- 121              		.loc 1 28 0
- 122 0006 FFF7FEFF 		bl	Status_9_11_Read
- 123              	.LVL14:
- 124 000a 08BD     		pop	{r3, pc}
- 125              		.cfi_endproc
- 126              	.LFE64:
- 127              		.size	read_buttons, .-read_buttons
- 128              		.section	.text.main,"ax",%progbits
- 129              		.align	2
- 130              		.global	main
- 131              		.thumb
- 132              		.thumb_func
- 133              		.type	main, %function
- 134              	main:
- 135              	.LFB65:
-  29:main.c        **** }
-  30:main.c        **** 
-  31:main.c        **** 
-  32:main.c        **** int main(void)
-  33:main.c        **** {
- 136              		.loc 1 33 0
-ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 4
+  88 002e FFF7FEFF 		bl	USB_Start
+  89              	.LVL8:
+  90              	.L6:
+  24:main.c        ****     while(!USB_bGetConfiguration()){}
+  91              		.loc 1 24 0 discriminator 1
+  92 0032 FFF7FEFF 		bl	USB_GetConfiguration
+  93              	.LVL9:
+  94 0036 0028     		cmp	r0, #0
+  95 0038 FBD0     		beq	.L6
+  25:main.c        ****     USB_LoadInEP(EP_IN, (uint8 *)USB_INPUT, sizeof(USB_INPUT));
+  96              		.loc 1 25 0
+  97 003a 0222     		movs	r2, #2
+  98 003c 0349     		ldr	r1, .L8
+  99 003e 0120     		movs	r0, #1
+ 100 0040 FFF7FEFF 		bl	USB_LoadInEP
+ 101              	.LVL10:
+  26:main.c        ****     USB_EnableOutEP(EP_OUT);
+ 102              		.loc 1 26 0
+ 103 0044 0220     		movs	r0, #2
+ 104 0046 FFF7FEFF 		bl	USB_EnableOutEP
+ 105              	.LVL11:
+ 106 004a 08BD     		pop	{r3, pc}
+ 107              	.L9:
+ 108              		.align	2
+ 109              	.L8:
+ 110 004c 00000000 		.word	.LANCHOR0
+ 111              		.cfi_endproc
+ 112              	.LFE64:
+ 113              		.size	startup, .-startup
+ 114              		.section	.text.read_buttons,"ax",%progbits
+ 115              		.align	2
+ 116              		.global	read_buttons
+ 117              		.thumb
+ 118              		.thumb_func
+ 119              		.type	read_buttons, %function
+ 120              	read_buttons:
+ 121              	.LFB65:
+  27:main.c        **** }
+  28:main.c        **** 
+  29:main.c        **** void read_buttons(void){
+ 122              		.loc 1 29 0
+ 123              		.cfi_startproc
+ 124              		@ args = 0, pretend = 0, frame = 0
+ 125              		@ frame_needed = 0, uses_anonymous_args = 0
+ 126 0000 08B5     		push	{r3, lr}
+ 127              		.cfi_def_cfa_offset 8
+ 128              		.cfi_offset 3, -8
+ 129              		.cfi_offset 14, -4
+  30:main.c        ****     BUTTON_INPUT[0] = Status_1_8_Read();
+ 130              		.loc 1 30 0
+ 131 0002 FFF7FEFF 		bl	Status_1_8_Read
+ 132              	.LVL12:
+  31:main.c        ****     BUTTON_INPUT[1] = Status_9_11_Read();
+ 133              		.loc 1 31 0
+ 134 0006 FFF7FEFF 		bl	Status_9_11_Read
+ 135              	.LVL13:
+ 136 000a 08BD     		pop	{r3, pc}
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccC0xZAx.s 			page 4
 
 
- 137              		.cfi_startproc
- 138              		@ Volatile: function does not return.
- 139              		@ args = 0, pretend = 0, frame = 0
- 140              		@ frame_needed = 0, uses_anonymous_args = 0
- 141 0000 08B5     		push	{r3, lr}
- 142              		.cfi_def_cfa_offset 8
- 143              		.cfi_offset 3, -8
- 144              		.cfi_offset 14, -4
-  34:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */ 
- 145              		.loc 1 34 0
- 146              		.syntax unified
- 147              	@ 34 "main.c" 1
- 148 0002 62B6     		CPSIE   i
- 149              	@ 0 "" 2
-  35:main.c        ****     startup();
- 150              		.loc 1 35 0
- 151              		.thumb
- 152              		.syntax unified
- 153 0004 FFF7FEFF 		bl	startup
- 154              	.LVL15:
- 155              	.L15:
-  36:main.c        ****     
-  37:main.c        ****     for(;;)
-  38:main.c        ****     {
-  39:main.c        ****     led_Write(1);
- 156              		.loc 1 39 0
- 157 0008 0120     		movs	r0, #1
- 158 000a FFF7FEFF 		bl	led_Write
- 159              	.LVL16:
-  40:main.c        ****     CyDelay(500);
- 160              		.loc 1 40 0
- 161 000e 4FF4FA70 		mov	r0, #500
- 162 0012 FFF7FEFF 		bl	CyDelay
- 163              	.LVL17:
-  41:main.c        ****     led_Write(0);
- 164              		.loc 1 41 0
- 165 0016 0020     		movs	r0, #0
- 166 0018 FFF7FEFF 		bl	led_Write
- 167              	.LVL18:
-  42:main.c        ****     CyDelay(500);
- 168              		.loc 1 42 0
- 169 001c 4FF4FA70 		mov	r0, #500
- 170 0020 FFF7FEFF 		bl	CyDelay
- 171              	.LVL19:
- 172              	.L14:
-  43:main.c        ****     
-  44:main.c        ****      while(!USB_GetEPAckState(EP_OUT));
- 173              		.loc 1 44 0 discriminator 1
- 174 0024 0220     		movs	r0, #2
- 175 0026 FFF7FEFF 		bl	USB_GetEPAckState
- 176              	.LVL20:
- 177 002a 0028     		cmp	r0, #0
- 178 002c FAD0     		beq	.L14
-  45:main.c        ****      
-  46:main.c        ****     read_buttons();
- 179              		.loc 1 46 0
- 180 002e FFF7FEFF 		bl	read_buttons
-ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 5
+ 137              		.cfi_endproc
+ 138              	.LFE65:
+ 139              		.size	read_buttons, .-read_buttons
+ 140              		.section	.text.main,"ax",%progbits
+ 141              		.align	2
+ 142              		.global	main
+ 143              		.thumb
+ 144              		.thumb_func
+ 145              		.type	main, %function
+ 146              	main:
+ 147              	.LFB66:
+  32:main.c        **** }
+  33:main.c        **** 
+  34:main.c        **** 
+  35:main.c        **** int main(void)
+  36:main.c        **** {
+ 148              		.loc 1 36 0
+ 149              		.cfi_startproc
+ 150              		@ args = 0, pretend = 0, frame = 0
+ 151              		@ frame_needed = 0, uses_anonymous_args = 0
+ 152 0000 08B5     		push	{r3, lr}
+ 153              		.cfi_def_cfa_offset 8
+ 154              		.cfi_offset 3, -8
+ 155              		.cfi_offset 14, -4
+  37:main.c        ****     uint8 ep_count;
+  38:main.c        ****     startup();
+ 156              		.loc 1 38 0
+ 157 0002 FFF7FEFF 		bl	startup
+ 158              	.LVL14:
+ 159              	.L15:
+  39:main.c        ****     
+  40:main.c        ****     for(;;)
+  41:main.c        ****     {
+  42:main.c        ****     led_Write(1);
+ 160              		.loc 1 42 0
+ 161 0006 0120     		movs	r0, #1
+ 162 0008 FFF7FEFF 		bl	led_Write
+ 163              	.LVL15:
+  43:main.c        ****     CyDelay(500);
+ 164              		.loc 1 43 0
+ 165 000c 4FF4FA70 		mov	r0, #500
+ 166 0010 FFF7FEFF 		bl	CyDelay
+ 167              	.LVL16:
+  44:main.c        ****     led_Write(0);
+ 168              		.loc 1 44 0
+ 169 0014 0020     		movs	r0, #0
+ 170 0016 FFF7FEFF 		bl	led_Write
+ 171              	.LVL17:
+  45:main.c        ****     CyDelay(500);
+ 172              		.loc 1 45 0
+ 173 001a 4FF4FA70 		mov	r0, #500
+ 174 001e FFF7FEFF 		bl	CyDelay
+ 175              	.LVL18:
+ 176              	.L13:
+  46:main.c        ****     
+  47:main.c        ****     while(!USB_bGetEPAckState(EP_IN));
+ 177              		.loc 1 47 0 discriminator 1
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccC0xZAx.s 			page 5
 
 
- 181              	.LVL21:
-  47:main.c        ****     
-  48:main.c        ****      // if usb reading data is empty, write
-  49:main.c        ****     if (USB_GetEPState(EP_OUT) == USB_IN_BUFFER_EMPTY){
- 182              		.loc 1 49 0
- 183 0032 0220     		movs	r0, #2
- 184 0034 FFF7FEFF 		bl	USB_GetEPState
- 185              	.LVL22:
- 186 0038 0128     		cmp	r0, #1
- 187 003a E5D1     		bne	.L15
-  50:main.c        ****         USB_LoadInEP(EP_IN, (uint8 *)USB_OUTPUT, 11); // check last parameter
- 188              		.loc 1 50 0
- 189 003c 0B22     		movs	r2, #11
- 190 003e 0249     		ldr	r1, .L18
- 191 0040 FFF7FEFF 		bl	USB_LoadInEP
- 192              	.LVL23:
- 193 0044 E0E7     		b	.L15
- 194              	.L19:
- 195 0046 00BF     		.align	2
- 196              	.L18:
- 197 0048 00000000 		.word	.LANCHOR0
- 198              		.cfi_endproc
- 199              	.LFE65:
- 200              		.size	main, .-main
- 201              		.bss
- 202              		.align	2
- 203              		.set	.LANCHOR0,. + 0
- 204              		.type	USB_OUTPUT, %object
- 205              		.size	USB_OUTPUT, 2
- 206              	USB_OUTPUT:
- 207 0000 0000     		.space	2
- 208              		.text
- 209              	.Letext0:
- 210              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
- 211              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
- 212              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
- 213              		.file 5 "Generated_Source\\PSoC5/USB.h"
- 214              		.file 6 "Generated_Source\\PSoC5/Status_1_8.h"
- 215              		.file 7 "Generated_Source\\PSoC5/Status_9_11.h"
- 216              		.file 8 "Generated_Source\\PSoC5/led.h"
- 217              		.file 9 "Generated_Source\\PSoC5/CyLib.h"
- 218              		.file 10 "Generated_Source\\PSoC5/core_cm3.h"
- 219              		.section	.debug_info,"",%progbits
- 220              	.Ldebug_info0:
- 221 0000 AE020000 		.4byte	0x2ae
- 222 0004 0400     		.2byte	0x4
- 223 0006 00000000 		.4byte	.Ldebug_abbrev0
- 224 000a 04       		.byte	0x4
- 225 000b 01       		.uleb128 0x1
- 226 000c 35000000 		.4byte	.LASF30
- 227 0010 0C       		.byte	0xc
- 228 0011 A3010000 		.4byte	.LASF31
- 229 0015 B9010000 		.4byte	.LASF32
- 230 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 231 001d 00000000 		.4byte	0
- 232 0021 00000000 		.4byte	.Ldebug_line0
- 233 0025 02       		.uleb128 0x2
-ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 6
+ 178 0022 0120     		movs	r0, #1
+ 179 0024 FFF7FEFF 		bl	USB_GetEPAckState
+ 180              	.LVL19:
+ 181 0028 0028     		cmp	r0, #0
+ 182 002a FAD0     		beq	.L13
+  48:main.c        ****     
+  49:main.c        ****     led_Write(1);
+ 183              		.loc 1 49 0
+ 184 002c 0120     		movs	r0, #1
+ 185 002e FFF7FEFF 		bl	led_Write
+ 186              	.LVL20:
+  50:main.c        ****     CyDelay(500);
+ 187              		.loc 1 50 0
+ 188 0032 4FF4FA70 		mov	r0, #500
+ 189 0036 FFF7FEFF 		bl	CyDelay
+ 190              	.LVL21:
+  51:main.c        ****     led_Write(0);
+ 191              		.loc 1 51 0
+ 192 003a 0020     		movs	r0, #0
+ 193 003c FFF7FEFF 		bl	led_Write
+ 194              	.LVL22:
+  52:main.c        ****     CyDelay(500);
+ 195              		.loc 1 52 0
+ 196 0040 4FF4FA70 		mov	r0, #500
+ 197 0044 FFF7FEFF 		bl	CyDelay
+ 198              	.LVL23:
+  53:main.c        ****     
+  54:main.c        ****     read_buttons();
+ 199              		.loc 1 54 0
+ 200 0048 FFF7FEFF 		bl	read_buttons
+ 201              	.LVL24:
+  55:main.c        ****     
+  56:main.c        ****      // if usb reading data is empty, write
+  57:main.c        ****     if (USB_GetEPState(EP_IN) == USB_IN_BUFFER_EMPTY){
+ 202              		.loc 1 57 0
+ 203 004c 0120     		movs	r0, #1
+ 204 004e FFF7FEFF 		bl	USB_GetEPState
+ 205              	.LVL25:
+ 206 0052 0128     		cmp	r0, #1
+ 207 0054 03D1     		bne	.L14
+  58:main.c        ****         USB_LoadInEP(EP_IN, (uint8 *)USB_INPUT, sizeof(USB_OUTPUT)); // check last parameter
+ 208              		.loc 1 58 0
+ 209 0056 0222     		movs	r2, #2
+ 210 0058 0949     		ldr	r1, .L18
+ 211 005a FFF7FEFF 		bl	USB_LoadInEP
+ 212              	.LVL26:
+ 213              	.L14:
+  59:main.c        ****     }
+  60:main.c        ****      // if usb reading data is full, read 
+  61:main.c        ****     if (USB_GetEPState(EP_OUT) == USB_OUT_BUFFER_FULL){
+ 214              		.loc 1 61 0
+ 215 005e 0220     		movs	r0, #2
+ 216 0060 FFF7FEFF 		bl	USB_GetEPState
+ 217              	.LVL27:
+ 218 0064 0128     		cmp	r0, #1
+ 219 0066 CED1     		bne	.L15
+  62:main.c        ****         ep_count = USB_GetEPCount(EP_OUT);
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccC0xZAx.s 			page 6
 
 
- 234 0026 01       		.byte	0x1
- 235 0027 06       		.byte	0x6
- 236 0028 5B020000 		.4byte	.LASF0
- 237 002c 02       		.uleb128 0x2
- 238 002d 01       		.byte	0x1
- 239 002e 08       		.byte	0x8
- 240 002f 27000000 		.4byte	.LASF1
- 241 0033 02       		.uleb128 0x2
- 242 0034 02       		.byte	0x2
- 243 0035 05       		.byte	0x5
- 244 0036 AF010000 		.4byte	.LASF2
- 245 003a 02       		.uleb128 0x2
- 246 003b 02       		.byte	0x2
- 247 003c 07       		.byte	0x7
- 248 003d E4000000 		.4byte	.LASF3
- 249 0041 03       		.uleb128 0x3
- 250 0042 0D000000 		.4byte	.LASF9
- 251 0046 02       		.byte	0x2
- 252 0047 3F       		.byte	0x3f
- 253 0048 4C000000 		.4byte	0x4c
- 254 004c 02       		.uleb128 0x2
- 255 004d 04       		.byte	0x4
- 256 004e 05       		.byte	0x5
- 257 004f 39020000 		.4byte	.LASF4
- 258 0053 02       		.uleb128 0x2
- 259 0054 04       		.byte	0x4
- 260 0055 07       		.byte	0x7
- 261 0056 D2000000 		.4byte	.LASF5
- 262 005a 02       		.uleb128 0x2
- 263 005b 08       		.byte	0x8
- 264 005c 05       		.byte	0x5
- 265 005d 95010000 		.4byte	.LASF6
- 266 0061 02       		.uleb128 0x2
- 267 0062 08       		.byte	0x8
- 268 0063 07       		.byte	0x7
- 269 0064 54010000 		.4byte	.LASF7
- 270 0068 04       		.uleb128 0x4
- 271 0069 04       		.byte	0x4
- 272 006a 05       		.byte	0x5
- 273 006b 696E7400 		.ascii	"int\000"
- 274 006f 02       		.uleb128 0x2
- 275 0070 04       		.byte	0x4
- 276 0071 07       		.byte	0x7
- 277 0072 32010000 		.4byte	.LASF8
- 278 0076 03       		.uleb128 0x3
- 279 0077 7C010000 		.4byte	.LASF10
- 280 007b 03       		.byte	0x3
- 281 007c 2C       		.byte	0x2c
- 282 007d 41000000 		.4byte	0x41
- 283 0081 05       		.uleb128 0x5
- 284 0082 1C020000 		.4byte	.LASF11
- 285 0086 04       		.byte	0x4
- 286 0087 E401     		.2byte	0x1e4
- 287 0089 2C000000 		.4byte	0x2c
- 288 008d 02       		.uleb128 0x2
- 289 008e 04       		.byte	0x4
- 290 008f 04       		.byte	0x4
-ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 7
+ 220              		.loc 1 62 0
+ 221 0068 0220     		movs	r0, #2
+ 222 006a FFF7FEFF 		bl	USB_GetEPCount
+ 223              	.LVL28:
+  63:main.c        ****         USB_ReadOutEP(EP_OUT, (uint8 *)USB_OUTPUT, ep_count); 
+ 224              		.loc 1 63 0
+ 225 006e C2B2     		uxtb	r2, r0
+ 226 0070 0449     		ldr	r1, .L18+4
+ 227 0072 0220     		movs	r0, #2
+ 228              	.LVL29:
+ 229 0074 FFF7FEFF 		bl	USB_ReadOutEP
+ 230              	.LVL30:
+  64:main.c        ****         USB_EnableOutEP(EP_OUT);
+ 231              		.loc 1 64 0
+ 232 0078 0220     		movs	r0, #2
+ 233 007a FFF7FEFF 		bl	USB_EnableOutEP
+ 234              	.LVL31:
+ 235 007e C2E7     		b	.L15
+ 236              	.L19:
+ 237              		.align	2
+ 238              	.L18:
+ 239 0080 00000000 		.word	.LANCHOR0
+ 240 0084 04000000 		.word	.LANCHOR0+4
+ 241              		.cfi_endproc
+ 242              	.LFE66:
+ 243              		.size	main, .-main
+ 244              		.bss
+ 245              		.align	2
+ 246              		.set	.LANCHOR0,. + 0
+ 247              		.type	USB_INPUT, %object
+ 248              		.size	USB_INPUT, 2
+ 249              	USB_INPUT:
+ 250 0000 0000     		.space	2
+ 251 0002 0000     		.space	2
+ 252              		.type	USB_OUTPUT, %object
+ 253              		.size	USB_OUTPUT, 2
+ 254              	USB_OUTPUT:
+ 255 0004 0000     		.space	2
+ 256              		.text
+ 257              	.Letext0:
+ 258              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 259              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 260              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 261              		.file 5 "Generated_Source\\PSoC5/USB.h"
+ 262              		.file 6 "Generated_Source\\PSoC5/Status_1_8.h"
+ 263              		.file 7 "Generated_Source\\PSoC5/Status_9_11.h"
+ 264              		.file 8 "Generated_Source\\PSoC5/led.h"
+ 265              		.file 9 "Generated_Source\\PSoC5/CyLib.h"
+ 266              		.file 10 "Generated_Source\\PSoC5/core_cm3.h"
+ 267              		.section	.debug_info,"",%progbits
+ 268              	.Ldebug_info0:
+ 269 0000 BA030000 		.4byte	0x3ba
+ 270 0004 0400     		.2byte	0x4
+ 271 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 272 000a 04       		.byte	0x4
+ 273 000b 01       		.uleb128 0x1
+ 274 000c 3A000000 		.4byte	.LASF34
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccC0xZAx.s 			page 7
 
 
- 291 0090 21000000 		.4byte	.LASF12
- 292 0094 02       		.uleb128 0x2
- 293 0095 08       		.byte	0x8
- 294 0096 04       		.byte	0x4
- 295 0097 14010000 		.4byte	.LASF13
- 296 009b 02       		.uleb128 0x2
- 297 009c 01       		.byte	0x1
- 298 009d 08       		.byte	0x8
- 299 009e AA010000 		.4byte	.LASF14
- 300 00a2 02       		.uleb128 0x2
- 301 00a3 08       		.byte	0x8
- 302 00a4 04       		.byte	0x4
- 303 00a5 4F020000 		.4byte	.LASF15
- 304 00a9 02       		.uleb128 0x2
- 305 00aa 04       		.byte	0x4
- 306 00ab 07       		.byte	0x7
- 307 00ac 84010000 		.4byte	.LASF16
- 308 00b0 06       		.uleb128 0x6
- 309 00b1 8D010000 		.4byte	.LASF17
- 310 00b5 01       		.byte	0x1
- 311 00b6 0D       		.byte	0xd
- 312 00b7 00000000 		.4byte	.LFB63
- 313 00bb 3C000000 		.4byte	.LFE63-.LFB63
- 314 00bf 01       		.uleb128 0x1
- 315 00c0 9C       		.byte	0x9c
- 316 00c1 2B010000 		.4byte	0x12b
- 317 00c5 07       		.uleb128 0x7
- 318 00c6 02000000 		.4byte	.LBB2
- 319 00ca 10000000 		.4byte	.LBE2-.LBB2
- 320 00ce E0000000 		.4byte	0xe0
- 321 00d2 08       		.uleb128 0x8
- 322 00d3 6900     		.ascii	"i\000"
- 323 00d5 01       		.byte	0x1
- 324 00d6 0E       		.byte	0xe
- 325 00d7 81000000 		.4byte	0x81
- 326 00db 00000000 		.4byte	.LLST0
- 327 00df 00       		.byte	0
- 328 00e0 07       		.uleb128 0x7
- 329 00e1 12000000 		.4byte	.LBB3
- 330 00e5 0C000000 		.4byte	.LBE3-.LBB3
- 331 00e9 FB000000 		.4byte	0xfb
- 332 00ed 08       		.uleb128 0x8
- 333 00ee 6A00     		.ascii	"j\000"
- 334 00f0 01       		.byte	0x1
- 335 00f1 11       		.byte	0x11
- 336 00f2 81000000 		.4byte	0x81
- 337 00f6 2A000000 		.4byte	.LLST1
- 338 00fa 00       		.byte	0
- 339 00fb 07       		.uleb128 0x7
- 340 00fc 1E000000 		.4byte	.LBB4
- 341 0100 0E000000 		.4byte	.LBE4-.LBB4
- 342 0104 16010000 		.4byte	0x116
- 343 0108 08       		.uleb128 0x8
- 344 0109 6B00     		.ascii	"k\000"
- 345 010b 01       		.byte	0x1
- 346 010c 14       		.byte	0x14
- 347 010d 81000000 		.4byte	0x81
-ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 8
+ 275 0010 0C       		.byte	0xc
+ 276 0011 C6010000 		.4byte	.LASF35
+ 277 0015 F5010000 		.4byte	.LASF36
+ 278 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 279 001d 00000000 		.4byte	0
+ 280 0021 00000000 		.4byte	.Ldebug_line0
+ 281 0025 02       		.uleb128 0x2
+ 282 0026 01       		.byte	0x1
+ 283 0027 06       		.byte	0x6
+ 284 0028 97020000 		.4byte	.LASF0
+ 285 002c 02       		.uleb128 0x2
+ 286 002d 01       		.byte	0x1
+ 287 002e 08       		.byte	0x8
+ 288 002f 2C000000 		.4byte	.LASF1
+ 289 0033 02       		.uleb128 0x2
+ 290 0034 02       		.byte	0x2
+ 291 0035 05       		.byte	0x5
+ 292 0036 EB010000 		.4byte	.LASF2
+ 293 003a 02       		.uleb128 0x2
+ 294 003b 02       		.byte	0x2
+ 295 003c 07       		.byte	0x7
+ 296 003d E9000000 		.4byte	.LASF3
+ 297 0041 03       		.uleb128 0x3
+ 298 0042 12000000 		.4byte	.LASF9
+ 299 0046 02       		.byte	0x2
+ 300 0047 3F       		.byte	0x3f
+ 301 0048 4C000000 		.4byte	0x4c
+ 302 004c 02       		.uleb128 0x2
+ 303 004d 04       		.byte	0x4
+ 304 004e 05       		.byte	0x5
+ 305 004f 75020000 		.4byte	.LASF4
+ 306 0053 02       		.uleb128 0x2
+ 307 0054 04       		.byte	0x4
+ 308 0055 07       		.byte	0x7
+ 309 0056 D7000000 		.4byte	.LASF5
+ 310 005a 02       		.uleb128 0x2
+ 311 005b 08       		.byte	0x8
+ 312 005c 05       		.byte	0x5
+ 313 005d B8010000 		.4byte	.LASF6
+ 314 0061 02       		.uleb128 0x2
+ 315 0062 08       		.byte	0x8
+ 316 0063 07       		.byte	0x7
+ 317 0064 69010000 		.4byte	.LASF7
+ 318 0068 04       		.uleb128 0x4
+ 319 0069 04       		.byte	0x4
+ 320 006a 05       		.byte	0x5
+ 321 006b 696E7400 		.ascii	"int\000"
+ 322 006f 02       		.uleb128 0x2
+ 323 0070 04       		.byte	0x4
+ 324 0071 07       		.byte	0x7
+ 325 0072 47010000 		.4byte	.LASF8
+ 326 0076 03       		.uleb128 0x3
+ 327 0077 9F010000 		.4byte	.LASF10
+ 328 007b 03       		.byte	0x3
+ 329 007c 2C       		.byte	0x2c
+ 330 007d 41000000 		.4byte	0x41
+ 331 0081 05       		.uleb128 0x5
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccC0xZAx.s 			page 8
 
 
- 348 0111 48000000 		.4byte	.LLST2
- 349 0115 00       		.byte	0
- 350 0116 09       		.uleb128 0x9
- 351 0117 34000000 		.4byte	.LVL12
- 352 011b 55020000 		.4byte	0x255
- 353 011f 0A       		.uleb128 0xa
- 354 0120 01       		.uleb128 0x1
- 355 0121 50       		.byte	0x50
- 356 0122 01       		.uleb128 0x1
- 357 0123 30       		.byte	0x30
- 358 0124 0A       		.uleb128 0xa
- 359 0125 01       		.uleb128 0x1
- 360 0126 51       		.byte	0x51
- 361 0127 01       		.uleb128 0x1
- 362 0128 32       		.byte	0x32
- 363 0129 00       		.byte	0
- 364 012a 00       		.byte	0
- 365 012b 06       		.uleb128 0x6
- 366 012c 2C020000 		.4byte	.LASF18
- 367 0130 01       		.byte	0x1
- 368 0131 1A       		.byte	0x1a
- 369 0132 00000000 		.4byte	.LFB64
- 370 0136 0C000000 		.4byte	.LFE64-.LFB64
- 371 013a 01       		.uleb128 0x1
- 372 013b 9C       		.byte	0x9c
- 373 013c 53010000 		.4byte	0x153
- 374 0140 0B       		.uleb128 0xb
- 375 0141 06000000 		.4byte	.LVL13
- 376 0145 61020000 		.4byte	0x261
- 377 0149 0B       		.uleb128 0xb
- 378 014a 0A000000 		.4byte	.LVL14
- 379 014e 6C020000 		.4byte	0x26c
- 380 0152 00       		.byte	0
- 381 0153 0C       		.uleb128 0xc
- 382 0154 1B010000 		.4byte	.LASF33
- 383 0158 01       		.byte	0x1
- 384 0159 20       		.byte	0x20
- 385 015a 68000000 		.4byte	0x68
- 386 015e 00000000 		.4byte	.LFB65
- 387 0162 4C000000 		.4byte	.LFE65-.LFB65
- 388 0166 01       		.uleb128 0x1
- 389 0167 9C       		.byte	0x9c
- 390 0168 0D020000 		.4byte	0x20d
- 391 016c 0B       		.uleb128 0xb
- 392 016d 08000000 		.4byte	.LVL15
- 393 0171 B0000000 		.4byte	0xb0
- 394 0175 0D       		.uleb128 0xd
- 395 0176 0E000000 		.4byte	.LVL16
- 396 017a 77020000 		.4byte	0x277
- 397 017e 88010000 		.4byte	0x188
- 398 0182 0A       		.uleb128 0xa
- 399 0183 01       		.uleb128 0x1
- 400 0184 50       		.byte	0x50
- 401 0185 01       		.uleb128 0x1
- 402 0186 31       		.byte	0x31
- 403 0187 00       		.byte	0
- 404 0188 0D       		.uleb128 0xd
-ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 9
+ 332 0082 58020000 		.4byte	.LASF11
+ 333 0086 04       		.byte	0x4
+ 334 0087 E401     		.2byte	0x1e4
+ 335 0089 2C000000 		.4byte	0x2c
+ 336 008d 02       		.uleb128 0x2
+ 337 008e 04       		.byte	0x4
+ 338 008f 04       		.byte	0x4
+ 339 0090 26000000 		.4byte	.LASF12
+ 340 0094 02       		.uleb128 0x2
+ 341 0095 08       		.byte	0x8
+ 342 0096 04       		.byte	0x4
+ 343 0097 29010000 		.4byte	.LASF13
+ 344 009b 02       		.uleb128 0x2
+ 345 009c 01       		.byte	0x1
+ 346 009d 08       		.byte	0x8
+ 347 009e 00000000 		.4byte	.LASF14
+ 348 00a2 02       		.uleb128 0x2
+ 349 00a3 08       		.byte	0x8
+ 350 00a4 04       		.byte	0x4
+ 351 00a5 8B020000 		.4byte	.LASF15
+ 352 00a9 02       		.uleb128 0x2
+ 353 00aa 04       		.byte	0x4
+ 354 00ab 07       		.byte	0x7
+ 355 00ac A7010000 		.4byte	.LASF16
+ 356 00b0 06       		.uleb128 0x6
+ 357 00b1 B0010000 		.4byte	.LASF17
+ 358 00b5 01       		.byte	0x1
+ 359 00b6 0E       		.byte	0xe
+ 360 00b7 00000000 		.4byte	.LFB64
+ 361 00bb 50000000 		.4byte	.LFE64-.LFB64
+ 362 00bf 01       		.uleb128 0x1
+ 363 00c0 9C       		.byte	0x9c
+ 364 00c1 4D010000 		.4byte	0x14d
+ 365 00c5 07       		.uleb128 0x7
+ 366 00c6 02000000 		.4byte	.LBB2
+ 367 00ca 16000000 		.4byte	.LBE2-.LBB2
+ 368 00ce E0000000 		.4byte	0xe0
+ 369 00d2 08       		.uleb128 0x8
+ 370 00d3 6A00     		.ascii	"j\000"
+ 371 00d5 01       		.byte	0x1
+ 372 00d6 0F       		.byte	0xf
+ 373 00d7 81000000 		.4byte	0x81
+ 374 00db 00000000 		.4byte	.LLST0
+ 375 00df 00       		.byte	0
+ 376 00e0 07       		.uleb128 0x7
+ 377 00e1 18000000 		.4byte	.LBB3
+ 378 00e5 10000000 		.4byte	.LBE3-.LBB3
+ 379 00e9 FB000000 		.4byte	0xfb
+ 380 00ed 08       		.uleb128 0x8
+ 381 00ee 6B00     		.ascii	"k\000"
+ 382 00f0 01       		.byte	0x1
+ 383 00f1 12       		.byte	0x12
+ 384 00f2 81000000 		.4byte	0x81
+ 385 00f6 2A000000 		.4byte	.LLST1
+ 386 00fa 00       		.byte	0
+ 387 00fb 09       		.uleb128 0x9
+ 388 00fc 32000000 		.4byte	.LVL8
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccC0xZAx.s 			page 9
 
 
- 405 0189 16000000 		.4byte	.LVL17
- 406 018d 82020000 		.4byte	0x282
- 407 0191 9D010000 		.4byte	0x19d
- 408 0195 0A       		.uleb128 0xa
- 409 0196 01       		.uleb128 0x1
- 410 0197 50       		.byte	0x50
- 411 0198 03       		.uleb128 0x3
- 412 0199 0A       		.byte	0xa
- 413 019a F401     		.2byte	0x1f4
- 414 019c 00       		.byte	0
- 415 019d 0D       		.uleb128 0xd
- 416 019e 1C000000 		.4byte	.LVL18
- 417 01a2 77020000 		.4byte	0x277
- 418 01a6 B0010000 		.4byte	0x1b0
- 419 01aa 0A       		.uleb128 0xa
- 420 01ab 01       		.uleb128 0x1
- 421 01ac 50       		.byte	0x50
- 422 01ad 01       		.uleb128 0x1
- 423 01ae 30       		.byte	0x30
- 424 01af 00       		.byte	0
- 425 01b0 0D       		.uleb128 0xd
- 426 01b1 24000000 		.4byte	.LVL19
- 427 01b5 82020000 		.4byte	0x282
- 428 01b9 C5010000 		.4byte	0x1c5
- 429 01bd 0A       		.uleb128 0xa
- 430 01be 01       		.uleb128 0x1
- 431 01bf 50       		.byte	0x50
- 432 01c0 03       		.uleb128 0x3
- 433 01c1 0A       		.byte	0xa
- 434 01c2 F401     		.2byte	0x1f4
- 435 01c4 00       		.byte	0
- 436 01c5 0D       		.uleb128 0xd
- 437 01c6 2A000000 		.4byte	.LVL20
- 438 01ca 8D020000 		.4byte	0x28d
- 439 01ce D8010000 		.4byte	0x1d8
- 440 01d2 0A       		.uleb128 0xa
- 441 01d3 01       		.uleb128 0x1
- 442 01d4 50       		.byte	0x50
- 443 01d5 01       		.uleb128 0x1
- 444 01d6 32       		.byte	0x32
- 445 01d7 00       		.byte	0
- 446 01d8 0B       		.uleb128 0xb
- 447 01d9 32000000 		.4byte	.LVL21
- 448 01dd 2B010000 		.4byte	0x12b
- 449 01e1 0D       		.uleb128 0xd
- 450 01e2 38000000 		.4byte	.LVL22
- 451 01e6 99020000 		.4byte	0x299
- 452 01ea F4010000 		.4byte	0x1f4
- 453 01ee 0A       		.uleb128 0xa
- 454 01ef 01       		.uleb128 0x1
- 455 01f0 50       		.byte	0x50
- 456 01f1 01       		.uleb128 0x1
- 457 01f2 32       		.byte	0x32
- 458 01f3 00       		.byte	0
- 459 01f4 09       		.uleb128 0x9
- 460 01f5 44000000 		.4byte	.LVL23
- 461 01f9 A5020000 		.4byte	0x2a5
-ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 10
+ 389 0100 31030000 		.4byte	0x331
+ 390 0104 13010000 		.4byte	0x113
+ 391 0108 0A       		.uleb128 0xa
+ 392 0109 01       		.uleb128 0x1
+ 393 010a 50       		.byte	0x50
+ 394 010b 01       		.uleb128 0x1
+ 395 010c 30       		.byte	0x30
+ 396 010d 0A       		.uleb128 0xa
+ 397 010e 01       		.uleb128 0x1
+ 398 010f 51       		.byte	0x51
+ 399 0110 01       		.uleb128 0x1
+ 400 0111 32       		.byte	0x32
+ 401 0112 00       		.byte	0
+ 402 0113 0B       		.uleb128 0xb
+ 403 0114 36000000 		.4byte	.LVL9
+ 404 0118 3D030000 		.4byte	0x33d
+ 405 011c 09       		.uleb128 0x9
+ 406 011d 44000000 		.4byte	.LVL10
+ 407 0121 49030000 		.4byte	0x349
+ 408 0125 3D010000 		.4byte	0x13d
+ 409 0129 0A       		.uleb128 0xa
+ 410 012a 01       		.uleb128 0x1
+ 411 012b 50       		.byte	0x50
+ 412 012c 01       		.uleb128 0x1
+ 413 012d 31       		.byte	0x31
+ 414 012e 0A       		.uleb128 0xa
+ 415 012f 01       		.uleb128 0x1
+ 416 0130 51       		.byte	0x51
+ 417 0131 05       		.uleb128 0x5
+ 418 0132 03       		.byte	0x3
+ 419 0133 00000000 		.4byte	.LANCHOR0
+ 420 0137 0A       		.uleb128 0xa
+ 421 0138 01       		.uleb128 0x1
+ 422 0139 52       		.byte	0x52
+ 423 013a 01       		.uleb128 0x1
+ 424 013b 32       		.byte	0x32
+ 425 013c 00       		.byte	0
+ 426 013d 0C       		.uleb128 0xc
+ 427 013e 4A000000 		.4byte	.LVL11
+ 428 0142 55030000 		.4byte	0x355
+ 429 0146 0A       		.uleb128 0xa
+ 430 0147 01       		.uleb128 0x1
+ 431 0148 50       		.byte	0x50
+ 432 0149 01       		.uleb128 0x1
+ 433 014a 32       		.byte	0x32
+ 434 014b 00       		.byte	0
+ 435 014c 00       		.byte	0
+ 436 014d 06       		.uleb128 0x6
+ 437 014e 68020000 		.4byte	.LASF18
+ 438 0152 01       		.byte	0x1
+ 439 0153 1D       		.byte	0x1d
+ 440 0154 00000000 		.4byte	.LFB65
+ 441 0158 0C000000 		.4byte	.LFE65-.LFB65
+ 442 015c 01       		.uleb128 0x1
+ 443 015d 9C       		.byte	0x9c
+ 444 015e 75010000 		.4byte	0x175
+ 445 0162 0B       		.uleb128 0xb
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccC0xZAx.s 			page 10
 
 
- 462 01fd 0A       		.uleb128 0xa
- 463 01fe 01       		.uleb128 0x1
- 464 01ff 51       		.byte	0x51
- 465 0200 05       		.uleb128 0x5
- 466 0201 03       		.byte	0x3
- 467 0202 00000000 		.4byte	.LANCHOR0
- 468 0206 0A       		.uleb128 0xa
- 469 0207 01       		.uleb128 0x1
- 470 0208 52       		.byte	0x52
- 471 0209 01       		.uleb128 0x1
- 472 020a 3B       		.byte	0x3b
- 473 020b 00       		.byte	0
- 474 020c 00       		.byte	0
- 475 020d 0E       		.uleb128 0xe
- 476 020e 81000000 		.4byte	0x81
- 477 0212 1D020000 		.4byte	0x21d
- 478 0216 0F       		.uleb128 0xf
- 479 0217 A9000000 		.4byte	0xa9
- 480 021b 01       		.byte	0x1
- 481 021c 00       		.byte	0
- 482 021d 10       		.uleb128 0x10
- 483 021e 42020000 		.4byte	.LASF19
- 484 0222 01       		.byte	0x1
- 485 0223 09       		.byte	0x9
- 486 0224 0D020000 		.4byte	0x20d
- 487 0228 10       		.uleb128 0x10
- 488 0229 3F010000 		.4byte	.LASF20
- 489 022d 01       		.byte	0x1
- 490 022e 0A       		.byte	0xa
- 491 022f 0D020000 		.4byte	0x20d
- 492 0233 11       		.uleb128 0x11
- 493 0234 49010000 		.4byte	.LASF21
- 494 0238 01       		.byte	0x1
- 495 0239 0B       		.byte	0xb
- 496 023a 0D020000 		.4byte	0x20d
- 497 023e 05       		.uleb128 0x5
- 498 023f 03       		.byte	0x3
- 499 0240 00000000 		.4byte	USB_OUTPUT
- 500 0244 12       		.uleb128 0x12
- 501 0245 07010000 		.4byte	.LASF34
- 502 0249 0A       		.byte	0xa
- 503 024a 1207     		.2byte	0x712
- 504 024c 50020000 		.4byte	0x250
- 505 0250 13       		.uleb128 0x13
- 506 0251 76000000 		.4byte	0x76
- 507 0255 14       		.uleb128 0x14
- 508 0256 22020000 		.4byte	.LASF22
- 509 025a 22020000 		.4byte	.LASF22
- 510 025e 05       		.byte	0x5
- 511 025f 2F01     		.2byte	0x12f
- 512 0261 15       		.uleb128 0x15
- 513 0262 F7000000 		.4byte	.LASF23
- 514 0266 F7000000 		.4byte	.LASF23
- 515 026a 06       		.byte	0x6
- 516 026b 30       		.byte	0x30
- 517 026c 15       		.uleb128 0x15
- 518 026d 6B010000 		.4byte	.LASF24
-ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 11
+ 446 0163 06000000 		.4byte	.LVL12
+ 447 0167 61030000 		.4byte	0x361
+ 448 016b 0B       		.uleb128 0xb
+ 449 016c 0A000000 		.4byte	.LVL13
+ 450 0170 6C030000 		.4byte	0x36c
+ 451 0174 00       		.byte	0
+ 452 0175 0D       		.uleb128 0xd
+ 453 0176 30010000 		.4byte	.LASF37
+ 454 017a 01       		.byte	0x1
+ 455 017b 23       		.byte	0x23
+ 456 017c 68000000 		.4byte	0x68
+ 457 0180 00000000 		.4byte	.LFB66
+ 458 0184 88000000 		.4byte	.LFE66-.LFB66
+ 459 0188 01       		.uleb128 0x1
+ 460 0189 9C       		.byte	0x9c
+ 461 018a E3020000 		.4byte	0x2e3
+ 462 018e 0E       		.uleb128 0xe
+ 463 018f E2010000 		.4byte	.LASF19
+ 464 0193 01       		.byte	0x1
+ 465 0194 25       		.byte	0x25
+ 466 0195 81000000 		.4byte	0x81
+ 467 0199 48000000 		.4byte	.LLST2
+ 468 019d 0B       		.uleb128 0xb
+ 469 019e 06000000 		.4byte	.LVL14
+ 470 01a2 B0000000 		.4byte	0xb0
+ 471 01a6 09       		.uleb128 0x9
+ 472 01a7 0C000000 		.4byte	.LVL15
+ 473 01ab 77030000 		.4byte	0x377
+ 474 01af B9010000 		.4byte	0x1b9
+ 475 01b3 0A       		.uleb128 0xa
+ 476 01b4 01       		.uleb128 0x1
+ 477 01b5 50       		.byte	0x50
+ 478 01b6 01       		.uleb128 0x1
+ 479 01b7 31       		.byte	0x31
+ 480 01b8 00       		.byte	0
+ 481 01b9 09       		.uleb128 0x9
+ 482 01ba 14000000 		.4byte	.LVL16
+ 483 01be 82030000 		.4byte	0x382
+ 484 01c2 CE010000 		.4byte	0x1ce
+ 485 01c6 0A       		.uleb128 0xa
+ 486 01c7 01       		.uleb128 0x1
+ 487 01c8 50       		.byte	0x50
+ 488 01c9 03       		.uleb128 0x3
+ 489 01ca 0A       		.byte	0xa
+ 490 01cb F401     		.2byte	0x1f4
+ 491 01cd 00       		.byte	0
+ 492 01ce 09       		.uleb128 0x9
+ 493 01cf 1A000000 		.4byte	.LVL17
+ 494 01d3 77030000 		.4byte	0x377
+ 495 01d7 E1010000 		.4byte	0x1e1
+ 496 01db 0A       		.uleb128 0xa
+ 497 01dc 01       		.uleb128 0x1
+ 498 01dd 50       		.byte	0x50
+ 499 01de 01       		.uleb128 0x1
+ 500 01df 30       		.byte	0x30
+ 501 01e0 00       		.byte	0
+ 502 01e1 09       		.uleb128 0x9
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccC0xZAx.s 			page 11
 
 
- 519 0271 6B010000 		.4byte	.LASF24
- 520 0275 07       		.byte	0x7
- 521 0276 30       		.byte	0x30
- 522 0277 15       		.uleb128 0x15
- 523 0278 17000000 		.4byte	.LASF25
- 524 027c 17000000 		.4byte	.LASF25
- 525 0280 08       		.byte	0x8
- 526 0281 26       		.byte	0x26
- 527 0282 15       		.uleb128 0x15
- 528 0283 67020000 		.4byte	.LASF26
- 529 0287 67020000 		.4byte	.LASF26
- 530 028b 09       		.byte	0x9
- 531 028c 76       		.byte	0x76
- 532 028d 14       		.uleb128 0x14
- 533 028e 20010000 		.4byte	.LASF27
- 534 0292 20010000 		.4byte	.LASF27
- 535 0296 05       		.byte	0x5
- 536 0297 3E01     		.2byte	0x13e
- 537 0299 14       		.uleb128 0x14
- 538 029a C3000000 		.4byte	.LASF28
- 539 029e C3000000 		.4byte	.LASF28
- 540 02a2 05       		.byte	0x5
- 541 02a3 3501     		.2byte	0x135
- 542 02a5 14       		.uleb128 0x14
- 543 02a6 00000000 		.4byte	.LASF29
- 544 02aa 00000000 		.4byte	.LASF29
- 545 02ae 05       		.byte	0x5
- 546 02af 3701     		.2byte	0x137
- 547 02b1 00       		.byte	0
- 548              		.section	.debug_abbrev,"",%progbits
- 549              	.Ldebug_abbrev0:
- 550 0000 01       		.uleb128 0x1
- 551 0001 11       		.uleb128 0x11
- 552 0002 01       		.byte	0x1
- 553 0003 25       		.uleb128 0x25
- 554 0004 0E       		.uleb128 0xe
- 555 0005 13       		.uleb128 0x13
- 556 0006 0B       		.uleb128 0xb
- 557 0007 03       		.uleb128 0x3
- 558 0008 0E       		.uleb128 0xe
- 559 0009 1B       		.uleb128 0x1b
- 560 000a 0E       		.uleb128 0xe
- 561 000b 55       		.uleb128 0x55
- 562 000c 17       		.uleb128 0x17
- 563 000d 11       		.uleb128 0x11
- 564 000e 01       		.uleb128 0x1
- 565 000f 10       		.uleb128 0x10
- 566 0010 17       		.uleb128 0x17
- 567 0011 00       		.byte	0
- 568 0012 00       		.byte	0
- 569 0013 02       		.uleb128 0x2
- 570 0014 24       		.uleb128 0x24
- 571 0015 00       		.byte	0
- 572 0016 0B       		.uleb128 0xb
- 573 0017 0B       		.uleb128 0xb
- 574 0018 3E       		.uleb128 0x3e
- 575 0019 0B       		.uleb128 0xb
-ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 12
+ 503 01e2 22000000 		.4byte	.LVL18
+ 504 01e6 82030000 		.4byte	0x382
+ 505 01ea F6010000 		.4byte	0x1f6
+ 506 01ee 0A       		.uleb128 0xa
+ 507 01ef 01       		.uleb128 0x1
+ 508 01f0 50       		.byte	0x50
+ 509 01f1 03       		.uleb128 0x3
+ 510 01f2 0A       		.byte	0xa
+ 511 01f3 F401     		.2byte	0x1f4
+ 512 01f5 00       		.byte	0
+ 513 01f6 09       		.uleb128 0x9
+ 514 01f7 28000000 		.4byte	.LVL19
+ 515 01fb 8D030000 		.4byte	0x38d
+ 516 01ff 09020000 		.4byte	0x209
+ 517 0203 0A       		.uleb128 0xa
+ 518 0204 01       		.uleb128 0x1
+ 519 0205 50       		.byte	0x50
+ 520 0206 01       		.uleb128 0x1
+ 521 0207 31       		.byte	0x31
+ 522 0208 00       		.byte	0
+ 523 0209 09       		.uleb128 0x9
+ 524 020a 32000000 		.4byte	.LVL20
+ 525 020e 77030000 		.4byte	0x377
+ 526 0212 1C020000 		.4byte	0x21c
+ 527 0216 0A       		.uleb128 0xa
+ 528 0217 01       		.uleb128 0x1
+ 529 0218 50       		.byte	0x50
+ 530 0219 01       		.uleb128 0x1
+ 531 021a 31       		.byte	0x31
+ 532 021b 00       		.byte	0
+ 533 021c 09       		.uleb128 0x9
+ 534 021d 3A000000 		.4byte	.LVL21
+ 535 0221 82030000 		.4byte	0x382
+ 536 0225 31020000 		.4byte	0x231
+ 537 0229 0A       		.uleb128 0xa
+ 538 022a 01       		.uleb128 0x1
+ 539 022b 50       		.byte	0x50
+ 540 022c 03       		.uleb128 0x3
+ 541 022d 0A       		.byte	0xa
+ 542 022e F401     		.2byte	0x1f4
+ 543 0230 00       		.byte	0
+ 544 0231 09       		.uleb128 0x9
+ 545 0232 40000000 		.4byte	.LVL22
+ 546 0236 77030000 		.4byte	0x377
+ 547 023a 44020000 		.4byte	0x244
+ 548 023e 0A       		.uleb128 0xa
+ 549 023f 01       		.uleb128 0x1
+ 550 0240 50       		.byte	0x50
+ 551 0241 01       		.uleb128 0x1
+ 552 0242 30       		.byte	0x30
+ 553 0243 00       		.byte	0
+ 554 0244 09       		.uleb128 0x9
+ 555 0245 48000000 		.4byte	.LVL23
+ 556 0249 82030000 		.4byte	0x382
+ 557 024d 59020000 		.4byte	0x259
+ 558 0251 0A       		.uleb128 0xa
+ 559 0252 01       		.uleb128 0x1
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccC0xZAx.s 			page 12
 
 
- 576 001a 03       		.uleb128 0x3
- 577 001b 0E       		.uleb128 0xe
- 578 001c 00       		.byte	0
- 579 001d 00       		.byte	0
- 580 001e 03       		.uleb128 0x3
- 581 001f 16       		.uleb128 0x16
- 582 0020 00       		.byte	0
- 583 0021 03       		.uleb128 0x3
- 584 0022 0E       		.uleb128 0xe
- 585 0023 3A       		.uleb128 0x3a
- 586 0024 0B       		.uleb128 0xb
- 587 0025 3B       		.uleb128 0x3b
- 588 0026 0B       		.uleb128 0xb
- 589 0027 49       		.uleb128 0x49
- 590 0028 13       		.uleb128 0x13
- 591 0029 00       		.byte	0
- 592 002a 00       		.byte	0
- 593 002b 04       		.uleb128 0x4
- 594 002c 24       		.uleb128 0x24
- 595 002d 00       		.byte	0
- 596 002e 0B       		.uleb128 0xb
- 597 002f 0B       		.uleb128 0xb
- 598 0030 3E       		.uleb128 0x3e
- 599 0031 0B       		.uleb128 0xb
- 600 0032 03       		.uleb128 0x3
- 601 0033 08       		.uleb128 0x8
- 602 0034 00       		.byte	0
- 603 0035 00       		.byte	0
- 604 0036 05       		.uleb128 0x5
- 605 0037 16       		.uleb128 0x16
- 606 0038 00       		.byte	0
- 607 0039 03       		.uleb128 0x3
- 608 003a 0E       		.uleb128 0xe
- 609 003b 3A       		.uleb128 0x3a
- 610 003c 0B       		.uleb128 0xb
- 611 003d 3B       		.uleb128 0x3b
- 612 003e 05       		.uleb128 0x5
- 613 003f 49       		.uleb128 0x49
- 614 0040 13       		.uleb128 0x13
- 615 0041 00       		.byte	0
- 616 0042 00       		.byte	0
- 617 0043 06       		.uleb128 0x6
- 618 0044 2E       		.uleb128 0x2e
- 619 0045 01       		.byte	0x1
- 620 0046 3F       		.uleb128 0x3f
- 621 0047 19       		.uleb128 0x19
- 622 0048 03       		.uleb128 0x3
- 623 0049 0E       		.uleb128 0xe
- 624 004a 3A       		.uleb128 0x3a
- 625 004b 0B       		.uleb128 0xb
- 626 004c 3B       		.uleb128 0x3b
- 627 004d 0B       		.uleb128 0xb
- 628 004e 27       		.uleb128 0x27
- 629 004f 19       		.uleb128 0x19
- 630 0050 11       		.uleb128 0x11
- 631 0051 01       		.uleb128 0x1
- 632 0052 12       		.uleb128 0x12
-ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 13
+ 560 0253 50       		.byte	0x50
+ 561 0254 03       		.uleb128 0x3
+ 562 0255 0A       		.byte	0xa
+ 563 0256 F401     		.2byte	0x1f4
+ 564 0258 00       		.byte	0
+ 565 0259 0B       		.uleb128 0xb
+ 566 025a 4C000000 		.4byte	.LVL24
+ 567 025e 4D010000 		.4byte	0x14d
+ 568 0262 09       		.uleb128 0x9
+ 569 0263 52000000 		.4byte	.LVL25
+ 570 0267 99030000 		.4byte	0x399
+ 571 026b 75020000 		.4byte	0x275
+ 572 026f 0A       		.uleb128 0xa
+ 573 0270 01       		.uleb128 0x1
+ 574 0271 50       		.byte	0x50
+ 575 0272 01       		.uleb128 0x1
+ 576 0273 31       		.byte	0x31
+ 577 0274 00       		.byte	0
+ 578 0275 09       		.uleb128 0x9
+ 579 0276 5E000000 		.4byte	.LVL26
+ 580 027a 49030000 		.4byte	0x349
+ 581 027e 91020000 		.4byte	0x291
+ 582 0282 0A       		.uleb128 0xa
+ 583 0283 01       		.uleb128 0x1
+ 584 0284 51       		.byte	0x51
+ 585 0285 05       		.uleb128 0x5
+ 586 0286 03       		.byte	0x3
+ 587 0287 00000000 		.4byte	.LANCHOR0
+ 588 028b 0A       		.uleb128 0xa
+ 589 028c 01       		.uleb128 0x1
+ 590 028d 52       		.byte	0x52
+ 591 028e 01       		.uleb128 0x1
+ 592 028f 32       		.byte	0x32
+ 593 0290 00       		.byte	0
+ 594 0291 09       		.uleb128 0x9
+ 595 0292 64000000 		.4byte	.LVL27
+ 596 0296 99030000 		.4byte	0x399
+ 597 029a A4020000 		.4byte	0x2a4
+ 598 029e 0A       		.uleb128 0xa
+ 599 029f 01       		.uleb128 0x1
+ 600 02a0 50       		.byte	0x50
+ 601 02a1 01       		.uleb128 0x1
+ 602 02a2 32       		.byte	0x32
+ 603 02a3 00       		.byte	0
+ 604 02a4 09       		.uleb128 0x9
+ 605 02a5 6E000000 		.4byte	.LVL28
+ 606 02a9 A5030000 		.4byte	0x3a5
+ 607 02ad B7020000 		.4byte	0x2b7
+ 608 02b1 0A       		.uleb128 0xa
+ 609 02b2 01       		.uleb128 0x1
+ 610 02b3 50       		.byte	0x50
+ 611 02b4 01       		.uleb128 0x1
+ 612 02b5 32       		.byte	0x32
+ 613 02b6 00       		.byte	0
+ 614 02b7 09       		.uleb128 0x9
+ 615 02b8 78000000 		.4byte	.LVL30
+ 616 02bc B1030000 		.4byte	0x3b1
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccC0xZAx.s 			page 13
 
 
- 633 0053 06       		.uleb128 0x6
- 634 0054 40       		.uleb128 0x40
- 635 0055 18       		.uleb128 0x18
- 636 0056 9742     		.uleb128 0x2117
- 637 0058 19       		.uleb128 0x19
- 638 0059 01       		.uleb128 0x1
- 639 005a 13       		.uleb128 0x13
- 640 005b 00       		.byte	0
- 641 005c 00       		.byte	0
- 642 005d 07       		.uleb128 0x7
- 643 005e 0B       		.uleb128 0xb
- 644 005f 01       		.byte	0x1
- 645 0060 11       		.uleb128 0x11
- 646 0061 01       		.uleb128 0x1
- 647 0062 12       		.uleb128 0x12
- 648 0063 06       		.uleb128 0x6
- 649 0064 01       		.uleb128 0x1
- 650 0065 13       		.uleb128 0x13
- 651 0066 00       		.byte	0
- 652 0067 00       		.byte	0
- 653 0068 08       		.uleb128 0x8
- 654 0069 34       		.uleb128 0x34
- 655 006a 00       		.byte	0
- 656 006b 03       		.uleb128 0x3
- 657 006c 08       		.uleb128 0x8
- 658 006d 3A       		.uleb128 0x3a
- 659 006e 0B       		.uleb128 0xb
- 660 006f 3B       		.uleb128 0x3b
- 661 0070 0B       		.uleb128 0xb
- 662 0071 49       		.uleb128 0x49
- 663 0072 13       		.uleb128 0x13
- 664 0073 02       		.uleb128 0x2
- 665 0074 17       		.uleb128 0x17
- 666 0075 00       		.byte	0
- 667 0076 00       		.byte	0
- 668 0077 09       		.uleb128 0x9
- 669 0078 898201   		.uleb128 0x4109
- 670 007b 01       		.byte	0x1
- 671 007c 11       		.uleb128 0x11
- 672 007d 01       		.uleb128 0x1
- 673 007e 31       		.uleb128 0x31
- 674 007f 13       		.uleb128 0x13
- 675 0080 00       		.byte	0
- 676 0081 00       		.byte	0
- 677 0082 0A       		.uleb128 0xa
- 678 0083 8A8201   		.uleb128 0x410a
- 679 0086 00       		.byte	0
- 680 0087 02       		.uleb128 0x2
- 681 0088 18       		.uleb128 0x18
- 682 0089 9142     		.uleb128 0x2111
- 683 008b 18       		.uleb128 0x18
- 684 008c 00       		.byte	0
- 685 008d 00       		.byte	0
- 686 008e 0B       		.uleb128 0xb
- 687 008f 898201   		.uleb128 0x4109
- 688 0092 00       		.byte	0
- 689 0093 11       		.uleb128 0x11
-ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 14
+ 617 02c0 D3020000 		.4byte	0x2d3
+ 618 02c4 0A       		.uleb128 0xa
+ 619 02c5 01       		.uleb128 0x1
+ 620 02c6 50       		.byte	0x50
+ 621 02c7 01       		.uleb128 0x1
+ 622 02c8 32       		.byte	0x32
+ 623 02c9 0A       		.uleb128 0xa
+ 624 02ca 01       		.uleb128 0x1
+ 625 02cb 51       		.byte	0x51
+ 626 02cc 05       		.uleb128 0x5
+ 627 02cd 03       		.byte	0x3
+ 628 02ce 04000000 		.4byte	.LANCHOR0+4
+ 629 02d2 00       		.byte	0
+ 630 02d3 0C       		.uleb128 0xc
+ 631 02d4 7E000000 		.4byte	.LVL31
+ 632 02d8 55030000 		.4byte	0x355
+ 633 02dc 0A       		.uleb128 0xa
+ 634 02dd 01       		.uleb128 0x1
+ 635 02de 50       		.byte	0x50
+ 636 02df 01       		.uleb128 0x1
+ 637 02e0 32       		.byte	0x32
+ 638 02e1 00       		.byte	0
+ 639 02e2 00       		.byte	0
+ 640 02e3 0F       		.uleb128 0xf
+ 641 02e4 81000000 		.4byte	0x81
+ 642 02e8 F3020000 		.4byte	0x2f3
+ 643 02ec 10       		.uleb128 0x10
+ 644 02ed A9000000 		.4byte	0xa9
+ 645 02f1 01       		.byte	0x1
+ 646 02f2 00       		.byte	0
+ 647 02f3 11       		.uleb128 0x11
+ 648 02f4 7E020000 		.4byte	.LASF38
+ 649 02f8 01       		.byte	0x1
+ 650 02f9 0A       		.byte	0xa
+ 651 02fa E3020000 		.4byte	0x2e3
+ 652 02fe 12       		.uleb128 0x12
+ 653 02ff 54010000 		.4byte	.LASF20
+ 654 0303 01       		.byte	0x1
+ 655 0304 0B       		.byte	0xb
+ 656 0305 E3020000 		.4byte	0x2e3
+ 657 0309 05       		.uleb128 0x5
+ 658 030a 03       		.byte	0x3
+ 659 030b 00000000 		.4byte	USB_INPUT
+ 660 030f 12       		.uleb128 0x12
+ 661 0310 5E010000 		.4byte	.LASF21
+ 662 0314 01       		.byte	0x1
+ 663 0315 0C       		.byte	0xc
+ 664 0316 E3020000 		.4byte	0x2e3
+ 665 031a 05       		.uleb128 0x5
+ 666 031b 03       		.byte	0x3
+ 667 031c 04000000 		.4byte	USB_OUTPUT
+ 668 0320 13       		.uleb128 0x13
+ 669 0321 1C010000 		.4byte	.LASF39
+ 670 0325 0A       		.byte	0xa
+ 671 0326 1207     		.2byte	0x712
+ 672 0328 2C030000 		.4byte	0x32c
+ 673 032c 14       		.uleb128 0x14
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccC0xZAx.s 			page 14
 
 
- 690 0094 01       		.uleb128 0x1
- 691 0095 31       		.uleb128 0x31
- 692 0096 13       		.uleb128 0x13
- 693 0097 00       		.byte	0
- 694 0098 00       		.byte	0
- 695 0099 0C       		.uleb128 0xc
- 696 009a 2E       		.uleb128 0x2e
- 697 009b 01       		.byte	0x1
- 698 009c 3F       		.uleb128 0x3f
- 699 009d 19       		.uleb128 0x19
- 700 009e 03       		.uleb128 0x3
- 701 009f 0E       		.uleb128 0xe
- 702 00a0 3A       		.uleb128 0x3a
- 703 00a1 0B       		.uleb128 0xb
- 704 00a2 3B       		.uleb128 0x3b
- 705 00a3 0B       		.uleb128 0xb
- 706 00a4 27       		.uleb128 0x27
- 707 00a5 19       		.uleb128 0x19
- 708 00a6 49       		.uleb128 0x49
- 709 00a7 13       		.uleb128 0x13
- 710 00a8 8701     		.uleb128 0x87
- 711 00aa 19       		.uleb128 0x19
- 712 00ab 11       		.uleb128 0x11
- 713 00ac 01       		.uleb128 0x1
- 714 00ad 12       		.uleb128 0x12
- 715 00ae 06       		.uleb128 0x6
- 716 00af 40       		.uleb128 0x40
- 717 00b0 18       		.uleb128 0x18
- 718 00b1 9742     		.uleb128 0x2117
- 719 00b3 19       		.uleb128 0x19
- 720 00b4 01       		.uleb128 0x1
- 721 00b5 13       		.uleb128 0x13
- 722 00b6 00       		.byte	0
- 723 00b7 00       		.byte	0
- 724 00b8 0D       		.uleb128 0xd
- 725 00b9 898201   		.uleb128 0x4109
- 726 00bc 01       		.byte	0x1
- 727 00bd 11       		.uleb128 0x11
- 728 00be 01       		.uleb128 0x1
- 729 00bf 31       		.uleb128 0x31
- 730 00c0 13       		.uleb128 0x13
- 731 00c1 01       		.uleb128 0x1
- 732 00c2 13       		.uleb128 0x13
- 733 00c3 00       		.byte	0
- 734 00c4 00       		.byte	0
- 735 00c5 0E       		.uleb128 0xe
- 736 00c6 01       		.uleb128 0x1
- 737 00c7 01       		.byte	0x1
- 738 00c8 49       		.uleb128 0x49
- 739 00c9 13       		.uleb128 0x13
- 740 00ca 01       		.uleb128 0x1
- 741 00cb 13       		.uleb128 0x13
- 742 00cc 00       		.byte	0
- 743 00cd 00       		.byte	0
- 744 00ce 0F       		.uleb128 0xf
- 745 00cf 21       		.uleb128 0x21
- 746 00d0 00       		.byte	0
-ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 15
+ 674 032d 76000000 		.4byte	0x76
+ 675 0331 15       		.uleb128 0x15
+ 676 0332 5E020000 		.4byte	.LASF22
+ 677 0336 5E020000 		.4byte	.LASF22
+ 678 033a 05       		.byte	0x5
+ 679 033b 2F01     		.2byte	0x12f
+ 680 033d 15       		.uleb128 0x15
+ 681 033e CD010000 		.4byte	.LASF23
+ 682 0342 CD010000 		.4byte	.LASF23
+ 683 0346 05       		.byte	0x5
+ 684 0347 3201     		.2byte	0x132
+ 685 0349 15       		.uleb128 0x15
+ 686 034a 05000000 		.4byte	.LASF24
+ 687 034e 05000000 		.4byte	.LASF24
+ 688 0352 05       		.byte	0x5
+ 689 0353 3701     		.2byte	0x137
+ 690 0355 15       		.uleb128 0x15
+ 691 0356 FC000000 		.4byte	.LASF25
+ 692 035a FC000000 		.4byte	.LASF25
+ 693 035e 05       		.byte	0x5
+ 694 035f 3B01     		.2byte	0x13b
+ 695 0361 16       		.uleb128 0x16
+ 696 0362 0C010000 		.4byte	.LASF26
+ 697 0366 0C010000 		.4byte	.LASF26
+ 698 036a 06       		.byte	0x6
+ 699 036b 30       		.byte	0x30
+ 700 036c 16       		.uleb128 0x16
+ 701 036d 8E010000 		.4byte	.LASF27
+ 702 0371 8E010000 		.4byte	.LASF27
+ 703 0375 07       		.byte	0x7
+ 704 0376 30       		.byte	0x30
+ 705 0377 16       		.uleb128 0x16
+ 706 0378 1C000000 		.4byte	.LASF28
+ 707 037c 1C000000 		.4byte	.LASF28
+ 708 0380 08       		.byte	0x8
+ 709 0381 26       		.byte	0x26
+ 710 0382 16       		.uleb128 0x16
+ 711 0383 A3020000 		.4byte	.LASF29
+ 712 0387 A3020000 		.4byte	.LASF29
+ 713 038b 09       		.byte	0x9
+ 714 038c 76       		.byte	0x76
+ 715 038d 15       		.uleb128 0x15
+ 716 038e 35010000 		.4byte	.LASF30
+ 717 0392 35010000 		.4byte	.LASF30
+ 718 0396 05       		.byte	0x5
+ 719 0397 3E01     		.2byte	0x13e
+ 720 0399 15       		.uleb128 0x15
+ 721 039a C8000000 		.4byte	.LASF31
+ 722 039e C8000000 		.4byte	.LASF31
+ 723 03a2 05       		.byte	0x5
+ 724 03a3 3501     		.2byte	0x135
+ 725 03a5 15       		.uleb128 0x15
+ 726 03a6 AB020000 		.4byte	.LASF32
+ 727 03aa AB020000 		.4byte	.LASF32
+ 728 03ae 05       		.byte	0x5
+ 729 03af 3601     		.2byte	0x136
+ 730 03b1 15       		.uleb128 0x15
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccC0xZAx.s 			page 15
 
 
- 747 00d1 49       		.uleb128 0x49
- 748 00d2 13       		.uleb128 0x13
- 749 00d3 2F       		.uleb128 0x2f
- 750 00d4 0B       		.uleb128 0xb
- 751 00d5 00       		.byte	0
- 752 00d6 00       		.byte	0
- 753 00d7 10       		.uleb128 0x10
- 754 00d8 34       		.uleb128 0x34
- 755 00d9 00       		.byte	0
- 756 00da 03       		.uleb128 0x3
- 757 00db 0E       		.uleb128 0xe
- 758 00dc 3A       		.uleb128 0x3a
- 759 00dd 0B       		.uleb128 0xb
- 760 00de 3B       		.uleb128 0x3b
- 761 00df 0B       		.uleb128 0xb
- 762 00e0 49       		.uleb128 0x49
- 763 00e1 13       		.uleb128 0x13
- 764 00e2 00       		.byte	0
- 765 00e3 00       		.byte	0
- 766 00e4 11       		.uleb128 0x11
- 767 00e5 34       		.uleb128 0x34
- 768 00e6 00       		.byte	0
- 769 00e7 03       		.uleb128 0x3
- 770 00e8 0E       		.uleb128 0xe
- 771 00e9 3A       		.uleb128 0x3a
- 772 00ea 0B       		.uleb128 0xb
- 773 00eb 3B       		.uleb128 0x3b
- 774 00ec 0B       		.uleb128 0xb
- 775 00ed 49       		.uleb128 0x49
- 776 00ee 13       		.uleb128 0x13
- 777 00ef 02       		.uleb128 0x2
- 778 00f0 18       		.uleb128 0x18
- 779 00f1 00       		.byte	0
- 780 00f2 00       		.byte	0
- 781 00f3 12       		.uleb128 0x12
- 782 00f4 34       		.uleb128 0x34
- 783 00f5 00       		.byte	0
- 784 00f6 03       		.uleb128 0x3
- 785 00f7 0E       		.uleb128 0xe
- 786 00f8 3A       		.uleb128 0x3a
- 787 00f9 0B       		.uleb128 0xb
- 788 00fa 3B       		.uleb128 0x3b
- 789 00fb 05       		.uleb128 0x5
- 790 00fc 49       		.uleb128 0x49
- 791 00fd 13       		.uleb128 0x13
- 792 00fe 3F       		.uleb128 0x3f
- 793 00ff 19       		.uleb128 0x19
- 794 0100 3C       		.uleb128 0x3c
- 795 0101 19       		.uleb128 0x19
- 796 0102 00       		.byte	0
- 797 0103 00       		.byte	0
- 798 0104 13       		.uleb128 0x13
- 799 0105 35       		.uleb128 0x35
- 800 0106 00       		.byte	0
- 801 0107 49       		.uleb128 0x49
- 802 0108 13       		.uleb128 0x13
- 803 0109 00       		.byte	0
-ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 16
+ 731 03b2 80010000 		.4byte	.LASF33
+ 732 03b6 80010000 		.4byte	.LASF33
+ 733 03ba 05       		.byte	0x5
+ 734 03bb 3901     		.2byte	0x139
+ 735 03bd 00       		.byte	0
+ 736              		.section	.debug_abbrev,"",%progbits
+ 737              	.Ldebug_abbrev0:
+ 738 0000 01       		.uleb128 0x1
+ 739 0001 11       		.uleb128 0x11
+ 740 0002 01       		.byte	0x1
+ 741 0003 25       		.uleb128 0x25
+ 742 0004 0E       		.uleb128 0xe
+ 743 0005 13       		.uleb128 0x13
+ 744 0006 0B       		.uleb128 0xb
+ 745 0007 03       		.uleb128 0x3
+ 746 0008 0E       		.uleb128 0xe
+ 747 0009 1B       		.uleb128 0x1b
+ 748 000a 0E       		.uleb128 0xe
+ 749 000b 55       		.uleb128 0x55
+ 750 000c 17       		.uleb128 0x17
+ 751 000d 11       		.uleb128 0x11
+ 752 000e 01       		.uleb128 0x1
+ 753 000f 10       		.uleb128 0x10
+ 754 0010 17       		.uleb128 0x17
+ 755 0011 00       		.byte	0
+ 756 0012 00       		.byte	0
+ 757 0013 02       		.uleb128 0x2
+ 758 0014 24       		.uleb128 0x24
+ 759 0015 00       		.byte	0
+ 760 0016 0B       		.uleb128 0xb
+ 761 0017 0B       		.uleb128 0xb
+ 762 0018 3E       		.uleb128 0x3e
+ 763 0019 0B       		.uleb128 0xb
+ 764 001a 03       		.uleb128 0x3
+ 765 001b 0E       		.uleb128 0xe
+ 766 001c 00       		.byte	0
+ 767 001d 00       		.byte	0
+ 768 001e 03       		.uleb128 0x3
+ 769 001f 16       		.uleb128 0x16
+ 770 0020 00       		.byte	0
+ 771 0021 03       		.uleb128 0x3
+ 772 0022 0E       		.uleb128 0xe
+ 773 0023 3A       		.uleb128 0x3a
+ 774 0024 0B       		.uleb128 0xb
+ 775 0025 3B       		.uleb128 0x3b
+ 776 0026 0B       		.uleb128 0xb
+ 777 0027 49       		.uleb128 0x49
+ 778 0028 13       		.uleb128 0x13
+ 779 0029 00       		.byte	0
+ 780 002a 00       		.byte	0
+ 781 002b 04       		.uleb128 0x4
+ 782 002c 24       		.uleb128 0x24
+ 783 002d 00       		.byte	0
+ 784 002e 0B       		.uleb128 0xb
+ 785 002f 0B       		.uleb128 0xb
+ 786 0030 3E       		.uleb128 0x3e
+ 787 0031 0B       		.uleb128 0xb
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccC0xZAx.s 			page 16
 
 
- 804 010a 00       		.byte	0
- 805 010b 14       		.uleb128 0x14
- 806 010c 2E       		.uleb128 0x2e
- 807 010d 00       		.byte	0
- 808 010e 3F       		.uleb128 0x3f
- 809 010f 19       		.uleb128 0x19
- 810 0110 3C       		.uleb128 0x3c
- 811 0111 19       		.uleb128 0x19
- 812 0112 6E       		.uleb128 0x6e
- 813 0113 0E       		.uleb128 0xe
- 814 0114 03       		.uleb128 0x3
- 815 0115 0E       		.uleb128 0xe
- 816 0116 3A       		.uleb128 0x3a
- 817 0117 0B       		.uleb128 0xb
- 818 0118 3B       		.uleb128 0x3b
- 819 0119 05       		.uleb128 0x5
- 820 011a 00       		.byte	0
- 821 011b 00       		.byte	0
- 822 011c 15       		.uleb128 0x15
- 823 011d 2E       		.uleb128 0x2e
- 824 011e 00       		.byte	0
- 825 011f 3F       		.uleb128 0x3f
- 826 0120 19       		.uleb128 0x19
- 827 0121 3C       		.uleb128 0x3c
- 828 0122 19       		.uleb128 0x19
- 829 0123 6E       		.uleb128 0x6e
- 830 0124 0E       		.uleb128 0xe
- 831 0125 03       		.uleb128 0x3
- 832 0126 0E       		.uleb128 0xe
- 833 0127 3A       		.uleb128 0x3a
- 834 0128 0B       		.uleb128 0xb
- 835 0129 3B       		.uleb128 0x3b
- 836 012a 0B       		.uleb128 0xb
- 837 012b 00       		.byte	0
- 838 012c 00       		.byte	0
- 839 012d 00       		.byte	0
- 840              		.section	.debug_loc,"",%progbits
- 841              	.Ldebug_loc0:
- 842              	.LLST0:
- 843 0000 02000000 		.4byte	.LVL0
- 844 0004 06000000 		.4byte	.LVL1
- 845 0008 0200     		.2byte	0x2
- 846 000a 30       		.byte	0x30
- 847 000b 9F       		.byte	0x9f
- 848 000c 06000000 		.4byte	.LVL1
- 849 0010 08000000 		.4byte	.LVL2
- 850 0014 0100     		.2byte	0x1
- 851 0016 53       		.byte	0x53
- 852 0017 0A000000 		.4byte	.LVL3
- 853 001b 10000000 		.4byte	.LVL4
- 854 001f 0100     		.2byte	0x1
- 855 0021 53       		.byte	0x53
- 856 0022 00000000 		.4byte	0
- 857 0026 00000000 		.4byte	0
- 858              	.LLST1:
- 859 002a 12000000 		.4byte	.LVL5
- 860 002e 14000000 		.4byte	.LVL6
-ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 17
+ 788 0032 03       		.uleb128 0x3
+ 789 0033 08       		.uleb128 0x8
+ 790 0034 00       		.byte	0
+ 791 0035 00       		.byte	0
+ 792 0036 05       		.uleb128 0x5
+ 793 0037 16       		.uleb128 0x16
+ 794 0038 00       		.byte	0
+ 795 0039 03       		.uleb128 0x3
+ 796 003a 0E       		.uleb128 0xe
+ 797 003b 3A       		.uleb128 0x3a
+ 798 003c 0B       		.uleb128 0xb
+ 799 003d 3B       		.uleb128 0x3b
+ 800 003e 05       		.uleb128 0x5
+ 801 003f 49       		.uleb128 0x49
+ 802 0040 13       		.uleb128 0x13
+ 803 0041 00       		.byte	0
+ 804 0042 00       		.byte	0
+ 805 0043 06       		.uleb128 0x6
+ 806 0044 2E       		.uleb128 0x2e
+ 807 0045 01       		.byte	0x1
+ 808 0046 3F       		.uleb128 0x3f
+ 809 0047 19       		.uleb128 0x19
+ 810 0048 03       		.uleb128 0x3
+ 811 0049 0E       		.uleb128 0xe
+ 812 004a 3A       		.uleb128 0x3a
+ 813 004b 0B       		.uleb128 0xb
+ 814 004c 3B       		.uleb128 0x3b
+ 815 004d 0B       		.uleb128 0xb
+ 816 004e 27       		.uleb128 0x27
+ 817 004f 19       		.uleb128 0x19
+ 818 0050 11       		.uleb128 0x11
+ 819 0051 01       		.uleb128 0x1
+ 820 0052 12       		.uleb128 0x12
+ 821 0053 06       		.uleb128 0x6
+ 822 0054 40       		.uleb128 0x40
+ 823 0055 18       		.uleb128 0x18
+ 824 0056 9742     		.uleb128 0x2117
+ 825 0058 19       		.uleb128 0x19
+ 826 0059 01       		.uleb128 0x1
+ 827 005a 13       		.uleb128 0x13
+ 828 005b 00       		.byte	0
+ 829 005c 00       		.byte	0
+ 830 005d 07       		.uleb128 0x7
+ 831 005e 0B       		.uleb128 0xb
+ 832 005f 01       		.byte	0x1
+ 833 0060 11       		.uleb128 0x11
+ 834 0061 01       		.uleb128 0x1
+ 835 0062 12       		.uleb128 0x12
+ 836 0063 06       		.uleb128 0x6
+ 837 0064 01       		.uleb128 0x1
+ 838 0065 13       		.uleb128 0x13
+ 839 0066 00       		.byte	0
+ 840 0067 00       		.byte	0
+ 841 0068 08       		.uleb128 0x8
+ 842 0069 34       		.uleb128 0x34
+ 843 006a 00       		.byte	0
+ 844 006b 03       		.uleb128 0x3
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccC0xZAx.s 			page 17
 
 
- 861 0032 0100     		.2byte	0x1
- 862 0034 53       		.byte	0x53
- 863 0035 16000000 		.4byte	.LVL7
- 864 0039 1C000000 		.4byte	.LVL8
- 865 003d 0100     		.2byte	0x1
- 866 003f 53       		.byte	0x53
- 867 0040 00000000 		.4byte	0
- 868 0044 00000000 		.4byte	0
- 869              	.LLST2:
- 870 0048 1E000000 		.4byte	.LVL9
- 871 004c 26000000 		.4byte	.LVL10
- 872 0050 0100     		.2byte	0x1
- 873 0052 53       		.byte	0x53
- 874 0053 28000000 		.4byte	.LVL11
- 875 0057 33000000 		.4byte	.LVL12-1
- 876 005b 0100     		.2byte	0x1
- 877 005d 53       		.byte	0x53
- 878 005e 00000000 		.4byte	0
- 879 0062 00000000 		.4byte	0
- 880              		.section	.debug_aranges,"",%progbits
- 881 0000 2C000000 		.4byte	0x2c
- 882 0004 0200     		.2byte	0x2
- 883 0006 00000000 		.4byte	.Ldebug_info0
- 884 000a 04       		.byte	0x4
- 885 000b 00       		.byte	0
- 886 000c 0000     		.2byte	0
- 887 000e 0000     		.2byte	0
- 888 0010 00000000 		.4byte	.LFB63
- 889 0014 3C000000 		.4byte	.LFE63-.LFB63
- 890 0018 00000000 		.4byte	.LFB64
- 891 001c 0C000000 		.4byte	.LFE64-.LFB64
- 892 0020 00000000 		.4byte	.LFB65
- 893 0024 4C000000 		.4byte	.LFE65-.LFB65
- 894 0028 00000000 		.4byte	0
- 895 002c 00000000 		.4byte	0
- 896              		.section	.debug_ranges,"",%progbits
- 897              	.Ldebug_ranges0:
- 898 0000 00000000 		.4byte	.LFB63
- 899 0004 3C000000 		.4byte	.LFE63
- 900 0008 00000000 		.4byte	.LFB64
- 901 000c 0C000000 		.4byte	.LFE64
- 902 0010 00000000 		.4byte	.LFB65
- 903 0014 4C000000 		.4byte	.LFE65
- 904 0018 00000000 		.4byte	0
- 905 001c 00000000 		.4byte	0
- 906              		.section	.debug_line,"",%progbits
- 907              	.Ldebug_line0:
- 908 0000 F8010000 		.section	.debug_str,"MS",%progbits,1
- 908      02008A01 
- 908      00000201 
- 908      FB0E0D00 
- 908      01010101 
- 909              	.LASF29:
- 910 0000 5553425F 		.ascii	"USB_LoadInEP\000"
- 910      4C6F6164 
- 910      496E4550 
- 910      00
-ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 18
+ 845 006c 08       		.uleb128 0x8
+ 846 006d 3A       		.uleb128 0x3a
+ 847 006e 0B       		.uleb128 0xb
+ 848 006f 3B       		.uleb128 0x3b
+ 849 0070 0B       		.uleb128 0xb
+ 850 0071 49       		.uleb128 0x49
+ 851 0072 13       		.uleb128 0x13
+ 852 0073 02       		.uleb128 0x2
+ 853 0074 17       		.uleb128 0x17
+ 854 0075 00       		.byte	0
+ 855 0076 00       		.byte	0
+ 856 0077 09       		.uleb128 0x9
+ 857 0078 898201   		.uleb128 0x4109
+ 858 007b 01       		.byte	0x1
+ 859 007c 11       		.uleb128 0x11
+ 860 007d 01       		.uleb128 0x1
+ 861 007e 31       		.uleb128 0x31
+ 862 007f 13       		.uleb128 0x13
+ 863 0080 01       		.uleb128 0x1
+ 864 0081 13       		.uleb128 0x13
+ 865 0082 00       		.byte	0
+ 866 0083 00       		.byte	0
+ 867 0084 0A       		.uleb128 0xa
+ 868 0085 8A8201   		.uleb128 0x410a
+ 869 0088 00       		.byte	0
+ 870 0089 02       		.uleb128 0x2
+ 871 008a 18       		.uleb128 0x18
+ 872 008b 9142     		.uleb128 0x2111
+ 873 008d 18       		.uleb128 0x18
+ 874 008e 00       		.byte	0
+ 875 008f 00       		.byte	0
+ 876 0090 0B       		.uleb128 0xb
+ 877 0091 898201   		.uleb128 0x4109
+ 878 0094 00       		.byte	0
+ 879 0095 11       		.uleb128 0x11
+ 880 0096 01       		.uleb128 0x1
+ 881 0097 31       		.uleb128 0x31
+ 882 0098 13       		.uleb128 0x13
+ 883 0099 00       		.byte	0
+ 884 009a 00       		.byte	0
+ 885 009b 0C       		.uleb128 0xc
+ 886 009c 898201   		.uleb128 0x4109
+ 887 009f 01       		.byte	0x1
+ 888 00a0 11       		.uleb128 0x11
+ 889 00a1 01       		.uleb128 0x1
+ 890 00a2 31       		.uleb128 0x31
+ 891 00a3 13       		.uleb128 0x13
+ 892 00a4 00       		.byte	0
+ 893 00a5 00       		.byte	0
+ 894 00a6 0D       		.uleb128 0xd
+ 895 00a7 2E       		.uleb128 0x2e
+ 896 00a8 01       		.byte	0x1
+ 897 00a9 3F       		.uleb128 0x3f
+ 898 00aa 19       		.uleb128 0x19
+ 899 00ab 03       		.uleb128 0x3
+ 900 00ac 0E       		.uleb128 0xe
+ 901 00ad 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccC0xZAx.s 			page 18
 
 
- 911              	.LASF9:
- 912 000d 5F5F696E 		.ascii	"__int32_t\000"
- 912      7433325F 
- 912      7400
- 913              	.LASF25:
- 914 0017 6C65645F 		.ascii	"led_Write\000"
- 914      57726974 
- 914      6500
- 915              	.LASF12:
- 916 0021 666C6F61 		.ascii	"float\000"
- 916      7400
- 917              	.LASF1:
- 918 0027 756E7369 		.ascii	"unsigned char\000"
- 918      676E6564 
- 918      20636861 
- 918      7200
- 919              	.LASF30:
- 920 0035 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 920      43313120 
- 920      352E342E 
- 920      31203230 
- 920      31363036 
- 921 0068 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 921      20726576 
- 921      6973696F 
- 921      6E203233 
- 921      37373135 
- 922 009b 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 922      66756E63 
- 922      74696F6E 
- 922      2D736563 
- 922      74696F6E 
- 923              	.LASF28:
- 924 00c3 5553425F 		.ascii	"USB_GetEPState\000"
- 924      47657445 
- 924      50537461 
- 924      746500
- 925              	.LASF5:
- 926 00d2 6C6F6E67 		.ascii	"long unsigned int\000"
- 926      20756E73 
- 926      69676E65 
- 926      6420696E 
- 926      7400
- 927              	.LASF3:
- 928 00e4 73686F72 		.ascii	"short unsigned int\000"
- 928      7420756E 
- 928      7369676E 
- 928      65642069 
- 928      6E7400
- 929              	.LASF23:
- 930 00f7 53746174 		.ascii	"Status_1_8_Read\000"
- 930      75735F31 
- 930      5F385F52 
- 930      65616400 
- 931              	.LASF34:
- 932 0107 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 932      52784275 
-ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 19
+ 902 00ae 0B       		.uleb128 0xb
+ 903 00af 3B       		.uleb128 0x3b
+ 904 00b0 0B       		.uleb128 0xb
+ 905 00b1 27       		.uleb128 0x27
+ 906 00b2 19       		.uleb128 0x19
+ 907 00b3 49       		.uleb128 0x49
+ 908 00b4 13       		.uleb128 0x13
+ 909 00b5 8701     		.uleb128 0x87
+ 910 00b7 19       		.uleb128 0x19
+ 911 00b8 11       		.uleb128 0x11
+ 912 00b9 01       		.uleb128 0x1
+ 913 00ba 12       		.uleb128 0x12
+ 914 00bb 06       		.uleb128 0x6
+ 915 00bc 40       		.uleb128 0x40
+ 916 00bd 18       		.uleb128 0x18
+ 917 00be 9742     		.uleb128 0x2117
+ 918 00c0 19       		.uleb128 0x19
+ 919 00c1 01       		.uleb128 0x1
+ 920 00c2 13       		.uleb128 0x13
+ 921 00c3 00       		.byte	0
+ 922 00c4 00       		.byte	0
+ 923 00c5 0E       		.uleb128 0xe
+ 924 00c6 34       		.uleb128 0x34
+ 925 00c7 00       		.byte	0
+ 926 00c8 03       		.uleb128 0x3
+ 927 00c9 0E       		.uleb128 0xe
+ 928 00ca 3A       		.uleb128 0x3a
+ 929 00cb 0B       		.uleb128 0xb
+ 930 00cc 3B       		.uleb128 0x3b
+ 931 00cd 0B       		.uleb128 0xb
+ 932 00ce 49       		.uleb128 0x49
+ 933 00cf 13       		.uleb128 0x13
+ 934 00d0 02       		.uleb128 0x2
+ 935 00d1 17       		.uleb128 0x17
+ 936 00d2 00       		.byte	0
+ 937 00d3 00       		.byte	0
+ 938 00d4 0F       		.uleb128 0xf
+ 939 00d5 01       		.uleb128 0x1
+ 940 00d6 01       		.byte	0x1
+ 941 00d7 49       		.uleb128 0x49
+ 942 00d8 13       		.uleb128 0x13
+ 943 00d9 01       		.uleb128 0x1
+ 944 00da 13       		.uleb128 0x13
+ 945 00db 00       		.byte	0
+ 946 00dc 00       		.byte	0
+ 947 00dd 10       		.uleb128 0x10
+ 948 00de 21       		.uleb128 0x21
+ 949 00df 00       		.byte	0
+ 950 00e0 49       		.uleb128 0x49
+ 951 00e1 13       		.uleb128 0x13
+ 952 00e2 2F       		.uleb128 0x2f
+ 953 00e3 0B       		.uleb128 0xb
+ 954 00e4 00       		.byte	0
+ 955 00e5 00       		.byte	0
+ 956 00e6 11       		.uleb128 0x11
+ 957 00e7 34       		.uleb128 0x34
+ 958 00e8 00       		.byte	0
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccC0xZAx.s 			page 19
 
 
- 932      66666572 
- 932      00
- 933              	.LASF13:
- 934 0114 646F7562 		.ascii	"double\000"
- 934      6C6500
- 935              	.LASF33:
- 936 011b 6D61696E 		.ascii	"main\000"
- 936      00
- 937              	.LASF27:
- 938 0120 5553425F 		.ascii	"USB_GetEPAckState\000"
- 938      47657445 
- 938      5041636B 
- 938      53746174 
- 938      6500
- 939              	.LASF8:
- 940 0132 756E7369 		.ascii	"unsigned int\000"
- 940      676E6564 
- 940      20696E74 
- 940      00
- 941              	.LASF20:
- 942 013f 5553425F 		.ascii	"USB_INPUT\000"
- 942      494E5055 
- 942      5400
- 943              	.LASF21:
- 944 0149 5553425F 		.ascii	"USB_OUTPUT\000"
- 944      4F555450 
- 944      555400
- 945              	.LASF7:
- 946 0154 6C6F6E67 		.ascii	"long long unsigned int\000"
- 946      206C6F6E 
- 946      6720756E 
- 946      7369676E 
- 946      65642069 
- 947              	.LASF24:
- 948 016b 53746174 		.ascii	"Status_9_11_Read\000"
- 948      75735F39 
- 948      5F31315F 
- 948      52656164 
- 948      00
- 949              	.LASF10:
- 950 017c 696E7433 		.ascii	"int32_t\000"
- 950      325F7400 
- 951              	.LASF16:
- 952 0184 73697A65 		.ascii	"sizetype\000"
- 952      74797065 
- 952      00
- 953              	.LASF17:
- 954 018d 73746172 		.ascii	"startup\000"
- 954      74757000 
- 955              	.LASF6:
- 956 0195 6C6F6E67 		.ascii	"long long int\000"
- 956      206C6F6E 
- 956      6720696E 
- 956      7400
- 957              	.LASF31:
- 958 01a3 6D61696E 		.ascii	"main.c\000"
- 958      2E6300
-ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccoLYTYK.s 			page 20
+ 959 00e9 03       		.uleb128 0x3
+ 960 00ea 0E       		.uleb128 0xe
+ 961 00eb 3A       		.uleb128 0x3a
+ 962 00ec 0B       		.uleb128 0xb
+ 963 00ed 3B       		.uleb128 0x3b
+ 964 00ee 0B       		.uleb128 0xb
+ 965 00ef 49       		.uleb128 0x49
+ 966 00f0 13       		.uleb128 0x13
+ 967 00f1 00       		.byte	0
+ 968 00f2 00       		.byte	0
+ 969 00f3 12       		.uleb128 0x12
+ 970 00f4 34       		.uleb128 0x34
+ 971 00f5 00       		.byte	0
+ 972 00f6 03       		.uleb128 0x3
+ 973 00f7 0E       		.uleb128 0xe
+ 974 00f8 3A       		.uleb128 0x3a
+ 975 00f9 0B       		.uleb128 0xb
+ 976 00fa 3B       		.uleb128 0x3b
+ 977 00fb 0B       		.uleb128 0xb
+ 978 00fc 49       		.uleb128 0x49
+ 979 00fd 13       		.uleb128 0x13
+ 980 00fe 02       		.uleb128 0x2
+ 981 00ff 18       		.uleb128 0x18
+ 982 0100 00       		.byte	0
+ 983 0101 00       		.byte	0
+ 984 0102 13       		.uleb128 0x13
+ 985 0103 34       		.uleb128 0x34
+ 986 0104 00       		.byte	0
+ 987 0105 03       		.uleb128 0x3
+ 988 0106 0E       		.uleb128 0xe
+ 989 0107 3A       		.uleb128 0x3a
+ 990 0108 0B       		.uleb128 0xb
+ 991 0109 3B       		.uleb128 0x3b
+ 992 010a 05       		.uleb128 0x5
+ 993 010b 49       		.uleb128 0x49
+ 994 010c 13       		.uleb128 0x13
+ 995 010d 3F       		.uleb128 0x3f
+ 996 010e 19       		.uleb128 0x19
+ 997 010f 3C       		.uleb128 0x3c
+ 998 0110 19       		.uleb128 0x19
+ 999 0111 00       		.byte	0
+ 1000 0112 00       		.byte	0
+ 1001 0113 14       		.uleb128 0x14
+ 1002 0114 35       		.uleb128 0x35
+ 1003 0115 00       		.byte	0
+ 1004 0116 49       		.uleb128 0x49
+ 1005 0117 13       		.uleb128 0x13
+ 1006 0118 00       		.byte	0
+ 1007 0119 00       		.byte	0
+ 1008 011a 15       		.uleb128 0x15
+ 1009 011b 2E       		.uleb128 0x2e
+ 1010 011c 00       		.byte	0
+ 1011 011d 3F       		.uleb128 0x3f
+ 1012 011e 19       		.uleb128 0x19
+ 1013 011f 3C       		.uleb128 0x3c
+ 1014 0120 19       		.uleb128 0x19
+ 1015 0121 6E       		.uleb128 0x6e
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccC0xZAx.s 			page 20
 
 
- 959              	.LASF14:
- 960 01aa 63686172 		.ascii	"char\000"
- 960      00
- 961              	.LASF2:
- 962 01af 73686F72 		.ascii	"short int\000"
- 962      7420696E 
- 962      7400
- 963              	.LASF32:
- 964 01b9 433A5C55 		.ascii	"C:\\Users\\Chantilly Robotics\\Desktop\\FRC 2019-20"
- 964      73657273 
- 964      5C436861 
- 964      6E74696C 
- 964      6C792052 
- 965 01e8 32305C43 		.ascii	"20\\Custom Gunner Controls\\2020-Control-Scheme.cyd"
- 965      7573746F 
- 965      6D204775 
- 965      6E6E6572 
- 965      20436F6E 
- 966 0219 736E00   		.ascii	"sn\000"
- 967              	.LASF11:
- 968 021c 75696E74 		.ascii	"uint8\000"
- 968      3800
- 969              	.LASF22:
- 970 0222 5553425F 		.ascii	"USB_Start\000"
- 970      53746172 
- 970      7400
- 971              	.LASF18:
- 972 022c 72656164 		.ascii	"read_buttons\000"
- 972      5F627574 
- 972      746F6E73 
- 972      00
- 973              	.LASF4:
- 974 0239 6C6F6E67 		.ascii	"long int\000"
- 974      20696E74 
- 974      00
- 975              	.LASF19:
- 976 0242 42555454 		.ascii	"BUTTON_INPUT\000"
- 976      4F4E5F49 
- 976      4E505554 
- 976      00
- 977              	.LASF15:
- 978 024f 6C6F6E67 		.ascii	"long double\000"
- 978      20646F75 
- 978      626C6500 
- 979              	.LASF0:
- 980 025b 7369676E 		.ascii	"signed char\000"
- 980      65642063 
- 980      68617200 
- 981              	.LASF26:
- 982 0267 43794465 		.ascii	"CyDelay\000"
- 982      6C617900 
- 983              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 1016 0122 0E       		.uleb128 0xe
+ 1017 0123 03       		.uleb128 0x3
+ 1018 0124 0E       		.uleb128 0xe
+ 1019 0125 3A       		.uleb128 0x3a
+ 1020 0126 0B       		.uleb128 0xb
+ 1021 0127 3B       		.uleb128 0x3b
+ 1022 0128 05       		.uleb128 0x5
+ 1023 0129 00       		.byte	0
+ 1024 012a 00       		.byte	0
+ 1025 012b 16       		.uleb128 0x16
+ 1026 012c 2E       		.uleb128 0x2e
+ 1027 012d 00       		.byte	0
+ 1028 012e 3F       		.uleb128 0x3f
+ 1029 012f 19       		.uleb128 0x19
+ 1030 0130 3C       		.uleb128 0x3c
+ 1031 0131 19       		.uleb128 0x19
+ 1032 0132 6E       		.uleb128 0x6e
+ 1033 0133 0E       		.uleb128 0xe
+ 1034 0134 03       		.uleb128 0x3
+ 1035 0135 0E       		.uleb128 0xe
+ 1036 0136 3A       		.uleb128 0x3a
+ 1037 0137 0B       		.uleb128 0xb
+ 1038 0138 3B       		.uleb128 0x3b
+ 1039 0139 0B       		.uleb128 0xb
+ 1040 013a 00       		.byte	0
+ 1041 013b 00       		.byte	0
+ 1042 013c 00       		.byte	0
+ 1043              		.section	.debug_loc,"",%progbits
+ 1044              	.Ldebug_loc0:
+ 1045              	.LLST0:
+ 1046 0000 02000000 		.4byte	.LVL0
+ 1047 0004 06000000 		.4byte	.LVL1
+ 1048 0008 0200     		.2byte	0x2
+ 1049 000a 30       		.byte	0x30
+ 1050 000b 9F       		.byte	0x9f
+ 1051 000c 06000000 		.4byte	.LVL1
+ 1052 0010 0E000000 		.4byte	.LVL2
+ 1053 0014 0100     		.2byte	0x1
+ 1054 0016 53       		.byte	0x53
+ 1055 0017 10000000 		.4byte	.LVL3
+ 1056 001b 16000000 		.4byte	.LVL4
+ 1057 001f 0100     		.2byte	0x1
+ 1058 0021 53       		.byte	0x53
+ 1059 0022 00000000 		.4byte	0
+ 1060 0026 00000000 		.4byte	0
+ 1061              	.LLST1:
+ 1062 002a 18000000 		.4byte	.LVL5
+ 1063 002e 22000000 		.4byte	.LVL6
+ 1064 0032 0100     		.2byte	0x1
+ 1065 0034 53       		.byte	0x53
+ 1066 0035 24000000 		.4byte	.LVL7
+ 1067 0039 31000000 		.4byte	.LVL8-1
+ 1068 003d 0100     		.2byte	0x1
+ 1069 003f 53       		.byte	0x53
+ 1070 0040 00000000 		.4byte	0
+ 1071 0044 00000000 		.4byte	0
+ 1072              	.LLST2:
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccC0xZAx.s 			page 21
+
+
+ 1073 0048 6E000000 		.4byte	.LVL28
+ 1074 004c 74000000 		.4byte	.LVL29
+ 1075 0050 0100     		.2byte	0x1
+ 1076 0052 50       		.byte	0x50
+ 1077 0053 74000000 		.4byte	.LVL29
+ 1078 0057 77000000 		.4byte	.LVL30-1
+ 1079 005b 0100     		.2byte	0x1
+ 1080 005d 52       		.byte	0x52
+ 1081 005e 00000000 		.4byte	0
+ 1082 0062 00000000 		.4byte	0
+ 1083              		.section	.debug_aranges,"",%progbits
+ 1084 0000 2C000000 		.4byte	0x2c
+ 1085 0004 0200     		.2byte	0x2
+ 1086 0006 00000000 		.4byte	.Ldebug_info0
+ 1087 000a 04       		.byte	0x4
+ 1088 000b 00       		.byte	0
+ 1089 000c 0000     		.2byte	0
+ 1090 000e 0000     		.2byte	0
+ 1091 0010 00000000 		.4byte	.LFB64
+ 1092 0014 50000000 		.4byte	.LFE64-.LFB64
+ 1093 0018 00000000 		.4byte	.LFB65
+ 1094 001c 0C000000 		.4byte	.LFE65-.LFB65
+ 1095 0020 00000000 		.4byte	.LFB66
+ 1096 0024 88000000 		.4byte	.LFE66-.LFB66
+ 1097 0028 00000000 		.4byte	0
+ 1098 002c 00000000 		.4byte	0
+ 1099              		.section	.debug_ranges,"",%progbits
+ 1100              	.Ldebug_ranges0:
+ 1101 0000 00000000 		.4byte	.LFB64
+ 1102 0004 50000000 		.4byte	.LFE64
+ 1103 0008 00000000 		.4byte	.LFB65
+ 1104 000c 0C000000 		.4byte	.LFE65
+ 1105 0010 00000000 		.4byte	.LFB66
+ 1106 0014 88000000 		.4byte	.LFE66
+ 1107 0018 00000000 		.4byte	0
+ 1108 001c 00000000 		.4byte	0
+ 1109              		.section	.debug_line,"",%progbits
+ 1110              	.Ldebug_line0:
+ 1111 0000 00020000 		.section	.debug_str,"MS",%progbits,1
+ 1111      02008A01 
+ 1111      00000201 
+ 1111      FB0E0D00 
+ 1111      01010101 
+ 1112              	.LASF14:
+ 1113 0000 63686172 		.ascii	"char\000"
+ 1113      00
+ 1114              	.LASF24:
+ 1115 0005 5553425F 		.ascii	"USB_LoadInEP\000"
+ 1115      4C6F6164 
+ 1115      496E4550 
+ 1115      00
+ 1116              	.LASF9:
+ 1117 0012 5F5F696E 		.ascii	"__int32_t\000"
+ 1117      7433325F 
+ 1117      7400
+ 1118              	.LASF28:
+ 1119 001c 6C65645F 		.ascii	"led_Write\000"
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccC0xZAx.s 			page 22
+
+
+ 1119      57726974 
+ 1119      6500
+ 1120              	.LASF12:
+ 1121 0026 666C6F61 		.ascii	"float\000"
+ 1121      7400
+ 1122              	.LASF1:
+ 1123 002c 756E7369 		.ascii	"unsigned char\000"
+ 1123      676E6564 
+ 1123      20636861 
+ 1123      7200
+ 1124              	.LASF34:
+ 1125 003a 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1125      43313120 
+ 1125      352E342E 
+ 1125      31203230 
+ 1125      31363036 
+ 1126 006d 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1126      20726576 
+ 1126      6973696F 
+ 1126      6E203233 
+ 1126      37373135 
+ 1127 00a0 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1127      66756E63 
+ 1127      74696F6E 
+ 1127      2D736563 
+ 1127      74696F6E 
+ 1128              	.LASF31:
+ 1129 00c8 5553425F 		.ascii	"USB_GetEPState\000"
+ 1129      47657445 
+ 1129      50537461 
+ 1129      746500
+ 1130              	.LASF5:
+ 1131 00d7 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1131      20756E73 
+ 1131      69676E65 
+ 1131      6420696E 
+ 1131      7400
+ 1132              	.LASF3:
+ 1133 00e9 73686F72 		.ascii	"short unsigned int\000"
+ 1133      7420756E 
+ 1133      7369676E 
+ 1133      65642069 
+ 1133      6E7400
+ 1134              	.LASF25:
+ 1135 00fc 5553425F 		.ascii	"USB_EnableOutEP\000"
+ 1135      456E6162 
+ 1135      6C654F75 
+ 1135      74455000 
+ 1136              	.LASF26:
+ 1137 010c 53746174 		.ascii	"Status_1_8_Read\000"
+ 1137      75735F31 
+ 1137      5F385F52 
+ 1137      65616400 
+ 1138              	.LASF39:
+ 1139 011c 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1139      52784275 
+ 1139      66666572 
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccC0xZAx.s 			page 23
+
+
+ 1139      00
+ 1140              	.LASF13:
+ 1141 0129 646F7562 		.ascii	"double\000"
+ 1141      6C6500
+ 1142              	.LASF37:
+ 1143 0130 6D61696E 		.ascii	"main\000"
+ 1143      00
+ 1144              	.LASF30:
+ 1145 0135 5553425F 		.ascii	"USB_GetEPAckState\000"
+ 1145      47657445 
+ 1145      5041636B 
+ 1145      53746174 
+ 1145      6500
+ 1146              	.LASF8:
+ 1147 0147 756E7369 		.ascii	"unsigned int\000"
+ 1147      676E6564 
+ 1147      20696E74 
+ 1147      00
+ 1148              	.LASF20:
+ 1149 0154 5553425F 		.ascii	"USB_INPUT\000"
+ 1149      494E5055 
+ 1149      5400
+ 1150              	.LASF21:
+ 1151 015e 5553425F 		.ascii	"USB_OUTPUT\000"
+ 1151      4F555450 
+ 1151      555400
+ 1152              	.LASF7:
+ 1153 0169 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1153      206C6F6E 
+ 1153      6720756E 
+ 1153      7369676E 
+ 1153      65642069 
+ 1154              	.LASF33:
+ 1155 0180 5553425F 		.ascii	"USB_ReadOutEP\000"
+ 1155      52656164 
+ 1155      4F757445 
+ 1155      5000
+ 1156              	.LASF27:
+ 1157 018e 53746174 		.ascii	"Status_9_11_Read\000"
+ 1157      75735F39 
+ 1157      5F31315F 
+ 1157      52656164 
+ 1157      00
+ 1158              	.LASF10:
+ 1159 019f 696E7433 		.ascii	"int32_t\000"
+ 1159      325F7400 
+ 1160              	.LASF16:
+ 1161 01a7 73697A65 		.ascii	"sizetype\000"
+ 1161      74797065 
+ 1161      00
+ 1162              	.LASF17:
+ 1163 01b0 73746172 		.ascii	"startup\000"
+ 1163      74757000 
+ 1164              	.LASF6:
+ 1165 01b8 6C6F6E67 		.ascii	"long long int\000"
+ 1165      206C6F6E 
+ 1165      6720696E 
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccC0xZAx.s 			page 24
+
+
+ 1165      7400
+ 1166              	.LASF35:
+ 1167 01c6 6D61696E 		.ascii	"main.c\000"
+ 1167      2E6300
+ 1168              	.LASF23:
+ 1169 01cd 5553425F 		.ascii	"USB_GetConfiguration\000"
+ 1169      47657443 
+ 1169      6F6E6669 
+ 1169      67757261 
+ 1169      74696F6E 
+ 1170              	.LASF19:
+ 1171 01e2 65705F63 		.ascii	"ep_count\000"
+ 1171      6F756E74 
+ 1171      00
+ 1172              	.LASF2:
+ 1173 01eb 73686F72 		.ascii	"short int\000"
+ 1173      7420696E 
+ 1173      7400
+ 1174              	.LASF36:
+ 1175 01f5 433A5C55 		.ascii	"C:\\Users\\Chantilly Robotics\\Desktop\\FRC 2019-20"
+ 1175      73657273 
+ 1175      5C436861 
+ 1175      6E74696C 
+ 1175      6C792052 
+ 1176 0224 32305C43 		.ascii	"20\\Custom Gunner Controls\\2020-Control-Scheme.cyd"
+ 1176      7573746F 
+ 1176      6D204775 
+ 1176      6E6E6572 
+ 1176      20436F6E 
+ 1177 0255 736E00   		.ascii	"sn\000"
+ 1178              	.LASF11:
+ 1179 0258 75696E74 		.ascii	"uint8\000"
+ 1179      3800
+ 1180              	.LASF22:
+ 1181 025e 5553425F 		.ascii	"USB_Start\000"
+ 1181      53746172 
+ 1181      7400
+ 1182              	.LASF18:
+ 1183 0268 72656164 		.ascii	"read_buttons\000"
+ 1183      5F627574 
+ 1183      746F6E73 
+ 1183      00
+ 1184              	.LASF4:
+ 1185 0275 6C6F6E67 		.ascii	"long int\000"
+ 1185      20696E74 
+ 1185      00
+ 1186              	.LASF38:
+ 1187 027e 42555454 		.ascii	"BUTTON_INPUT\000"
+ 1187      4F4E5F49 
+ 1187      4E505554 
+ 1187      00
+ 1188              	.LASF15:
+ 1189 028b 6C6F6E67 		.ascii	"long double\000"
+ 1189      20646F75 
+ 1189      626C6500 
+ 1190              	.LASF0:
+ 1191 0297 7369676E 		.ascii	"signed char\000"
+ARM GAS  C:\Users\CHANTI~1\AppData\Local\Temp\ccC0xZAx.s 			page 25
+
+
+ 1191      65642063 
+ 1191      68617200 
+ 1192              	.LASF29:
+ 1193 02a3 43794465 		.ascii	"CyDelay\000"
+ 1193      6C617900 
+ 1194              	.LASF32:
+ 1195 02ab 5553425F 		.ascii	"USB_GetEPCount\000"
+ 1195      47657445 
+ 1195      50436F75 
+ 1195      6E7400
+ 1196              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

@@ -2,7 +2,7 @@
 --	Conversion of 2020-Control-Scheme.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Mon Feb 03 20:45:16 2020
+--	Thu Feb 06 20:40:38 2020
 --
 
 USE cypress.cypress.all;
@@ -31,7 +31,7 @@ SIGNAL \USB:tmpFB_0__Dp_net_0\ : bit;
 TERMINAL \USB:Net_1000\ : bit;
 SIGNAL \USB:tmpIO_0__Dp_net_0\ : bit;
 TERMINAL \USB:tmpSIOVREF__Dp_net_0\ : bit;
-SIGNAL Net_208 : bit;
+SIGNAL Net_210 : bit;
 SIGNAL \USB:Net_1889\ : bit;
 SIGNAL \USB:Net_1876\ : bit;
 SIGNAL \USB:ep_int_8\ : bit;
@@ -470,7 +470,7 @@ led:cy_psoc3_pins_v1_10
 	GENERIC MAP(cy_registers=>"")
 	PORT MAP(dp=>\USB:Net_1000\,
 		dm=>\USB:Net_597\,
-		sof_int=>Net_208,
+		sof_int=>Net_210,
 		arb_int=>\USB:Net_1889\,
 		usb_int=>\USB:Net_1876\,
 		ept_int=>(\USB:ep_int_8\, \USB:ep_int_7\, \USB:ep_int_6\, \USB:ep_int_5\,

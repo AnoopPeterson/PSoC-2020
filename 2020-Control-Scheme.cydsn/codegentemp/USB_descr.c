@@ -44,8 +44,8 @@ const uint8 CYCODE USB_DEVICE0_DESCR[18u] = {
 /* idVendor                                */ 0xB4u, 0x04u,
 /* idProduct                               */ 0x51u, 0x80u,
 /* bcdDevice                               */ 0x00u, 0x00u,
-/* iManufacturer                           */ 0x00u,
-/* iProduct                                */ 0x00u,
+/* iManufacturer                           */ 0x02u,
+/* iProduct                                */ 0x01u,
 /* iSerialNumber                           */ 0x00u,
 /* bNumConfigurations                      */ 0x01u
 };
@@ -90,9 +90,9 @@ const uint8 CYCODE USB_DEVICE0_CONFIGURATION0_DESCR[41u] = {
 /*  Endpoint Descriptor Length             */ 0x07u,
 /*  DescriptorType: ENDPOINT               */ 0x05u,
 /*  bEndpointAddress                       */ 0x81u,
-/*  bmAttributes                           */ 0x02u,
-/*  wMaxPacketSize                         */ 0x10u, 0x00u,
-/*  bInterval                              */ 0x00u,
+/*  bmAttributes                           */ 0x03u,
+/*  wMaxPacketSize                         */ 0x0Bu, 0x00u,
+/*  bInterval                              */ 0x0Au,
 /*********************************************************************
 * Endpoint Descriptor
 *********************************************************************/
@@ -107,7 +107,7 @@ const uint8 CYCODE USB_DEVICE0_CONFIGURATION0_DESCR[41u] = {
 /*********************************************************************
 * String Descriptor Table
 *********************************************************************/
-const uint8 CYCODE USB_STRING_DESCRIPTORS[35u] = {
+const uint8 CYCODE USB_STRING_DESCRIPTORS[53u] = {
 /*********************************************************************
 * Language ID Descriptor
 *********************************************************************/
@@ -122,6 +122,13 @@ const uint8 CYCODE USB_STRING_DESCRIPTORS[35u] = {
  (uint8)'6', 0u,(uint8)'1', 0u,(uint8)'2', 0u,(uint8)'_', 0u,(uint8)'C', 0u,
  (uint8)'o', 0u,(uint8)'n', 0u,(uint8)'t', 0u,(uint8)'r', 0u,(uint8)'o', 0u,
  (uint8)'l', 0u,(uint8)'l', 0u,(uint8)'e', 0u,(uint8)'r', 0u,
+/*********************************************************************
+* String Descriptor: "Team 612"
+*********************************************************************/
+/* Descriptor Length                       */ 0x12u,
+/* DescriptorType: STRING                  */ 0x03u,
+ (uint8)'T', 0u,(uint8)'e', 0u,(uint8)'a', 0u,(uint8)'m', 0u,(uint8)' ', 0u,
+ (uint8)'6', 0u,(uint8)'1', 0u,(uint8)'2', 0u,
 /*********************************************************************/
 /* Marks the end of the list.              */ 0x00u};
 /*********************************************************************/
@@ -130,7 +137,7 @@ const uint8 CYCODE USB_STRING_DESCRIPTORS[35u] = {
 /*********************************************************************
 * HID Report Descriptor: Gunner
 *********************************************************************/
-const uint8 CYCODE USB_HIDREPORT_DESCRIPTOR1[37u] = {
+const uint8 CYCODE USB_HIDREPORT_DESCRIPTOR1[33u] = {
 /*  Descriptor Size (Not part of descriptor)*/ USB_HID_RPT_1_SIZE_LSB,
 USB_HID_RPT_1_SIZE_MSB,
 /* USAGE_PAGE                              */ 0x05u, 0x01u, 
@@ -144,11 +151,9 @@ USB_HID_RPT_1_SIZE_MSB,
 /* REPORT_SIZE                             */ 0x75u, 0x01u, 
 /* REPORT_COUNT                            */ 0x95u, 0x0Bu, 
 /* INPUT                                   */ 0x81u, 0x02u, 
-/* REPORT_SIZE                             */ 0x75u, 0x08u, 
-/* REPORT_COUNT                            */ 0x95u, 0x02u, 
+/* REPORT_SIZE                             */ 0x75u, 0x02u, 
+/* REPORT_COUNT                            */ 0x95u, 0x01u, 
 /* OUTPUT                                  */ 0x91u, 0x02u, 
-/* REPORT_SIZE                             */ 0x75u, 0x08u, 
-/* REPORT_COUNT                            */ 0x95u, 0x02u, 
 /* END_COLLECTION                          */ 0xC0u, 
 /*********************************************************************/
 /* End of the HID Report Descriptor        */ 0x00u, 0x00u};
@@ -218,7 +223,7 @@ const T_USB_LUT CYCODE USB_DEVICE0_CONFIGURATION0_INTERFACE0_TABLE[1u] = {
 *********************************************************************/
 const T_USB_EP_SETTINGS_BLOCK CYCODE USB_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE[2u] = {
 /* IFC  ALT    EPAddr bmAttr MaxPktSize Class ********************/
-{0x00u, 0x00u, 0x81u, 0x02u, 0x0010u,   0x03u},
+{0x00u, 0x00u, 0x81u, 0x03u, 0x000Bu,   0x03u},
 {0x00u, 0x00u, 0x02u, 0x03u, 0x0002u,   0x03u}
 };
 const uint8 CYCODE USB_DEVICE0_CONFIGURATION0_INTERFACE_CLASS[1u] = {
