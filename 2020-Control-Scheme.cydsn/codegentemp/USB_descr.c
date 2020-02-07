@@ -151,9 +151,9 @@ USB_HID_RPT_1_SIZE_MSB,
 /* REPORT_SIZE                             */ 0x75u, 0x01u, 
 /* REPORT_COUNT                            */ 0x95u, 0x0Bu, 
 /* INPUT                                   */ 0x81u, 0x02u, 
-/* REPORT_SIZE                             */ 0x75u, 0x02u, 
+/* REPORT_SIZE                             */ 0x75u, 0x05u, 
 /* REPORT_COUNT                            */ 0x95u, 0x01u, 
-/* OUTPUT                                  */ 0x91u, 0x02u, 
+/* INPUT                                   */ 0x81u, 0x03u, 
 /* END_COLLECTION                          */ 0xC0u, 
 /*********************************************************************/
 /* End of the HID Report Descriptor        */ 0x00u, 0x00u};
@@ -176,21 +176,6 @@ const T_USB_TD CYCODE USB_DEVICE0_CONFIGURATION0_INTERFACE0_ALTERNATE0_HID_IN_RP
     &USB_DEVICE0_CONFIGURATION0_INTERFACE0_ALTERNATE0_HID_IN_RPT_SCB},
 };
 /*********************************************************************
-* HID Output Report Storage
-*********************************************************************/
-T_USB_XFER_STATUS_BLOCK USB_DEVICE0_CONFIGURATION0_INTERFACE0_ALTERNATE0_HID_OUT_RPT_SCB;
-uint8 USB_DEVICE0_CONFIGURATION0_INTERFACE0_ALTERNATE0_HID_OUT_BUF[
-            USB_DEVICE0_CONFIGURATION0_INTERFACE0_ALTERNATE0_HID_OUT_BUF_SIZE];
-
-/*********************************************************************
-* HID Output Report TD Table
-*********************************************************************/
-const T_USB_TD CYCODE USB_DEVICE0_CONFIGURATION0_INTERFACE0_ALTERNATE0_HID_OUT_RPT_TABLE[1u] = {
-    {USB_DEVICE0_CONFIGURATION0_INTERFACE0_ALTERNATE0_HID_OUT_BUF_SIZE,
-    &USB_DEVICE0_CONFIGURATION0_INTERFACE0_ALTERNATE0_HID_OUT_BUF[0u],
-    &USB_DEVICE0_CONFIGURATION0_INTERFACE0_ALTERNATE0_HID_OUT_RPT_SCB},
-};
-/*********************************************************************
 * HID Report Look Up Table         This table has four entries:
 *                                        IN Report Table
 *                                        OUT Report Table
@@ -200,7 +185,7 @@ const T_USB_TD CYCODE USB_DEVICE0_CONFIGURATION0_INTERFACE0_ALTERNATE0_HID_OUT_R
 *********************************************************************/
 const T_USB_LUT CYCODE USB_DEVICE0_CONFIGURATION0_INTERFACE0_ALTERNATE0_HID_TABLE[5u] = {
     {0x00u,     &USB_DEVICE0_CONFIGURATION0_INTERFACE0_ALTERNATE0_HID_IN_RPT_TABLE},
-    {0x00u,     &USB_DEVICE0_CONFIGURATION0_INTERFACE0_ALTERNATE0_HID_OUT_RPT_TABLE},
+    {0x00u,    NULL},
     {0x00u,    NULL},
     {0x01u,     (const void *)&USB_HIDREPORT_DESCRIPTOR1[0]},
     {0x01u,     (const void *)&USB_DEVICE0_CONFIGURATION0_DESCR[18]}

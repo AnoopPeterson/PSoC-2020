@@ -1,6 +1,6 @@
-C:\Users\Chantilly Robotics\Desktop\FRC 2019-2020\Custom Gunner Controls\2020-Control-Scheme.cydsn\2020-Control-Scheme.cyprj|03145e87-76e0-4ec0-9319-2f8cf409a608
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|ef71b6f7-e67f-42de-bc06-dc67b1cb1e98
-C:\Users\Chantilly Robotics\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|fc1af34e-b3f9-4421-b668-1b5cd0a4478e
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|c9ae0247-a1b5-42b9-9b87-b6e6fb021096
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|45662d86-dc51-46cc-a0d4-6c03171bc6fe
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|f874b389-d022-4f3f-9f7e-a4ac2b11c370
+C:\Users\anoop.DESKTOP-AK0U51E\Documents\612_Code\PSOC\2020_CONTROL_SCHEME\PSoC-2020\2020-Control-Scheme.cydsn\2020-Control-Scheme.cyprj|4f3f72cb-75d6-432b-bdf9-82e2319f58eb
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|e1a0ba77-c928-4c79-a24d-51a64bde48f6
+C:\Users\anoop.DESKTOP-AK0U51E\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|b5d05adb-d818-48f0-b333-91facdd66206
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|b8e2071e-6255-408e-bbd2-0f76e7bff7aa
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|64686a2d-f61a-41aa-9c2f-5aef0a29e6fe
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|35ad97f3-69ab-45ab-b2a2-04a51704feb1

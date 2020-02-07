@@ -46,10 +46,6 @@ int main(void)
     
     while(!USB_bGetEPAckState(EP_IN));
     
-    led_Write(1);
-    CyDelay(500);
-    led_Write(0);
-    CyDelay(500);
     
     read_buttons();
     
