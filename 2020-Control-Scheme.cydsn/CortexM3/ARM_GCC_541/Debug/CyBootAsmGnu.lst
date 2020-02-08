@@ -11617,131 +11617,131 @@ ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
  305              	.set Clock__PM_STBY_MSK, 0x01
  306              	
  307              	/* Pin_1_8 */
- 308              	.set Pin_1_8__0__INTTYPE, CYREG_PICU0_INTTYPE0
+ 308              	.set Pin_1_8__0__INTTYPE, CYREG_PICU3_INTTYPE0
  309              	.set Pin_1_8__0__MASK, 0x01
- 310              	.set Pin_1_8__0__PC, CYREG_PRT0_PC0
- 311              	.set Pin_1_8__0__PORT, 0
+ 310              	.set Pin_1_8__0__PC, CYREG_PRT3_PC0
+ 311              	.set Pin_1_8__0__PORT, 3
  312              	.set Pin_1_8__0__SHIFT, 0
- 313              	.set Pin_1_8__1__INTTYPE, CYREG_PICU0_INTTYPE1
+ 313              	.set Pin_1_8__1__INTTYPE, CYREG_PICU3_INTTYPE1
  314              	.set Pin_1_8__1__MASK, 0x02
- 315              	.set Pin_1_8__1__PC, CYREG_PRT0_PC1
- 316              	.set Pin_1_8__1__PORT, 0
+ 315              	.set Pin_1_8__1__PC, CYREG_PRT3_PC1
+ 316              	.set Pin_1_8__1__PORT, 3
  317              	.set Pin_1_8__1__SHIFT, 1
- 318              	.set Pin_1_8__2__INTTYPE, CYREG_PICU0_INTTYPE2
+ 318              	.set Pin_1_8__2__INTTYPE, CYREG_PICU3_INTTYPE2
  319              	.set Pin_1_8__2__MASK, 0x04
- 320              	.set Pin_1_8__2__PC, CYREG_PRT0_PC2
- 321              	.set Pin_1_8__2__PORT, 0
+ 320              	.set Pin_1_8__2__PC, CYREG_PRT3_PC2
+ 321              	.set Pin_1_8__2__PORT, 3
  322              	.set Pin_1_8__2__SHIFT, 2
- 323              	.set Pin_1_8__3__INTTYPE, CYREG_PICU0_INTTYPE3
+ 323              	.set Pin_1_8__3__INTTYPE, CYREG_PICU3_INTTYPE3
  324              	.set Pin_1_8__3__MASK, 0x08
- 325              	.set Pin_1_8__3__PC, CYREG_PRT0_PC3
- 326              	.set Pin_1_8__3__PORT, 0
+ 325              	.set Pin_1_8__3__PC, CYREG_PRT3_PC3
+ 326              	.set Pin_1_8__3__PORT, 3
  327              	.set Pin_1_8__3__SHIFT, 3
- 328              	.set Pin_1_8__4__INTTYPE, CYREG_PICU0_INTTYPE4
+ 328              	.set Pin_1_8__4__INTTYPE, CYREG_PICU3_INTTYPE4
 ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 195
 
 
  329              	.set Pin_1_8__4__MASK, 0x10
- 330              	.set Pin_1_8__4__PC, CYREG_PRT0_PC4
- 331              	.set Pin_1_8__4__PORT, 0
+ 330              	.set Pin_1_8__4__PC, CYREG_PRT3_PC4
+ 331              	.set Pin_1_8__4__PORT, 3
  332              	.set Pin_1_8__4__SHIFT, 4
- 333              	.set Pin_1_8__5__INTTYPE, CYREG_PICU0_INTTYPE5
+ 333              	.set Pin_1_8__5__INTTYPE, CYREG_PICU3_INTTYPE5
  334              	.set Pin_1_8__5__MASK, 0x20
- 335              	.set Pin_1_8__5__PC, CYREG_PRT0_PC5
- 336              	.set Pin_1_8__5__PORT, 0
+ 335              	.set Pin_1_8__5__PC, CYREG_PRT3_PC5
+ 336              	.set Pin_1_8__5__PORT, 3
  337              	.set Pin_1_8__5__SHIFT, 5
- 338              	.set Pin_1_8__6__INTTYPE, CYREG_PICU0_INTTYPE6
+ 338              	.set Pin_1_8__6__INTTYPE, CYREG_PICU3_INTTYPE6
  339              	.set Pin_1_8__6__MASK, 0x40
- 340              	.set Pin_1_8__6__PC, CYREG_PRT0_PC6
- 341              	.set Pin_1_8__6__PORT, 0
+ 340              	.set Pin_1_8__6__PC, CYREG_PRT3_PC6
+ 341              	.set Pin_1_8__6__PORT, 3
  342              	.set Pin_1_8__6__SHIFT, 6
- 343              	.set Pin_1_8__7__INTTYPE, CYREG_PICU0_INTTYPE7
+ 343              	.set Pin_1_8__7__INTTYPE, CYREG_PICU3_INTTYPE7
  344              	.set Pin_1_8__7__MASK, 0x80
- 345              	.set Pin_1_8__7__PC, CYREG_PRT0_PC7
- 346              	.set Pin_1_8__7__PORT, 0
+ 345              	.set Pin_1_8__7__PC, CYREG_PRT3_PC7
+ 346              	.set Pin_1_8__7__PORT, 3
  347              	.set Pin_1_8__7__SHIFT, 7
- 348              	.set Pin_1_8__AG, CYREG_PRT0_AG
- 349              	.set Pin_1_8__AMUX, CYREG_PRT0_AMUX
- 350              	.set Pin_1_8__BIE, CYREG_PRT0_BIE
- 351              	.set Pin_1_8__BIT_MASK, CYREG_PRT0_BIT_MASK
- 352              	.set Pin_1_8__BYP, CYREG_PRT0_BYP
- 353              	.set Pin_1_8__CTL, CYREG_PRT0_CTL
- 354              	.set Pin_1_8__DM0, CYREG_PRT0_DM0
- 355              	.set Pin_1_8__DM1, CYREG_PRT0_DM1
- 356              	.set Pin_1_8__DM2, CYREG_PRT0_DM2
- 357              	.set Pin_1_8__DR, CYREG_PRT0_DR
- 358              	.set Pin_1_8__INP_DIS, CYREG_PRT0_INP_DIS
- 359              	.set Pin_1_8__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU0_BASE
- 360              	.set Pin_1_8__LCD_COM_SEG, CYREG_PRT0_LCD_COM_SEG
- 361              	.set Pin_1_8__LCD_EN, CYREG_PRT0_LCD_EN
+ 348              	.set Pin_1_8__AG, CYREG_PRT3_AG
+ 349              	.set Pin_1_8__AMUX, CYREG_PRT3_AMUX
+ 350              	.set Pin_1_8__BIE, CYREG_PRT3_BIE
+ 351              	.set Pin_1_8__BIT_MASK, CYREG_PRT3_BIT_MASK
+ 352              	.set Pin_1_8__BYP, CYREG_PRT3_BYP
+ 353              	.set Pin_1_8__CTL, CYREG_PRT3_CTL
+ 354              	.set Pin_1_8__DM0, CYREG_PRT3_DM0
+ 355              	.set Pin_1_8__DM1, CYREG_PRT3_DM1
+ 356              	.set Pin_1_8__DM2, CYREG_PRT3_DM2
+ 357              	.set Pin_1_8__DR, CYREG_PRT3_DR
+ 358              	.set Pin_1_8__INP_DIS, CYREG_PRT3_INP_DIS
+ 359              	.set Pin_1_8__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU3_BASE
+ 360              	.set Pin_1_8__LCD_COM_SEG, CYREG_PRT3_LCD_COM_SEG
+ 361              	.set Pin_1_8__LCD_EN, CYREG_PRT3_LCD_EN
  362              	.set Pin_1_8__MASK, 0xFF
- 363              	.set Pin_1_8__PORT, 0
- 364              	.set Pin_1_8__PRT, CYREG_PRT0_PRT
- 365              	.set Pin_1_8__PRTDSI__CAPS_SEL, CYREG_PRT0_CAPS_SEL
- 366              	.set Pin_1_8__PRTDSI__DBL_SYNC_IN, CYREG_PRT0_DBL_SYNC_IN
- 367              	.set Pin_1_8__PRTDSI__OE_SEL0, CYREG_PRT0_OE_SEL0
- 368              	.set Pin_1_8__PRTDSI__OE_SEL1, CYREG_PRT0_OE_SEL1
- 369              	.set Pin_1_8__PRTDSI__OUT_SEL0, CYREG_PRT0_OUT_SEL0
- 370              	.set Pin_1_8__PRTDSI__OUT_SEL1, CYREG_PRT0_OUT_SEL1
- 371              	.set Pin_1_8__PRTDSI__SYNC_OUT, CYREG_PRT0_SYNC_OUT
- 372              	.set Pin_1_8__PS, CYREG_PRT0_PS
+ 363              	.set Pin_1_8__PORT, 3
+ 364              	.set Pin_1_8__PRT, CYREG_PRT3_PRT
+ 365              	.set Pin_1_8__PRTDSI__CAPS_SEL, CYREG_PRT3_CAPS_SEL
+ 366              	.set Pin_1_8__PRTDSI__DBL_SYNC_IN, CYREG_PRT3_DBL_SYNC_IN
+ 367              	.set Pin_1_8__PRTDSI__OE_SEL0, CYREG_PRT3_OE_SEL0
+ 368              	.set Pin_1_8__PRTDSI__OE_SEL1, CYREG_PRT3_OE_SEL1
+ 369              	.set Pin_1_8__PRTDSI__OUT_SEL0, CYREG_PRT3_OUT_SEL0
+ 370              	.set Pin_1_8__PRTDSI__OUT_SEL1, CYREG_PRT3_OUT_SEL1
+ 371              	.set Pin_1_8__PRTDSI__SYNC_OUT, CYREG_PRT3_SYNC_OUT
+ 372              	.set Pin_1_8__PS, CYREG_PRT3_PS
  373              	.set Pin_1_8__SHIFT, 0
- 374              	.set Pin_1_8__SLW, CYREG_PRT0_SLW
+ 374              	.set Pin_1_8__SLW, CYREG_PRT3_SLW
  375              	
  376              	/* Pin_9_11 */
- 377              	.set Pin_9_11__0__INTTYPE, CYREG_PICU3_INTTYPE4
- 378              	.set Pin_9_11__0__MASK, 0x10
- 379              	.set Pin_9_11__0__PC, CYREG_PRT3_PC4
- 380              	.set Pin_9_11__0__PORT, 3
- 381              	.set Pin_9_11__0__SHIFT, 4
- 382              	.set Pin_9_11__1__INTTYPE, CYREG_PICU3_INTTYPE5
- 383              	.set Pin_9_11__1__MASK, 0x20
- 384              	.set Pin_9_11__1__PC, CYREG_PRT3_PC5
- 385              	.set Pin_9_11__1__PORT, 3
+ 377              	.set Pin_9_11__0__INTTYPE, CYREG_PICU2_INTTYPE5
+ 378              	.set Pin_9_11__0__MASK, 0x20
+ 379              	.set Pin_9_11__0__PC, CYREG_PRT2_PC5
+ 380              	.set Pin_9_11__0__PORT, 2
+ 381              	.set Pin_9_11__0__SHIFT, 5
+ 382              	.set Pin_9_11__1__INTTYPE, CYREG_PICU2_INTTYPE6
+ 383              	.set Pin_9_11__1__MASK, 0x40
+ 384              	.set Pin_9_11__1__PC, CYREG_PRT2_PC6
+ 385              	.set Pin_9_11__1__PORT, 2
 ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 196
 
 
- 386              	.set Pin_9_11__1__SHIFT, 5
- 387              	.set Pin_9_11__2__INTTYPE, CYREG_PICU3_INTTYPE6
- 388              	.set Pin_9_11__2__MASK, 0x40
- 389              	.set Pin_9_11__2__PC, CYREG_PRT3_PC6
- 390              	.set Pin_9_11__2__PORT, 3
- 391              	.set Pin_9_11__2__SHIFT, 6
- 392              	.set Pin_9_11__AG, CYREG_PRT3_AG
- 393              	.set Pin_9_11__AMUX, CYREG_PRT3_AMUX
- 394              	.set Pin_9_11__BIE, CYREG_PRT3_BIE
- 395              	.set Pin_9_11__BIT_MASK, CYREG_PRT3_BIT_MASK
- 396              	.set Pin_9_11__BYP, CYREG_PRT3_BYP
- 397              	.set Pin_9_11__CTL, CYREG_PRT3_CTL
- 398              	.set Pin_9_11__DM0, CYREG_PRT3_DM0
- 399              	.set Pin_9_11__DM1, CYREG_PRT3_DM1
- 400              	.set Pin_9_11__DM2, CYREG_PRT3_DM2
- 401              	.set Pin_9_11__DR, CYREG_PRT3_DR
- 402              	.set Pin_9_11__INP_DIS, CYREG_PRT3_INP_DIS
- 403              	.set Pin_9_11__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU3_BASE
- 404              	.set Pin_9_11__LCD_COM_SEG, CYREG_PRT3_LCD_COM_SEG
- 405              	.set Pin_9_11__LCD_EN, CYREG_PRT3_LCD_EN
- 406              	.set Pin_9_11__MASK, 0x70
- 407              	.set Pin_9_11__PORT, 3
- 408              	.set Pin_9_11__PRT, CYREG_PRT3_PRT
- 409              	.set Pin_9_11__PRTDSI__CAPS_SEL, CYREG_PRT3_CAPS_SEL
- 410              	.set Pin_9_11__PRTDSI__DBL_SYNC_IN, CYREG_PRT3_DBL_SYNC_IN
- 411              	.set Pin_9_11__PRTDSI__OE_SEL0, CYREG_PRT3_OE_SEL0
- 412              	.set Pin_9_11__PRTDSI__OE_SEL1, CYREG_PRT3_OE_SEL1
- 413              	.set Pin_9_11__PRTDSI__OUT_SEL0, CYREG_PRT3_OUT_SEL0
- 414              	.set Pin_9_11__PRTDSI__OUT_SEL1, CYREG_PRT3_OUT_SEL1
- 415              	.set Pin_9_11__PRTDSI__SYNC_OUT, CYREG_PRT3_SYNC_OUT
- 416              	.set Pin_9_11__PS, CYREG_PRT3_PS
- 417              	.set Pin_9_11__SHIFT, 4
- 418              	.set Pin_9_11__SLW, CYREG_PRT3_SLW
+ 386              	.set Pin_9_11__1__SHIFT, 6
+ 387              	.set Pin_9_11__2__INTTYPE, CYREG_PICU2_INTTYPE7
+ 388              	.set Pin_9_11__2__MASK, 0x80
+ 389              	.set Pin_9_11__2__PC, CYREG_PRT2_PC7
+ 390              	.set Pin_9_11__2__PORT, 2
+ 391              	.set Pin_9_11__2__SHIFT, 7
+ 392              	.set Pin_9_11__AG, CYREG_PRT2_AG
+ 393              	.set Pin_9_11__AMUX, CYREG_PRT2_AMUX
+ 394              	.set Pin_9_11__BIE, CYREG_PRT2_BIE
+ 395              	.set Pin_9_11__BIT_MASK, CYREG_PRT2_BIT_MASK
+ 396              	.set Pin_9_11__BYP, CYREG_PRT2_BYP
+ 397              	.set Pin_9_11__CTL, CYREG_PRT2_CTL
+ 398              	.set Pin_9_11__DM0, CYREG_PRT2_DM0
+ 399              	.set Pin_9_11__DM1, CYREG_PRT2_DM1
+ 400              	.set Pin_9_11__DM2, CYREG_PRT2_DM2
+ 401              	.set Pin_9_11__DR, CYREG_PRT2_DR
+ 402              	.set Pin_9_11__INP_DIS, CYREG_PRT2_INP_DIS
+ 403              	.set Pin_9_11__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU2_BASE
+ 404              	.set Pin_9_11__LCD_COM_SEG, CYREG_PRT2_LCD_COM_SEG
+ 405              	.set Pin_9_11__LCD_EN, CYREG_PRT2_LCD_EN
+ 406              	.set Pin_9_11__MASK, 0xE0
+ 407              	.set Pin_9_11__PORT, 2
+ 408              	.set Pin_9_11__PRT, CYREG_PRT2_PRT
+ 409              	.set Pin_9_11__PRTDSI__CAPS_SEL, CYREG_PRT2_CAPS_SEL
+ 410              	.set Pin_9_11__PRTDSI__DBL_SYNC_IN, CYREG_PRT2_DBL_SYNC_IN
+ 411              	.set Pin_9_11__PRTDSI__OE_SEL0, CYREG_PRT2_OE_SEL0
+ 412              	.set Pin_9_11__PRTDSI__OE_SEL1, CYREG_PRT2_OE_SEL1
+ 413              	.set Pin_9_11__PRTDSI__OUT_SEL0, CYREG_PRT2_OUT_SEL0
+ 414              	.set Pin_9_11__PRTDSI__OUT_SEL1, CYREG_PRT2_OUT_SEL1
+ 415              	.set Pin_9_11__PRTDSI__SYNC_OUT, CYREG_PRT2_SYNC_OUT
+ 416              	.set Pin_9_11__PS, CYREG_PRT2_PS
+ 417              	.set Pin_9_11__SHIFT, 5
+ 418              	.set Pin_9_11__SLW, CYREG_PRT2_SLW
  419              	
  420              	/* Status_1_8 */
  421              	.set Status_1_8_sts_sts_reg__0__MASK, 0x01
  422              	.set Status_1_8_sts_sts_reg__0__POS, 0
  423              	.set Status_1_8_sts_sts_reg__1__MASK, 0x02
  424              	.set Status_1_8_sts_sts_reg__1__POS, 1
- 425              	.set Status_1_8_sts_sts_reg__16BIT_STATUS_AUX_CTL_REG, CYREG_B0_UDB05_06_ACTL
- 426              	.set Status_1_8_sts_sts_reg__16BIT_STATUS_REG, CYREG_B0_UDB05_06_ST
+ 425              	.set Status_1_8_sts_sts_reg__16BIT_STATUS_AUX_CTL_REG, CYREG_B1_UDB06_07_ACTL
+ 426              	.set Status_1_8_sts_sts_reg__16BIT_STATUS_REG, CYREG_B1_UDB06_07_ST
  427              	.set Status_1_8_sts_sts_reg__2__MASK, 0x04
  428              	.set Status_1_8_sts_sts_reg__2__POS, 2
  429              	.set Status_1_8_sts_sts_reg__3__MASK, 0x08
@@ -11755,9 +11755,9 @@ ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
  437              	.set Status_1_8_sts_sts_reg__7__MASK, 0x80
  438              	.set Status_1_8_sts_sts_reg__7__POS, 7
  439              	.set Status_1_8_sts_sts_reg__MASK, 0xFF
- 440              	.set Status_1_8_sts_sts_reg__MASK_REG, CYREG_B0_UDB05_MSK
- 441              	.set Status_1_8_sts_sts_reg__STATUS_AUX_CTL_REG, CYREG_B0_UDB05_ACTL
- 442              	.set Status_1_8_sts_sts_reg__STATUS_REG, CYREG_B0_UDB05_ST
+ 440              	.set Status_1_8_sts_sts_reg__MASK_REG, CYREG_B1_UDB06_MSK
+ 441              	.set Status_1_8_sts_sts_reg__STATUS_AUX_CTL_REG, CYREG_B1_UDB06_ACTL
+ 442              	.set Status_1_8_sts_sts_reg__STATUS_REG, CYREG_B1_UDB06_ST
 ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 197
 
 
@@ -11767,14 +11767,14 @@ ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
  446              	.set Status_9_11_sts_sts_reg__0__POS, 0
  447              	.set Status_9_11_sts_sts_reg__1__MASK, 0x02
  448              	.set Status_9_11_sts_sts_reg__1__POS, 1
- 449              	.set Status_9_11_sts_sts_reg__16BIT_STATUS_AUX_CTL_REG, CYREG_B0_UDB06_07_ACTL
- 450              	.set Status_9_11_sts_sts_reg__16BIT_STATUS_REG, CYREG_B0_UDB06_07_ST
+ 449              	.set Status_9_11_sts_sts_reg__16BIT_STATUS_AUX_CTL_REG, CYREG_B1_UDB07_08_ACTL
+ 450              	.set Status_9_11_sts_sts_reg__16BIT_STATUS_REG, CYREG_B1_UDB07_08_ST
  451              	.set Status_9_11_sts_sts_reg__2__MASK, 0x04
  452              	.set Status_9_11_sts_sts_reg__2__POS, 2
  453              	.set Status_9_11_sts_sts_reg__MASK, 0x07
- 454              	.set Status_9_11_sts_sts_reg__MASK_REG, CYREG_B0_UDB06_MSK
- 455              	.set Status_9_11_sts_sts_reg__STATUS_AUX_CTL_REG, CYREG_B0_UDB06_ACTL
- 456              	.set Status_9_11_sts_sts_reg__STATUS_REG, CYREG_B0_UDB06_ST
+ 454              	.set Status_9_11_sts_sts_reg__MASK_REG, CYREG_B1_UDB07_MSK
+ 455              	.set Status_9_11_sts_sts_reg__STATUS_AUX_CTL_REG, CYREG_B1_UDB07_ACTL
+ 456              	.set Status_9_11_sts_sts_reg__STATUS_REG, CYREG_B1_UDB07_ST
  457              	
  458              	/* Miscellaneous */
  459              	.set BCLK__BUS_CLK__HZ, 24000000

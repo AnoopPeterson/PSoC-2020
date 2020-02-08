@@ -51,17 +51,17 @@ All values are in Picoseconds
 
 Port Name        Setup to Clk  Clock Name:Phase  
 ---------------  ------------  ----------------  
-Pin_1_8(0)_PAD   17983         Clock:R           
-Pin_1_8(1)_PAD   16792         Clock:R           
-Pin_1_8(2)_PAD   16790         Clock:R           
-Pin_1_8(3)_PAD   16711         Clock:R           
-Pin_1_8(4)_PAD   17308         Clock:R           
-Pin_1_8(5)_PAD   17987         Clock:R           
-Pin_1_8(6)_PAD   17194         Clock:R           
-Pin_1_8(7)_PAD   17037         Clock:R           
-Pin_9_11(0)_PAD  16050         Clock:R           
-Pin_9_11(1)_PAD  16171         Clock:R           
-Pin_9_11(2)_PAD  16177         Clock:R           
+Pin_1_8(0)_PAD   15085         Clock:R           
+Pin_1_8(1)_PAD   15627         Clock:R           
+Pin_1_8(2)_PAD   15643         Clock:R           
+Pin_1_8(3)_PAD   15465         Clock:R           
+Pin_1_8(4)_PAD   14869         Clock:R           
+Pin_1_8(5)_PAD   15417         Clock:R           
+Pin_1_8(6)_PAD   15349         Clock:R           
+Pin_1_8(7)_PAD   15498         Clock:R           
+Pin_9_11(0)_PAD  19747         Clock:R           
+Pin_9_11(1)_PAD  19303         Clock:R           
+Pin_9_11(2)_PAD  24001         Clock:R           
 
 
                        3.2::Clock to Out

@@ -44,8 +44,8 @@ const uint8 CYCODE USB_DEVICE0_DESCR[18u] = {
 /* idVendor                                */ 0xB4u, 0x04u,
 /* idProduct                               */ 0x51u, 0x80u,
 /* bcdDevice                               */ 0x00u, 0x00u,
-/* iManufacturer                           */ 0x02u,
-/* iProduct                                */ 0x01u,
+/* iManufacturer                           */ 0x01u,
+/* iProduct                                */ 0x02u,
 /* iSerialNumber                           */ 0x00u,
 /* bNumConfigurations                      */ 0x01u
 };
@@ -107,7 +107,7 @@ const uint8 CYCODE USB_DEVICE0_CONFIGURATION0_DESCR[41u] = {
 /*********************************************************************
 * String Descriptor Table
 *********************************************************************/
-const uint8 CYCODE USB_STRING_DESCRIPTORS[53u] = {
+const uint8 CYCODE USB_STRING_DESCRIPTORS[41u] = {
 /*********************************************************************
 * Language ID Descriptor
 *********************************************************************/
@@ -115,20 +115,19 @@ const uint8 CYCODE USB_STRING_DESCRIPTORS[53u] = {
 /* DescriptorType: STRING                  */ 0x03u,
 /* Language Id                             */ 0x09u, 0x04u,
 /*********************************************************************
-* String Descriptor: "612_Controller"
-*********************************************************************/
-/* Descriptor Length                       */ 0x1Eu,
-/* DescriptorType: STRING                  */ 0x03u,
- (uint8)'6', 0u,(uint8)'1', 0u,(uint8)'2', 0u,(uint8)'_', 0u,(uint8)'C', 0u,
- (uint8)'o', 0u,(uint8)'n', 0u,(uint8)'t', 0u,(uint8)'r', 0u,(uint8)'o', 0u,
- (uint8)'l', 0u,(uint8)'l', 0u,(uint8)'e', 0u,(uint8)'r', 0u,
-/*********************************************************************
 * String Descriptor: "Team 612"
 *********************************************************************/
 /* Descriptor Length                       */ 0x12u,
 /* DescriptorType: STRING                  */ 0x03u,
  (uint8)'T', 0u,(uint8)'e', 0u,(uint8)'a', 0u,(uint8)'m', 0u,(uint8)' ', 0u,
  (uint8)'6', 0u,(uint8)'1', 0u,(uint8)'2', 0u,
+/*********************************************************************
+* String Descriptor: "Gun Case"
+*********************************************************************/
+/* Descriptor Length                       */ 0x12u,
+/* DescriptorType: STRING                  */ 0x03u,
+ (uint8)'G', 0u,(uint8)'u', 0u,(uint8)'n', 0u,(uint8)' ', 0u,(uint8)'C', 0u,
+ (uint8)'a', 0u,(uint8)'s', 0u,(uint8)'e', 0u,
 /*********************************************************************/
 /* Marks the end of the list.              */ 0x00u};
 /*********************************************************************/

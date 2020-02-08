@@ -1,5 +1,5 @@
 -- Project:   2020-Control-Scheme
--- Generated: 02/07/2020 17:55:29
+-- Generated: 02/08/2020 14:40:35
 -- PSoC Creator  4.2
 
 ENTITY \2020-Control-Scheme\ IS
@@ -117,27 +117,27 @@ ARCHITECTURE __DEFAULT__ OF \2020-Control-Scheme\ IS
     ATTRIBUTE lib_model OF \USB:Dp(0)\ : LABEL IS "iocell3";
     ATTRIBUTE Location OF \USB:Dp(0)\ : LABEL IS "P15[6]";
     ATTRIBUTE lib_model OF Pin_1_8(0) : LABEL IS "iocell4";
-    ATTRIBUTE Location OF Pin_1_8(0) : LABEL IS "P0[0]";
+    ATTRIBUTE Location OF Pin_1_8(0) : LABEL IS "P3[0]";
     ATTRIBUTE lib_model OF Pin_1_8(1) : LABEL IS "iocell5";
-    ATTRIBUTE Location OF Pin_1_8(1) : LABEL IS "P0[1]";
+    ATTRIBUTE Location OF Pin_1_8(1) : LABEL IS "P3[1]";
     ATTRIBUTE lib_model OF Pin_1_8(2) : LABEL IS "iocell6";
-    ATTRIBUTE Location OF Pin_1_8(2) : LABEL IS "P0[2]";
+    ATTRIBUTE Location OF Pin_1_8(2) : LABEL IS "P3[2]";
     ATTRIBUTE lib_model OF Pin_1_8(3) : LABEL IS "iocell7";
-    ATTRIBUTE Location OF Pin_1_8(3) : LABEL IS "P0[3]";
+    ATTRIBUTE Location OF Pin_1_8(3) : LABEL IS "P3[3]";
     ATTRIBUTE lib_model OF Pin_1_8(4) : LABEL IS "iocell8";
-    ATTRIBUTE Location OF Pin_1_8(4) : LABEL IS "P0[4]";
+    ATTRIBUTE Location OF Pin_1_8(4) : LABEL IS "P3[4]";
     ATTRIBUTE lib_model OF Pin_1_8(5) : LABEL IS "iocell9";
-    ATTRIBUTE Location OF Pin_1_8(5) : LABEL IS "P0[5]";
+    ATTRIBUTE Location OF Pin_1_8(5) : LABEL IS "P3[5]";
     ATTRIBUTE lib_model OF Pin_1_8(6) : LABEL IS "iocell10";
-    ATTRIBUTE Location OF Pin_1_8(6) : LABEL IS "P0[6]";
+    ATTRIBUTE Location OF Pin_1_8(6) : LABEL IS "P3[6]";
     ATTRIBUTE lib_model OF Pin_1_8(7) : LABEL IS "iocell11";
-    ATTRIBUTE Location OF Pin_1_8(7) : LABEL IS "P0[7]";
+    ATTRIBUTE Location OF Pin_1_8(7) : LABEL IS "P3[7]";
     ATTRIBUTE lib_model OF Pin_9_11(0) : LABEL IS "iocell12";
-    ATTRIBUTE Location OF Pin_9_11(0) : LABEL IS "P3[4]";
+    ATTRIBUTE Location OF Pin_9_11(0) : LABEL IS "P2[5]";
     ATTRIBUTE lib_model OF Pin_9_11(1) : LABEL IS "iocell13";
-    ATTRIBUTE Location OF Pin_9_11(1) : LABEL IS "P3[5]";
+    ATTRIBUTE Location OF Pin_9_11(1) : LABEL IS "P2[6]";
     ATTRIBUTE lib_model OF Pin_9_11(2) : LABEL IS "iocell14";
-    ATTRIBUTE Location OF Pin_9_11(2) : LABEL IS "P3[6]";
+    ATTRIBUTE Location OF Pin_9_11(2) : LABEL IS "P2[7]";
     ATTRIBUTE Location OF \USB:USB\ : LABEL IS "F(USB,0)";
     ATTRIBUTE lib_model OF \Status_1_8:sts:sts_reg\ : LABEL IS "statuscell1";
     ATTRIBUTE lib_model OF \Status_9_11:sts:sts_reg\ : LABEL IS "statuscell2";

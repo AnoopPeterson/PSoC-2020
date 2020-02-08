@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\cciZGR40.s 			page 1
+ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccbZ3mdK.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\cciZGR40.s 			page 1
   28:Generated_Source\PSoC5/Pin_9_11.c **** *
   29:Generated_Source\PSoC5/Pin_9_11.c **** * \brief Writes the value to the physical port (data output register), masking
   30:Generated_Source\PSoC5/Pin_9_11.c **** *  and shifting the bits appropriately. 
-ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\cciZGR40.s 			page 2
+ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccbZ3mdK.s 			page 2
 
 
   31:Generated_Source\PSoC5/Pin_9_11.c **** *
@@ -99,26 +99,26 @@ ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\cciZGR40.s 			page 1
   34              		.loc 1 59 0
   35 0000 044A     		ldr	r2, .L2
   36 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
-  37 0004 03F08F03 		and	r3, r3, #143
+  37 0004 03F01F03 		and	r3, r3, #31
   38              	.LVL1:
   60:Generated_Source\PSoC5/Pin_9_11.c ****     Pin_9_11_DR = staticBits | ((uint8)(value << Pin_9_11_SHIFT) & Pin_9_11_MASK);
   39              		.loc 1 60 0
-  40 0008 0001     		lsls	r0, r0, #4
+  40 0008 4001     		lsls	r0, r0, #5
   41              	.LVL2:
-  42 000a 00F07000 		and	r0, r0, #112
-  43 000e 1843     		orrs	r0, r0, r3
-  44 0010 1070     		strb	r0, [r2]
-  45 0012 7047     		bx	lr
+  42 000a C0B2     		uxtb	r0, r0
+  43 000c 1843     		orrs	r0, r0, r3
+  44 000e 1070     		strb	r0, [r2]
+  45 0010 7047     		bx	lr
   46              	.L3:
-  47              		.align	2
+  47 0012 00BF     		.align	2
   48              	.L2:
-  49 0014 30510040 		.word	1073762608
+  49 0014 20510040 		.word	1073762592
   50              		.cfi_endproc
   51              	.LFE0:
   52              		.size	Pin_9_11_Write, .-Pin_9_11_Write
   53              		.section	.text.Pin_9_11_SetDriveMode,"ax",%progbits
   54              		.align	2
-ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\cciZGR40.s 			page 3
+ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccbZ3mdK.s 			page 3
 
 
   55              		.global	Pin_9_11_SetDriveMode
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\cciZGR40.s 			page 1
   76 0010 0132     		adds	r2, r2, #1
   77 0012 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
   78 0014 03F0F103 		and	r3, r3, #241
-ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\cciZGR40.s 			page 4
+ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccbZ3mdK.s 			page 4
 
 
   79 0018 0343     		orrs	r3, r3, r0
@@ -194,7 +194,7 @@ ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\cciZGR40.s 			page 1
   88              	.L6:
   89 002a 00BF     		.align	2
   90              	.L5:
-  91 002c 1C500040 		.word	1073762332
+  91 002c 15500040 		.word	1073762325
   92              		.cfi_endproc
   93              	.LFE1:
   94              		.size	Pin_9_11_SetDriveMode, .-Pin_9_11_SetDriveMode
@@ -235,19 +235,19 @@ ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\cciZGR40.s 			page 1
  107              		@ link register save eliminated.
  117:Generated_Source\PSoC5/Pin_9_11.c ****     return (Pin_9_11_PS & Pin_9_11_MASK) >> Pin_9_11_SHIFT;
  108              		.loc 1 117 0
- 109 0000 024B     		ldr	r3, .L8
+ 109 0000 014B     		ldr	r3, .L8
  110 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
  118:Generated_Source\PSoC5/Pin_9_11.c **** }
-ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\cciZGR40.s 			page 5
+ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccbZ3mdK.s 			page 5
 
 
  111              		.loc 1 118 0
- 112 0004 C0F30210 		ubfx	r0, r0, #4, #3
- 113 0008 7047     		bx	lr
+ 112 0004 4009     		lsrs	r0, r0, #5
+ 113 0006 7047     		bx	lr
  114              	.L9:
- 115 000a 00BF     		.align	2
+ 115              		.align	2
  116              	.L8:
- 117 000c 31510040 		.word	1073762609
+ 117 0008 21510040 		.word	1073762593
  118              		.cfi_endproc
  119              	.LFE2:
  120              		.size	Pin_9_11_Read, .-Pin_9_11_Read
@@ -292,19 +292,19 @@ ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\cciZGR40.s 			page 1
  133              		@ link register save eliminated.
  145:Generated_Source\PSoC5/Pin_9_11.c ****     return (Pin_9_11_DR & Pin_9_11_MASK) >> Pin_9_11_SHIFT;
  134              		.loc 1 145 0
- 135 0000 024B     		ldr	r3, .L11
+ 135 0000 014B     		ldr	r3, .L11
  136 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
  146:Generated_Source\PSoC5/Pin_9_11.c **** }
  137              		.loc 1 146 0
- 138 0004 C0F30210 		ubfx	r0, r0, #4, #3
- 139 0008 7047     		bx	lr
-ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\cciZGR40.s 			page 6
+ 138 0004 4009     		lsrs	r0, r0, #5
+ 139 0006 7047     		bx	lr
+ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccbZ3mdK.s 			page 6
 
 
  140              	.L12:
- 141 000a 00BF     		.align	2
+ 141              		.align	2
  142              	.L11:
- 143 000c 30510040 		.word	1073762608
+ 143 0008 20510040 		.word	1073762592
  144              		.cfi_endproc
  145              	.LFE3:
  146              		.size	Pin_9_11_ReadDataReg, .-Pin_9_11_ReadDataReg
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\cciZGR40.s 			page 1
  194 0058 07       		.byte	0x7
  195 0059 84010000 		.4byte	.LASF7
  196 005d 03       		.uleb128 0x3
-ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\cciZGR40.s 			page 7
+ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccbZ3mdK.s 			page 7
 
 
  197 005e 04       		.byte	0x4
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\cciZGR40.s 			page 1
  251 00cf 06       		.uleb128 0x6
  252 00d0 E6010000 		.4byte	.LASF15
  253 00d4 01       		.byte	0x1
-ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\cciZGR40.s 			page 8
+ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccbZ3mdK.s 			page 8
 
 
  254 00d5 5A       		.byte	0x5a
@@ -440,7 +440,7 @@ ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\cciZGR40.s 			page 1
  270 00fa 73       		.byte	0x73
  271 00fb 6B000000 		.4byte	0x6b
  272 00ff 00000000 		.4byte	.LFB2
- 273 0103 10000000 		.4byte	.LFE2-.LFB2
+ 273 0103 0C000000 		.4byte	.LFE2-.LFB2
  274 0107 01       		.uleb128 0x1
  275 0108 9C       		.byte	0x9c
  276 0109 09       		.uleb128 0x9
@@ -449,7 +449,7 @@ ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\cciZGR40.s 			page 1
  279 010f 8F       		.byte	0x8f
  280 0110 6B000000 		.4byte	0x6b
  281 0114 00000000 		.4byte	.LFB3
- 282 0118 10000000 		.4byte	.LFE3-.LFB3
+ 282 0118 0C000000 		.4byte	.LFE3-.LFB3
  283 011c 01       		.uleb128 0x1
  284 011d 9C       		.byte	0x9c
  285 011e 00       		.byte	0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\cciZGR40.s 			page 1
  308 0014 24       		.uleb128 0x24
  309 0015 00       		.byte	0
  310 0016 0B       		.uleb128 0xb
-ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\cciZGR40.s 			page 9
+ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccbZ3mdK.s 			page 9
 
 
  311 0017 0B       		.uleb128 0xb
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\cciZGR40.s 			page 1
  365 004d 06       		.uleb128 0x6
  366 004e 40       		.uleb128 0x40
  367 004f 18       		.uleb128 0x18
-ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\cciZGR40.s 			page 10
+ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccbZ3mdK.s 			page 10
 
 
  368 0050 9742     		.uleb128 0x2117
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\cciZGR40.s 			page 1
  422 0087 06       		.uleb128 0x6
  423 0088 40       		.uleb128 0x40
  424 0089 18       		.uleb128 0x18
-ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\cciZGR40.s 			page 11
+ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccbZ3mdK.s 			page 11
 
 
  425 008a 9742     		.uleb128 0x2117
@@ -649,24 +649,24 @@ ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\cciZGR40.s 			page 1
  470 0018 00000000 		.4byte	.LFB1
  471 001c 30000000 		.4byte	.LFE1-.LFB1
  472 0020 00000000 		.4byte	.LFB2
- 473 0024 10000000 		.4byte	.LFE2-.LFB2
+ 473 0024 0C000000 		.4byte	.LFE2-.LFB2
  474 0028 00000000 		.4byte	.LFB3
- 475 002c 10000000 		.4byte	.LFE3-.LFB3
+ 475 002c 0C000000 		.4byte	.LFE3-.LFB3
  476 0030 00000000 		.4byte	0
  477 0034 00000000 		.4byte	0
  478              		.section	.debug_ranges,"",%progbits
  479              	.Ldebug_ranges0:
  480 0000 00000000 		.4byte	.LFB0
  481 0004 18000000 		.4byte	.LFE0
-ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\cciZGR40.s 			page 12
+ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccbZ3mdK.s 			page 12
 
 
  482 0008 00000000 		.4byte	.LFB1
  483 000c 30000000 		.4byte	.LFE1
  484 0010 00000000 		.4byte	.LFB2
- 485 0014 10000000 		.4byte	.LFE2
+ 485 0014 0C000000 		.4byte	.LFE2
  486 0018 00000000 		.4byte	.LFB3
- 487 001c 10000000 		.4byte	.LFE3
+ 487 001c 0C000000 		.4byte	.LFE3
  488 0020 00000000 		.4byte	0
  489 0024 00000000 		.4byte	0
  490              		.section	.debug_line,"",%progbits
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\cciZGR40.s 			page 1
  508      74696F6E 
  509              	.LASF14:
  510 00cf 50696E5F 		.ascii	"Pin_9_11_Write\000"
-ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\cciZGR40.s 			page 13
+ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccbZ3mdK.s 			page 13
 
 
  510      395F3131 
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\cciZGR40.s 			page 1
  530 01ae 63686172 		.ascii	"char\000"
  530      00
  531              	.LASF2:
-ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\cciZGR40.s 			page 14
+ARM GAS  C:\Users\ANOOP~1.DES\AppData\Local\Temp\ccbZ3mdK.s 			page 14
 
 
  532 01b3 73686F72 		.ascii	"short int\000"

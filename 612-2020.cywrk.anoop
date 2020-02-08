@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="612-2020\2020-Control-Scheme\TopDesign">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="612-2020\2020-Control-Scheme\Source Files\main.c">
 <ExpandedNodeIds>
 <v>612-2020</v>
 <v>612-2020\2020-Control-Scheme</v>
@@ -244,8 +244,9 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
-<name v=".\2020-Control-Scheme.cydsn\main.c" />
 <name v=".\2020-Control-Scheme.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\2020-Control-Scheme.cydsn\2020-Control-Scheme.cydwr" />
+<name v=".\2020-Control-Scheme.cydsn\main.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -253,7 +254,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1439, 711" SelectedTabbedMdiWindow="a4a5c63c-3a9f-402a-8992-b6d0e927e943"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="58f6544b-0149-44b1-a0ac-b3148720c957" /><DocumentWindow Key="C:\Users\anoop.DESKTOP-AK0U51E\Documents\612_Code\PSOC\2020_CONTROL_SCHEME\PSoC-2020\2020-Control-Scheme.cydsn\main.c" Guid="a4a5c63c-3a9f-402a-8992-b6d0e927e943" /><DocumentWindow Key="C:\Users\anoop.DESKTOP-AK0U51E\Documents\612_Code\PSOC\2020_CONTROL_SCHEME\PSoC-2020\2020-Control-Scheme.cydsn\TopDesign\TopDesign.cysch" Guid="e22e4732-14c5-4168-9fe9-5eea192ab08f" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1693, 711" SelectedTabbedMdiWindow="58f6544b-0149-44b1-a0ac-b3148720c957"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="58f6544b-0149-44b1-a0ac-b3148720c957" /><DocumentWindow Key="C:\Users\anoop.DESKTOP-AK0U51E\Documents\612_Code\PSOC\2020_CONTROL_SCHEME\PSoC-2020\2020-Control-Scheme.cydsn\TopDesign\TopDesign.cysch" Guid="e22e4732-14c5-4168-9fe9-5eea192ab08f" /><DocumentWindow Key="C:\Users\anoop.DESKTOP-AK0U51E\Documents\612_Code\PSOC\2020_CONTROL_SCHEME\PSoC-2020\2020-Control-Scheme.cydsn\2020-Control-Scheme.cydwr" Guid="c00260f3-fad2-4073-95bd-0fc1236959c1" /><DocumentWindow Key="C:\Users\anoop.DESKTOP-AK0U51E\Documents\612_Code\PSOC\2020_CONTROL_SCHEME\PSoC-2020\2020-Control-Scheme.cydsn\main.c" Guid="7c81cff8-8b34-4f6b-8e2e-6c9221ddecfc" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
